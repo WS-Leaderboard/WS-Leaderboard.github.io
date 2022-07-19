@@ -7,6 +7,21 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/* Colour scheme:
+default grey1: 585858,		replacement 1: E5E5E5
+default grey2: c9c9c9		replacement 1: E5E5E5
+default pink1: f2849e,		replacement 1: FCA311
+default pink2: ee5f81,		replacement 1: FCA311
+
+article.style1 f2849e (pink)
+article.style2 7ecaf6 (blue)
+article.style3 7bd0c1 (green)
+article.style4 c75b9b (purp)
+article.style5 ae85ca (violet)
+article.style6 8499e7 (blue)
+
+*/
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -151,7 +166,7 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #f2849e !important;
+			color: #FCA311 !important;
 		}
 
 	strong, b {
@@ -1856,8 +1871,8 @@ input, select, textarea {
 			}
 
 			.icon.style2:hover {
-				color: #f2849e;
-				border-color: #f2849e;
+				color: #FCA311;
+				border-color: #FCA311;
 			}
 
 			.icon.style2:active {
@@ -2170,8 +2185,8 @@ input, select, textarea {
 		input[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
-			border-bottom-color: #f2849e;
-			box-shadow: inset 0 -1px 0 0 #f2849e;
+			border-bottom-color: #FCA311;
+			box-shadow: inset 0 -1px 0 0 #FCA311;
 		}
 
 	select {
@@ -2275,8 +2290,8 @@ input, select, textarea {
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #f2849e;
-			box-shadow: 0 0 0 1px #f2849e;
+			border-color: #FCA311;
+			box-shadow: 0 0 0 1px #FCA311;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2494,8 +2509,8 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			color: #f2849e !important;
-			box-shadow: inset 0 0 0 2px #f2849e;
+			color: #FCA311 !important;
+			box-shadow: inset 0 0 0 2px #FCA311;
 		}
 
 		input[type="submit"]:active,
@@ -2537,7 +2552,7 @@ input, select, textarea {
 			input[type="button"].primary:hover,
 			button.primary:hover,
 			.button.primary:hover {
-				background-color: #f2849e;
+				background-color: #FCA311;
 			}
 
 			input[type="submit"].primary:active,
@@ -2928,7 +2943,7 @@ input, select, textarea {
 						}
 
 						#header nav ul li a[href="#menu"]:before {
-							background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 8px%3B stroke: %23f2849e%3B %7D%3C/style%3E%3Cline x1='0' y1='25' x2='100' y2='25' /%3E%3Cline x1='0' y1='50' x2='100' y2='50' /%3E%3Cline x1='0' y1='75' x2='100' y2='75' /%3E%3C/svg%3E");
+							background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 8px%3B stroke: %23FCA311%3B %7D%3C/style%3E%3Cline x1='0' y1='25' x2='100' y2='25' /%3E%3Cline x1='0' y1='50' x2='100' y2='50' /%3E%3Cline x1='0' y1='75' x2='100' y2='75' /%3E%3C/svg%3E");
 							opacity: 0;
 						}
 
@@ -3078,7 +3093,7 @@ input, select, textarea {
 			}
 
 			#menu > .close:before {
-				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 8px%3B stroke: %23f2849e%3B %7D%3C/style%3E%3Cline x1='15' y1='15' x2='85' y2='85' /%3E%3Cline x1='85' y1='15' x2='15' y2='85' /%3E%3C/svg%3E");
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 8px%3B stroke: %23FCA311%3B %7D%3C/style%3E%3Cline x1='15' y1='15' x2='85' y2='85' /%3E%3Cline x1='85' y1='15' x2='15' y2='85' /%3E%3C/svg%3E");
 				opacity: 0;
 			}
 
@@ -3161,6 +3176,10 @@ input, select, textarea {
 			}
 
 		}
+	#main .frames {
+		width: 100% ;
+		height: 400px ;
+	}
 
 /* Footer */
 
