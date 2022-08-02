@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -40,12 +41,12 @@
 						<h2>Menu</h2>
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li><a href="full_list.html">Full Rankings</a></li>
+							<li><a href="full-rankings.html">Full Rankings</a></li>
 							<li><a href="game_archive.html">Game Archives</a></li>
 							<li><a href="statistics.html">Statistics</a></li>
 							<li><a href="interviews.html">Interviews</a></li>
-							<li><a href="future-features.html">Future Features</a></li>
 							<li><a href="support.html">Support</a></li>
+							<li><a href="future-features.html">Future Features</a></li>
 						</ul>
 					</nav>
 
@@ -59,19 +60,28 @@
 						</div>
 						<div class="inner">
 							<h2>Rankings Table</h2>
-							<iframe src="full_list.html" title="Full Rankings" class="frames" height="500px"></iframe>
+							<!--iframe src="full_list.html" title="Full Rankings" class="frames" height="500px"></iframe-->
+							<p><i>Click column headers to sort, or filter with the search box below.</i></p>
+							<input type="text" id="myinput" placeholder="Search..." title="Type in something"><br>
+							<table class="table-wrapper">
+								<thead><tr>
+									<th><span id="rank" class="w3-button table-column">Rank <i class="caret"></span></th>
+									<th><span id="corporation" class="w3-button table-column">Corporation <i class="caret"></span></th>
+									<th><span id="rating" class="w3-button table-column">Rating <i class="caret"></span></th>
+									<th><span id="delta" class="w3-button table-column">Δ <i class="caret"></span></th>
+								</tr></thead>
+								<tbody id="full_list"></tbody>
+							</table>
 						</div>
 					</div>
 
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner">
-								<h2>Follow</h2>
+							<section>
+								<h2>Get In Touch</h2>
 								<ul class="icons">
-									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+									<li><a href="https://discord.gg/p588eHaFqh" class="icon brands style2 fa-discord"><span class="label">Discord</span></a></li>
 								</ul>
 							</section>
 							<ul class="copyright">
@@ -88,6 +98,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script src="assets/js/tables.js"></script>
 	</body>
 </html>
