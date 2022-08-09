@@ -1,6 +1,488 @@
-Rank,Corporation    ,Rating,Δ
- 1,Legion          ,"1,634",-39
- 2,Hinterm Mond    ,"1,627", -
- 3,StarControl     ,"1,617",+9
- 4,BlackStar Order ,"1,546",-41
- 5,Kharon Shipping ,"1,518",-33
+rank,corporation,rating,delta
+  1,Legion          ,1634,-39
+  2,Hinterm Mond    ,1627,0
+  3,StarControl     ,1617,9
+  4,BlackStar Order ,1546,-41
+  5,Kharon Shipping ,1518,-33
+  6,Auscorp         ,1461,1
+~  ,System Shock    ,1446,-29
+  7,Karanth         ,1381,-7
+  8,Unimatrix Zero  ,1361,13
+  9,DadCorp         ,1358,27
+ 10,Spacecrevards   ,1358,-24
+ 11,Yishun CC       ,1311,29
+ 12,OntarioDynasty  ,1294,-10
+ 13,DUNE            ,1292,-13
+~  ,RUS             ,1292,-21
+ 14,Anla'Shok       ,1282,-44
+ 15,Ender           ,1249,-44
+ 16,ГОРИЗОНТ        ,1242,-18
+~  ,Hades Corpo     ,1238,-18
+ 17,Ark Summit      ,1230,18
+~  ,Final           ,1225,0
+ 18,The Time Lords  ,1212,-5
+~  ,InfamousExiles  ,1199,-16
+ 19,Team Elite      ,1196,1
+ 20,Nearland Ind    ,1182,-16
+ 21,Imperium XIII   ,1170,0
+ 22,Embers Rising   ,1153,36
+ 23,Watchers        ,1146,-13
+ 24,HORNET          ,1146,-58
+ 25,EradicatorElite ,1145,-13
+ 26,Black Solaris   ,1141,12
+ 27,Tacitus         ,1128,22
+~  ,NERF            ,1123,-12
+ 28,Sith Empire     ,1112,-11
+~  ,Canadian Army   ,1110,-11
+ 29,Dark Skai       ,1109,-11
+ 30,Wintercomes     ,1090,-10
+~  ,EMP             ,1089,-10
+ 31,Spacefleet      ,1087,20
+ 32,Lexx            ,1086,-1
+ 33,Greener Pastures,1080,28
+ 34,$TAR$           ,1080,8
+ 35,Grunthal Gang   ,1079,45
+~  ,Kyлak           ,1074,-9
+ 36,Star Fall       ,1068,71
+ 37,Weyland Corp    ,1056,20
+ 38,Terranova       ,1054,16
+ 39,Void Consortium ,1051,61
+ 40,Orion           ,1047,-8
+~  ,NOVA            ,1047,-8
+~  ,BRhue           ,1047,-8
+ 41,GermanIndustrie ,1046,-5
+ 42,Metal Nova      ,1044,10
+ 43,DTC             ,1036,12
+ 44,Internationals  ,1033,-8
+ 45,Famous Assassins,1031,0
+~  ,Continuum       ,1030,39
+ 46,Blood Brigade   ,1027,155
+~  ,Wacky Wabbits   ,1027,0
+ 47,H3LL FLAY3RS    ,1025,0
+~  ,Order of Hades  ,1024,0
+~  ,Rise Up         ,1023,0
+ 48,Furyan Corps.   ,1017,-9
+ 49,Bastion         ,1016,4
+~  ,Salamanders     ,1014,0
+ 50,UKR Spase       ,1012,-25
+~  ,Polaris         ,1011,-5
+~  ,Stellar Exports ,1007,0
+~  ,Urban Legends   ,1006,0
+~  ,nebulous        ,1005,0
+~  ,Ancient Library ,1004,0
+ 51,Black Sun       ,1004,-16
+~  ,42-Omatic Corp  ,1002,0
+~  ,Star-Jump CORPS ,1001,0
+~  ,For Ever HWI    ,1001,0
+~  ,Stargate Corp   ,1001,45
+~  ,Red Coat Mafia  ,998,0
+~  ,Tormenta        ,998,-23
+ 52,Red Dawn        ,998,83
+~  ,Because Why Not ,995,0
+~  ,USSC            ,995,0
+~  ,Toxic           ,995,0
+~  ,TiesaFoundation ,995,0
+~  ,Russian Team    ,994,0
+~  ,Grummibarenbande,994,0
+~  ,Les Francaises  ,993,0
+~  ,DISS LIGA       ,993,0
+~  ,kumzumir        ,992,0
+ 53,Elite           ,992,-4
+ 54,Widow Makers    ,991,0
+ 55,Bounty Hunters  ,991,-63
+~  ,龙门星团            ,989,0
+~  ,Vendetta Squad  ,989,0
+~  ,我有大氣球           ,989,0
+~  ,Delta Strike    ,988,0
+~  ,Prosperity      ,988,0
+~  ,龙门训练营           ,988,0
+~  ,E.T.A          ,985,-10
+~  ,Saltarrocas    ,983,0
+~  ,POCCNR         ,983,-1
+~  ,TheSpacingGuild,982,0
+~  ,Rogue Hero's   ,981,0
+~  ,Omega Alpha    ,981,0
+~  ,Titan Corp.    ,979,0
+ 56,USSR            ,977,0
+~  ,UAGC            ,975,0
+~  ,The Black Bulls ,975,0
+~  ,Avabel Online   ,974,0
+~  ,Phoenix Rising  ,974,0
+~  ,MAPCIOKN        ,974,-11
+~  ,Argentina 1.0   ,972,0
+~  ,Dropbears Inc   ,972,0
+ 57,ANBEPCAHTbl     ,972,16
+~  ,battlesquadron  ,971,0
+~  ,Sternenflotte   ,971,0
+~  ,Space Penguins  ,970,0
+~  ,M4-Legends      ,969,0
+ 58,Austria         ,969,0
+~  ,Soylent Corp.   ,967,0
+~  ,Imperial Armada ,967,0
+ 59,JTPS            ,966,-2
+~  ,AMБPEЛЛA        ,966,0
+~  ,Sternenwanderer ,965,0
+~  ,The First Order ,965,0
+~  ,Society of Sin  ,961,-10
+~  ,The BR Project  ,961,0
+ 60,TPYNRNR         ,961,-12
+~  ,Paиoн No 9      ,958,0
+~  ,ZEN             ,958,0
+ 61,Trade Station   ,956,0
+~  ,#VALUE!,956,0
+~  ,Españoles       ,955,-18
+ 62,Farland Ind.    ,954,0
+ 63,The Asylum      ,954,-4
+~  ,Avengers        ,954,0
+~  ,Ahamkara        ,952,-7
+~  ,H香港K            ,950,0
+~  ,Old Men Gaming  ,950,0
+ 64,Rocket-by Baby  ,948,0
+~  ,Балтийский флот ,948,0
+~  ,Trade Systems   ,948,0
+~  ,Titan Basecamp  ,948,0
+~  ,Dansk           ,948,0
+~  ,Collective      ,948,0
+~  ,Elite Penguins  ,948,0
+ 65,Space Donuts    ,947,0
+~  ,Cool Casual     ,947,0
+ 66,Corporation     ,946,24
+~  ,LossFarm No. 648,945,0
+ 67,the heavy       ,945,-12
+~  ,Avantgarde      ,945,0
+~  ,Obsidian        ,945,0
+~  ,龙冂训练营           ,943,0
+~  ,Domus           ,943,0
+~  ,Quilliance      ,943,0
+~  ,Tёmный Bиxpь    ,943,0
+~  ,Enigma          ,942,0
+~  ,AlSounT         ,942,0
+~  ,Guardians       ,942,0
+~  ,BKC             ,942,0
+ 68,pirates spatial ,941,0
+ 69,Gulinga         ,940,0
+~  ,Midland Ind.    ,939,0
+~  ,Space Oddity    ,937,0
+~  ,Octoberpierynm  ,937,0
+~  ,Aus Alliance    ,935,0
+ 70,星呢月球            ,934,0
+~  ,CnGR            ,933,0
+~  ,Гaлaктикa Элa   ,933,0
+~  ,The Goonies     ,933,0
+~  ,Space bastards  ,933,0
+~  ,Star Command    ,932,0
+~  ,Gamekings       ,932,0
+~  ,Galaxia         ,932,0
+~  ,Lost Legion     ,931,0
+ 71,LOST PIRATES    ,930,-26
+~  ,The Star League ,930,-1
+~  ,Aggronauten     ,930,22
+~  ,OntarioDominion ,929,0
+ 72,Tartaros Armada ,929,22
+~  ,Int. Trading Co ,928,0
+~  ,Best            ,927,0
+~  ,Delta Nation    ,925,0
+~  ,Corvus Ind.     ,925,0
+~  ,HИФИГACEБ       ,925,0
+~  ,Interstellar    ,925,0
+~  ,Farmville       ,925,0
+~  ,Star Wars       ,924,0
+~  ,Core Infliction ,923,0
+~  ,AlfaOmega       ,923,0
+~  ,Galactic Force  ,923,0
+~  ,Kpanhnn Kocmoc  ,923,0
+~  ,帝国军事学院          ,923,0
+~  ,Fomorians Eire  ,922,0
+~  ,kdy             ,922,0
+~  ,EZCO            ,922,0
+~  ,VALLKIRIA       ,920,0
+~  ,Ritter der Nuss ,920,0
+~  ,VoidCorp        ,920,-4
+~  ,DarkMoon        ,919,0
+~  ,Steak n' Shake  ,918,0
+ 73,海賊ギルド           ,918,-12
+~  ,Ironbear Legion ,918,0
+~  ,STAR TERROR CZ  ,917,0
+~  ,Corp. Estelar   ,917,0
+ 74,Rising star     ,916,-30
+~  ,T E H b         ,916,0
+~  ,DegobaSystem    ,916,0
+~  ,Gwiezdna Horda  ,916,0
+~  ,Kobol           ,915,0
+~  ,Hamburg AG 2    ,915,-12
+~  ,KLM             ,914,0
+~  ,Sky Walkers     ,914,0
+~  ,Justice League  ,914,0
+~  ,EGO             ,914,0
+~  ,Defiant wolfs   ,913,0
+~  ,Nmnepnr         ,913,0
+ 75,ENFORCERS       ,913,0
+~  ,Pandora's Star  ,913,-7
+~  ,Deutsch Staat D ,913,0
+~  ,Nooooobs        ,912,-3
+~  ,Anke none       ,912,0
+~  ,ShalaskanEmpire ,911,0
+~  ,Italian Stars   ,911,0
+~  ,NoweUkladyll    ,911,0
+~  ,Stalkers' Zone  ,911,0
+ 76,Polish Pirates  ,911,-11
+ 77,G.M.U.          ,911,0
+~  ,Star Dust       ,910,0
+~  ,GalaxHitchikers ,910,0
+~  ,XenoCorp        ,909,0
+~  ,Battle Academy  ,908,0
+~  ,SYNDICATE       ,907,0
+~  ,Diplomats Union ,907,0
+~  ,The Fracture    ,905,0
+~  ,Anarchy         ,904,0
+~  ,exirium         ,903,0
+~  ,The trade pub   ,903,0
+~  ,Turk Yildizlari ,903,-9
+~  ,White Solaris   ,903,0
+~  ,Abanoh          ,902,0
+~  ,BattleCo        ,901,0
+~  ,Flight and War  ,900,0
+~  ,Green Alliance  ,900,0
+~  ,Legion Estelar  ,900,0
+~  ,KOPNOPAUNR 3NA  ,900,0
+~  ,Yellow Dwarf    ,900,0
+~  ,星䂓地㺷            ,900,0
+ 78,WFOS            ,900,-73
+~  ,Españoles 2     ,900,0
+~  ,W.O.A           ,900,0
+~  ,Squadron        ,899,0
+ 79,Das Imperium    ,899,0
+~  ,Romania         ,899,0
+~  ,LIETUVA         ,898,0
+~  ,Regulus         ,898,0
+~  ,NuevaFederacion ,898,0
+~  ,Evil Empire     ,898,0
+~  ,11th Engineers  ,898,0
+~  ,Teeny's WS      ,897,0
+~  ,AMG             ,897,0
+~  ,Hellfire Club   ,897,0
+~  ,Tnxnn Omyt      ,896,0
+~  ,Guardia Oscura  ,896,0
+~  ,Star Gate       ,896,0
+~  ,bob             ,896,0
+~  ,Simply Uranus   ,896,0
+~  ,AltCorp Inc     ,895,0
+~  ,Panola Corp.    ,895,0
+~  ,77=49           ,895,0
+~  ,Heyaepxnmble    ,895,0
+~  ,aranas-vermelha ,895,0
+~  ,Acгapд          ,895,0
+~  ,RESISTENCIA     ,895,0
+~  ,Foreshadowing   ,895,0
+~  ,星舰地球            ,895,0
+~  ,Created         ,895,0
+~  ,Polaris Corp.   ,894,0
+~  ,The Promenade   ,894,0
+~  ,Aobpothbie Nioan,894,44
+~  ,PHOENIX         ,894,0
+ 80,Black Mirror Co ,894,-3
+~  ,The Herd        ,894,0
+~  ,Brazilcorp.     ,893,0
+~  ,M3K             ,893,0
+~  ,BLOK EKIPA      ,893,0
+~  ,Void Dominion   ,893,0
+~  ,Russian Corp    ,893,0
+~  ,GalaxyGuardians ,892,0
+~  ,Draconis        ,892,0
+~  ,Star War School ,892,0
+~  ,Soul System     ,892,0
+~  ,OPA             ,892,0
+~  ,RedFoxCorp      ,892,0
+~  ,space rats      ,892,0
+~  ,Majapahit       ,892,0
+~  ,Helion Prime    ,892,0
+~  ,TITANS          ,891,0
+~  ,Daemon Runners  ,891,0
+~  ,Hun Avengers    ,891,0
+~  ,Sol             ,891,0
+~  ,SveaEmpire      ,891,-9
+~  ,Speakeasy       ,891,0
+~  ,The Guardians   ,890,0
+~  ,Simply Chaos    ,890,0
+~  ,UFP             ,890,0
+~  ,Likapa          ,890,0
+~  ,N7 Elite Forces ,890,0
+~  ,42 Nova Corps.  ,890,0
+~  ,COЮЗ Akanemnr   ,889,0
+~  ,New Utopia      ,889,0
+~  ,Zanganos        ,889,0
+~  ,ALIANZA 4       ,888,0
+~  ,The Claw        ,888,0
+~  ,Dark Age        ,888,0
+~  ,White Dwarf     ,888,0
+~  ,Hermes          ,888,0
+~  ,BR Gear         ,888,0
+~  ,Hun Generals    ,887,0
+~  ,R.S.F.          ,887,0
+~  ,On en a Gros !  ,886,0
+~  ,A Team          ,886,0
+~  ,Dragon Eclipse  ,886,0
+~  ,pycb            ,885,-10
+~  ,Star Destroyers ,885,0
+~  ,The Outfit      ,884,0
+~  ,White Star Inc. ,884,0
+ 81,Anomaly         ,884,18
+~  ,7SinS           ,884,0
+~  ,Pulsar          ,884,0
+~  ,Rusty legacy    ,884,0
+~  ,We R Bad        ,884,0
+~  ,Legionnaires    ,884,0
+~  ,INFINITY STAR   ,884,0
+~  ,仙女座星雲           ,884,0
+~  ,Legion Imperial ,883,0
+~  ,Sektion 31      ,883,0
+~  ,Durham Dragons  ,883,0
+~  ,Rabid Butterfly ,883,0
+~  ,Silver Guard    ,883,0
+~  ,Alpha Nation    ,882,0
+~  ,RussianRangers  ,881,0
+~  ,Corp Du Jour    ,881,0
+~  ,Void            ,881,0
+ 82,IX Nernoh       ,881,-9
+ 83,Covenant        ,881,37
+~  ,OntarioDomicile ,881,0
+~  ,401(K)          ,881,0
+~  ,群星联合会           ,881,0
+~  ,Crazy Monkeys   ,881,-10
+ 84,Rocinante       ,880,0
+~  ,JerK            ,880,0
+~  ,Battlestar FR   ,880,0
+~  ,Alpha Tauri     ,880,0
+~  ,Bo3poxaehne     ,880,0
+~  ,United Stars    ,879,-5
+~  ,TSI Inc.        ,879,0
+~  ,Nюбители пива   ,878,0
+~  ,USA Corp        ,878,0
+~  ,Peak Extraction ,878,0
+~  ,Omega Nation    ,878,0
+~  ,RSR Bravo       ,878,0
+ 85,Cnythnk         ,878,0
+~  ,Curcubeu        ,877,0
+~  ,Farming Inc.    ,877,0
+~  ,alienigenas     ,877,27
+~  ,The Force       ,876,0
+~  ,Dreckiger Rest  ,876,0
+~  ,Axiom           ,875,25
+~  ,Alpaca Haven    ,875,0
+~  ,SNSS            ,875,0
+~  ,Les Chevaliers  ,875,-8
+~  ,Любители Пива   ,875,0
+~  ,中国家民            ,875,0
+~  ,OntarioDistrict ,875,25
+~  ,I.N.D.I.G.O     ,875,0
+~  ,Bloodtide       ,875,0
+~  ,★后?明?星?         ,874,24
+~  ,RSI             ,874,0
+~  ,Prophecy        ,874,-18
+~  ,The X-Files     ,874,0
+~  ,Crazy Elite     ,874,0
+ 86,PocKocMoc       ,873,0
+~  ,Special Force   ,873,0
+~  ,太空的猫            ,873,0
+~  ,Parhapek        ,872,0
+ 87,MAQUIS          ,871,-4
+~  ,Serenity        ,871,-3
+~  ,Federation      ,870,-10
+~  ,Discordia       ,870,0
+~  ,PODER ETERNO    ,870,0
+~  ,Free Thinkers 2 ,870,0
+~  ,우주미아            ,869,0
+~  ,Galactic Otters ,868,0
+~  ,Big Hammer      ,868,0
+~  ,Winged Phoenix  ,868,0
+~  ,ANZAC Warriors  ,868,0
+~  ,Star Fox        ,867,0
+ 88,Galactic Empire ,867,-16
+~  ,Bcenehckne 40%  ,867,0
+ 89,Knights Ronin   ,867,-17
+~  ,Dragon Army     ,866,-17
+~  ,혁명군             ,865,-15
+~  ,UnionofSpace    ,865,15
+~  ,FAIR            ,864,0
+~  ,Dauntless       ,864,0
+~  ,Highland Ind.   ,864,0
+~  ,华夏星海            ,864,0
+ 90,ROGUE ONE       ,863,0
+~  ,第一序列            ,861,39
+~  ,Peaky Blinders  ,861,0
+~  ,Space Pirate    ,861,-7
+~  ,SALTARDIS       ,860,0
+~  ,UNSC            ,860,0
+~  ,Abh             ,860,0
+~  ,CommCody & LPA  ,860,0
+ 91,USA             ,860,0
+~  ,West Worlders   ,860,0
+ 92,Deadspace       ,859,9
+~  ,2nd Squad       ,859,0
+~  ,Seila           ,859,0
+~  ,深空补给港           ,859,0
+~  ,Gummibarenbande ,859,0
+~  ,The Picard      ,859,0
+~  ,YETI Collective ,859,0
+~  ,CTG             ,858,8
+ 93,FreeSpcAlliance ,858,0
+~  ,Hipernova       ,858,0
+~  ,Industrial W.O  ,858,0
+~  ,Minutemen       ,858,0
+~  ,lucky cats      ,856,0
+ 94,Star Jumpers    ,856,0
+~  ,COЮЗ            ,856,0
+~  ,Killer Shadow   ,855,-4
+~  ,Variants        ,855,-7
+~  ,Tycho Corp      ,855,-7
+~  ,Jaggernaut      ,855,-7
+~  ,Newbs           ,853,0
+ 95,Death Flight    ,853,-33
+~  ,Space Balls     ,852,0
+~  ,debutant fr     ,851,0
+~  ,United Galaxies ,851,0
+~  ,Ykp ihtpobeptn  ,851,-4
+~  ,Ten Forward     ,851,0
+~  ,Nebula          ,850,0
+~  ,Wispered Storm  ,850,0
+~  ,YAL             ,848,0
+~  ,Glashan         ,848,-15
+~  ,C'est pas faux! ,847,0
+~  ,Providence      ,845,-14
+~  ,Galactic gods   ,845,-5
+~  ,Aepxaba Pycb    ,845,-8
+~  ,CCCP 2.0        ,845,-5
+~  ,지고 받자           ,845,0
+~  ,Stella Glow     ,845,-5
+~  ,Les Tilotest    ,844,-6
+~  ,BRASIL STAR     ,844,-31
+ 96,Lacuna Ind.     ,844,-16
+~  ,Lights Off      ,844,-7
+ 97,Rogue Corp      ,843,0
+~  ,NERF TOY'S      ,843,0
+~  ,Swiss Chillers  ,843,0
+ 98,Hydra           ,842,-1
+~  ,RATAS           ,842,-8
+ 99,Dumpster Fire   ,842,0
+~  ,No Orbit        ,842,0
+~  ,ITA             ,842,0
+~  ,TGY Inc.        ,841,0
+~  ,CCCP            ,840,0
+100,First Squad     ,839,-11
+~  ,水星联合织           ,839,-11
+101,CbrtbleHeroAhnkn,838,0
+~  ,Sons of Liberty ,836,0
+~  ,Rocket-Babies   ,836,0
+~  ,GermanSpaceUno. ,835,-8
+102,Sprite          ,834,-18
+~  ,Madison Holding ,833,0
+103,KARI            ,828,-3
+~  ,PACCBET         ,827,-28
+~  ,GDZ             ,825,0
+104,Starsailors     ,825,-4
+105,Astra Ultima    ,824,0
+~  ,(_(_Vossk_)_)   ,823,-27
+106,Path of Hades   ,816,31
+107,Space Marine    ,809,-22
+108,世外桃源            ,807,0
+109,Solysis         ,779,0
