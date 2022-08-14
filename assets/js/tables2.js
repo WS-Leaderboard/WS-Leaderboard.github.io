@@ -1,6 +1,8 @@
 /*
 	Modified code derived from various internet sources, primarily:
 	https://betterprogramming.pub/sort-and-filter-dynamic-data-in-table-with-javascript-e7a1d2025e3c
+	Convert csv to json:
+	https://www.convertcsv.com/csv-to-json.htm
 */
 var caretUpClassName = 'fa fa-caret-up';
 var caretDownClassName = 'fa fa-caret-down';
@@ -67,23 +69,24 @@ function populateTable() {
 	table.innerHTML = '';
 	for (let data of tableData) {
 		let row = table.insertRow(-1);
-		let date = row.insertCell(0);
-		date.innerHTML = data.date;
 
-		let players = row.insertCell(1);
-		players.innerHTML = data.players;
-
-		let team1 = row.insertCell(2);
+		let team1 = row.insertCell(0);
 		team1.innerHTML = data.team1;
 
-		let score1 = row.insertCell(3);
+		let score1 = row.insertCell(1);
 		score1.innerHTML = data.score1;
 
-		let score2 = row.insertCell(4);
+		let score2 = row.insertCell(2);
 		score2.innerHTML = data.score2;
 
-		let team2 = row.insertCell(5);
+		let team2 = row.insertCell(3);
 		team2.innerHTML = data.team2;
+		
+		let players = row.insertCell(4);
+		players.innerHTML = data.players;
+		
+		let date = row.insertCell(5);
+		date.innerHTML = data.date;
 	}
 
 	filterTable();
