@@ -1,6 +1,8 @@
 /*
 	Modified code derived from various internet sources, primarily:
 	https://betterprogramming.pub/sort-and-filter-dynamic-data-in-table-with-javascript-e7a1d2025e3c
+	Convert csv to json:
+	https://www.convertcsv.com/csv-to-json.htm
 */
 var caretUpClassName = 'fa fa-caret-up';
 var caretDownClassName = 'fa fa-caret-down';
