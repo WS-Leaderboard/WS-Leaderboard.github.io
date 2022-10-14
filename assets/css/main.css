@@ -101,7 +101,7 @@ input, select, textarea {
 		text-align: justify;
 	}
 	
-	@media screen and (max-width: 480px) {
+	@media screen and (max-width: 400px) {
 
 		html, body {
 			min-width: 320px;
@@ -1554,7 +1554,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 480px) {
+		@media screen and (max-width: 400px) {
 
 			.row {
 				display: flex;
@@ -2005,7 +2005,7 @@ input, select, textarea {
 				width: 100%;
 			}
 
-		@media screen and (max-width: 480px) {
+		@media screen and (max-width: 400px) {
 
 			ul.actions:not(.fixed) {
 				-moz-flex-direction: column;
@@ -2119,7 +2119,7 @@ input, select, textarea {
 					width: calc(25% - 0.375em);
 				}
 
-		@media screen and (max-width: 480px) {
+		@media screen and (max-width: 400px) {
 
 			form > .fields {
 				width: calc(100% + 3em);
@@ -2361,10 +2361,22 @@ input, select, textarea {
 			top: 0.25em;
 		}
 
-		.image.avatar {
-			/*width: 150px;
-			height: auto;*/
+		.image.small {
 			max-height: 150px;
+		}
+		.image.avatar {
+			max-height: 150px;
+			-moz-transition: -moz-transform 0.5s ease;
+			-webkit-transition: -webkit-transform 0.5s ease;
+			-ms-transition: -ms-transform 0.5s ease;
+			transition: transform 0.5s ease;
+		}
+		
+		.image.avatar:hover {
+			-moz-transform: scale(1.1);
+			-webkit-transform: scale(1.1);
+			-ms-transform: scale(1.1);
+			transform: scale(1.1);
 		}
 		
 		.image.fit {
@@ -2460,6 +2472,21 @@ input, select, textarea {
 
 			table.alt tfoot {
 				border-top: 0;
+			}
+
+		table.plain {
+			width: auto;
+			border-collapse: separate;
+		}
+			table.plain td {
+				padding: 0.5em 0.5em;
+				background-color: #ffffff;
+			}
+			table.plain th {
+				padding: 0.5em 0.5em;
+				border-bottom: solid 2px #c9c9c9;
+			}
+			table.plain tr {
 			}
 
 /* Button */
@@ -2839,7 +2866,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 480px) {
+		@media screen and (max-width: 400px) {
 
 			.tiles {
 				margin: 0;
@@ -3320,7 +3347,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 480px) {
+		@media screen and (max-width: 400px) {
 
 			#footer > .inner .copyright {
 				margin-top: 2em;
