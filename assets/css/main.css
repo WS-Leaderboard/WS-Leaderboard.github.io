@@ -25,7 +25,7 @@ article.style6 8499e7 (blue)
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
-code, del, dfn, em, img, ins, kbd, q, s, samp,
+code, under, del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b,
 u, i, center, dl, dt, dd, ol, ul, li, fieldset,
 form, label, legend, table, caption, tbody,
@@ -293,6 +293,13 @@ input, select, textarea {
 		font-size: 0.9em;
 		margin: 0 0.25em;
 		padding: 0.25em 0.65em;
+	}
+	
+	under {
+		font-size: 0.9em;
+		font-style: italic;
+		position: relative;
+		top: -0.5em;
 	}
 
 	pre {
