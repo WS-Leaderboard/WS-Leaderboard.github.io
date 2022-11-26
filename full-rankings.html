@@ -4,6 +4,23 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+<?
+$rankings = include './data/rankings.php';
+	function makeHtmlTable($data){
+		$html = [];
+		foreach ($data as $k => $tr) {
+			$html[] = "<tr>";
+			foreach($tr as $td){
+				$html[] = "<td>".trim($td)."</td>";
+			}
+			$html[] = "</tr>";
+		}
+		return implode('',$html);
+	}
+	function makeHtmlCaret(){
+		return '<i class="caret fa fa-caret-up"></i><i class="caret fa fa-caret-down"></i>';
+	}
+?>
 <html>
 	<head>
 		<title>WS Community Leaderboard</title>
@@ -70,12 +87,12 @@
 							<h3>Cycle 8.2</h3>
 							<table class="table-wrapper">
 								<thead><tr>
-									<th><span id="rank" class="w3-button table-column">Rank <i class="caret"></span></th>
-									<th><span id="corporation" class="w3-button table-column">Corporation <i class="caret"></span></th>
-									<th><span id="rating" class="w3-button table-column">Rating <i class="caret"></span></th>
-									<th><span id="delta" class="w3-button table-column">Δ <i class="caret"></span></th>
+									<th id="rank" class="tablesorter-header tablesorter-headerUnSorted"><span class="w3-button table-column">Rank<?=makeHtmlCaret()?></span></th>
+									<th id="corporation" class="tablesorter-header tablesorter-headerUnSorted"><span class="w3-button table-column">Corporation<?=makeHtmlCaret()?></span></th>
+									<th id="rating" class="tablesorter-header tablesorter-headerUnSorted"><span class="w3-button table-column">Rating<?=makeHtmlCaret()?></span></th>
+									<th id="delta" class="tablesorter-header tablesorter-headerUnSorted"><span class="w3-button table-column">Δ<?=makeHtmlCaret()?></span></th>
 								</tr></thead>
-								<tbody id="full_list"></tbody>
+								<tbody id="full_list"><?=makeHtmlTable($rankings)?></tbody>
 							</table>
 						</div>
 					</div>
@@ -100,11 +117,12 @@
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.tablesorter.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="data/rankings.js"></script>
+			<!-- <script src="data/rankings.js"></script> -->
 			<script src="assets/js/tables.js"></script>
 	</body>
 </html>
