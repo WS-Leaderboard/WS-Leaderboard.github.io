@@ -1,5 +1,6 @@
 WS Community Leaderboard
 by Timmeh (discord: timmeh42#1150)
+with backend magic by NandGates
 
 This website is based on a discord server (invite: https://discord.gg/p588eHaFqh) dedicated to rating and ranking Corporations from the game Hades Star in their White Star match results over time.
 
