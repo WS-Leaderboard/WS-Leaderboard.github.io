@@ -4,6 +4,10 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+<?
+$games = include './data/games.php';
+include './assets/php/tablemaker.php';
+?>
 <html>
 	<head>
 		<title>WS Community Leaderboard</title>
@@ -67,16 +71,9 @@
 							<!--iframe src="full_archive.html" title="Full Rankings" class="frames" height="500px"></iframe-->
 							<p><i>Filter with the search box below (column sorting not yet implemented).</i></p>
 							<input type="text" id="myinput" placeholder="Search..." title="Type in something"><br>
-							<table class="table-wrapper">
-								<thead><tr>
-									<th><span id="team1" class="w3-button table-column">Team 1 <i class="caret"></span></th>
-									<th><span id="score1" class="w3-button table-column">Score 1 <i class="caret"></span></th>
-									<th><span id="score2" class="w3-button table-column">Score 2 <i class="caret"></span></th>
-									<th><span id="team2" class="w3-button table-column">Team 2 <i class="caret"></span></th>
-									<th><span id="players" class="w3-button table-column">Players <i class="caret"></span></th>
-									<th><span id="date" class="w3-button table-column">Date <i class="caret"></span></th>
-								</tr></thead>
-								<tbody id="full_list"></tbody>
+							<table class="table-wrapper games">
+								<thead><?=makeHtmlTableHeader(["Team 1", "Score 1", "Score 2", "Team 2","Players","Date"])?></thead>
+								<tbody id="full_list"><?=makeHtmlTable($games)?></tbody>
 							</table>
 						</div>
 					</div>
@@ -101,12 +98,13 @@
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.tablesorter.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="data/games.js"></script>
-			<script src="assets/js/tables2.js"></script>
+			<script src="assets/js/tables.js"></script>
 
 	</body>
 </html>

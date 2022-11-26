@@ -40,12 +40,16 @@ input.addEventListener('keyup', function(event) {
 });
 
 
-var sortable = $('table.table-wrapper');
+var rankings = $('table.table-wrapper.rankings');
+var games = $('table.table-wrapper.games');
 
 $(document).ready(function(){
-	sortable.tablesorter({
+	rankings.tablesorter({
 		sortList: [[0,0]],
-		headers: {4:{sorter:false}}
+	});
+	games.tablesorter({
+		sortList: [[0,0]],
+		/* headers: {4:{sorter:false}} */
 	});
 });
 
