@@ -48,8 +48,9 @@ $(document).ready(function(){
 		sortList: [[0,0]],
 	});
 	games.tablesorter({
-		sortList: [[0,0]],
-		/* headers: {4:{sorter:false}} */
+		sortList: [[5,1]],
+		/* sortInitialOrder: "desc",
+		headers: {5 : {sorter:true, sortInitialOrder: "desc"} } */
 	});
 });
 
