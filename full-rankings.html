@@ -4,10 +4,6 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<?
-$rankings = include './data/rankings.php';
-include './assets/php/tablemaker.php';
-?>
 <html>
 	<head>
 		<title>WS Community Leaderboard</title>
@@ -73,8 +69,7 @@ include './assets/php/tablemaker.php';
 							<input type="text" id="myinput" placeholder="Search..." title="Type in something"><br>
 							<h3>Cycle 8.2</h3>
 							<table class="table-wrapper rankings">
-								<thead><?=makeHtmlTableHeader(["Rank", "Corporation", "Rating", "Δ"])?></thead>
-								<tbody id="full_list"><?=makeHtmlTable($rankings)?></tbody>
+								
 							</table>
 						</div>
 					</div>

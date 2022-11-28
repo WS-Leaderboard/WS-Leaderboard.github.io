@@ -5,10 +5,6 @@
 	https://www.convertcsv.com/csv-to-json.htm
 */
 
-var table = document.getElementById('full_list');
-var input = document.getElementById('myinput');
-
-
 function filterTable() {
 	let filter = input.value.toUpperCase();
 	rows = table.getElementsByTagName("TR");
@@ -33,25 +29,45 @@ function filterTable() {
 	}
 }
 
-filterTable();
-
+/* filterTable();
 input.addEventListener('keyup', function(event) {
 	filterTable();
 });
-
+ */
 
 var rankings = $('table.table-wrapper.rankings');
 var games = $('table.table-wrapper.games');
+var input = $('#myinput');
 
 $(document).ready(function(){
-	rankings.tablesorter({
-		sortList: [[0,0]],
-	});
-	games.tablesorter({
-		sortList: [[5,1]],
-		/* sortInitialOrder: "desc",
-		headers: {5 : {sorter:true, sortInitialOrder: "desc"} } */
-	});
-});
+	$('table.table-wrapper').html("LOADING...");
+	
+	if (rankings.length > 0){
+		$.get('assets/php/rankings.php', function(data) {
+			rankings.html(data);
+			rankings.tablesorter({
+				sortList: [[0,0]],
+			});
+		});
+		table = rankings;
+	}
+	if (games.length>0) {
+		$.get('assets/php/games.php', function(data) {
+			games.html(data);
+			games.tablesorter({
+				sortList: [[5,1]],
+				// sortInitialOrder: "desc",
+				//headers: {5 : {sorter:true, sortInitialOrder: "desc"} }
+			});
+		});
+		table = games;
+	}
+	input.on("keyup", function() {
+		var value = $(this).val().toLowerCase();
+		table.find('tbody tr').filter(function() {
+		  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+		});
+	  });
 
+});
 	
