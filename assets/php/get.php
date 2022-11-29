@@ -10,14 +10,14 @@ function getSync(){
     $name = '/site/'.$name[1].'s.';
 
     $url = explode(":",$_SERVER["SCRIPT_URI"]);
-    $url = $url[0] . "://". $_SERVER["HTTP_HOST"];
+    $url = ($url[0]?$url[0]:"http") . "://". $_SERVER["HTTP_HOST"];
     $site = $url . $name .'php';
 
-    $homepage = @file_get_contents($site);
-    if ( $homepage !== FALSE ) {
+    $source = @file_get_contents($site);
+    if ( $source !== FALSE ) {
         $filename = '.'.$name.'html';
         $handle = fopen($filename,"w");
-        fwrite($handle,$homepage);
+        fwrite($handle,$source);
         fclose($handle);
     }
 }
