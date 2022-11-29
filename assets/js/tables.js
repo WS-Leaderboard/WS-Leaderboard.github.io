@@ -41,9 +41,24 @@ var input = $('#myinput');
 
 $(document).ready(function(){
 	$('table.table-wrapper').html("LOADING...");
-	
+	/*
+		check IF github.io
+	*/
+	site = document.location;
+	if ( site.toString().includes("github.io")) {
+		file = 'html';
+	}else{
+		file = 'php';
+	}
+	/*
+		Load content or dynamic PHP or static
+		create static (linux console)
+		curl -L "http://ws-leaderboard.h2g.pl/site/games.php" > ./site/games.html
+		curl -L "http://ws-leaderboard.h2g.pl/site/rankings.php" > ./site/rankings.html
+
+	*/
 	if (rankings.length > 0){
-		$.get('assets/php/rankings.php', function(data) {
+		$.get('site/rankings.'+file, function(data) {
 			rankings.html(data);
 			rankings.tablesorter({
 				sortList: [[0,0]],
@@ -52,7 +67,7 @@ $(document).ready(function(){
 		table = rankings;
 	}
 	if (games.length>0) {
-		$.get('assets/php/games.php', function(data) {
+		$.get('site/games.'+file, function(data) {
 			games.html(data);
 			games.tablesorter({
 				sortList: [[5,1]],
