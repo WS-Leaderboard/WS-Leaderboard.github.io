@@ -1,7 +1,7 @@
 /*
 	Table content async loader
 	*
-	depence: jQuery
+	depence: jQuery TableSorter
 */
 var rankings = $('table.table-wrapper.rankings');
 var games = $('table.table-wrapper.games');
