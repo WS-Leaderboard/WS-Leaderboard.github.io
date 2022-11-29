@@ -2416,6 +2416,17 @@ input, select, textarea {
 
 /* Table */
 
+.tablesorter-headerUnSorted .caret, .tablesorter-headerDesc .fa-caret-up, .tablesorter-headerAsc .fa-caret-down{
+	display:none
+}
+.tablesorter-headerDesc .fa-caret-down{
+	display:inline-block;
+}
+.tablesorter-headerAsc .fa-caret-up{
+	display:inline-block;
+}
+table .caret {margin-left: 0.5em;}
+
 	.table-wrapper {
 		-webkit-overflow-scrolling: touch;
 		overflow-x: auto;
@@ -2493,8 +2504,7 @@ input, select, textarea {
 				padding: 0.5em 0.5em;
 				border-bottom: solid 2px #c9c9c9;
 			}
-			table.plain tr {
-			}
+			/* table.plain tr {} */
 
 /* Button */
 
@@ -2631,7 +2641,7 @@ input, select, textarea {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		postiion: relative;
+		position: relative;
 		margin: -2.5em 0 0 -2.5em;
 	}
 
@@ -2889,7 +2899,7 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		padding: 8em 0 0.1em 0 ;
+		padding: 2.5em 0 0.1em 0 ;
 	}
 
 		#header .logo {
@@ -2958,6 +2968,7 @@ input, select, textarea {
 						font-weight: 900;
 						letter-spacing: 0.35em;
 						text-transform: uppercase;
+						border:1px solid rgba(0, 0, 0, 0.5)
 					}
 
 					#header nav ul li a[href="#menu"] {

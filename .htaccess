@@ -1,0 +1,8 @@
+AddHandler application/x-httpd-php74 .php .html
+
+RewriteEngine On
+RewriteRule .* - [E=noabort:1]
+RewriteRule .* - [E=noconntimeout:1]
+
+php_value max_execution_time 65500
+#php_value allow_url_fopen On

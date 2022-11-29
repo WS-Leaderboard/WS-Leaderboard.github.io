@@ -1,126 +1,69 @@
 /*
-	Modified code derived from various internet sources, primarily:
-	https://betterprogramming.pub/sort-and-filter-dynamic-data-in-table-with-javascript-e7a1d2025e3c
-	Convert csv to json:
-	https://www.convertcsv.com/csv-to-json.htm
+	Table content async loader
+	*
+	depence: jQuery TableSorter
 */
-var caretUpClassName = 'fa fa-caret-up';
-var caretDownClassName = 'fa fa-caret-down';
-var table = document.getElementById('full_list');
-var input = document.getElementById('myinput');
+var rankings = $('table.table-wrapper.rankings');
+var games = $('table.table-wrapper.games');
+var input = $('#myinput');
+var loading = "LOADING...";
 
-var tableData = rankingsData;
-
-const sort_by = (field, reverse, primer) => {
-
-	const sort_reverse = ["rank", "corporation"];
-	
-	const key = primer ?
-	function(x) {
-	  return primer(x[field]);
-	} :
-	function(x) {
-	  return x[field];
-	};
-
-	if (sort_reverse.includes(field)) {
-		reverse = !reverse ? 1 : -1;
+$(document).ready(function(){
+	/*
+		Paste Loading indicator, nothing fancy instead animated gif
+	*/
+	$('table.table-wrapper').html(loading);
+	/*
+		check IF github.io
+		then load static HTML, which should be synced with PHP
+		or load PHP on hosting which support it
+	*/
+	site = document.location;
+	if ( site.toString().includes("github.io")) {
+		file = 'html';
+	}else{
+		file = 'php';
 	}
-	else {
-		reverse = !reverse ? -1 : 1;
+	/*
+		Load content or dynamic PHP or static, need to be in main directory
+		Linux/terminal
+			curl -L "http://ws-leaderboard.h2g.pl/site/games.php" > ./site/games.html
+			curl -L "http://ws-leaderboard.h2g.pl/site/rankings.php" > ./site/rankings.html
+		or Powershell (terminal)
+			wget "http://ws-leaderboard.h2g.pl/site/games.php"  -outfile "./site/games.html"
+			wget "http://ws-leaderboard.h2g.pl/site/rankings.php" -outfile "./site/rankings.html"
+	*/
+	if (rankings.length > 0){
+		$.get('site/rankings.'+file, function(data) {
+			rankings.html(data);
+			rankings.tablesorter({
+				// Start sort by Rating DESC
+				sortList: [[2,1]],
+			});
+		});
+		table = rankings;
 	}
-	
-	return function(a, b) {
-	return a = key(a), b = key(b), reverse * ((a > b) - (b > a));
-	};
-};
-
-function clearArrow() {
-	let carets = document.getElementsByClassName('caret');
-	for (let caret of carets) {
-		caret.className = "caret";
+	if (games.length>0) {
+		$.get('site/games.'+file, function(data) {
+			games.html(data);
+			games.tablesorter({
+				// Start sort by Date DESC
+				sortList: [[5,1]],
+				// sortInitialOrder: "desc",
+				//headers: {5 : {sorter:true, sortInitialOrder: "desc"} }
+			});
+		});
+		table = games;
 	}
-}
+	/*
+		Add event on search field (instead listener)
+	*/
+	input.on("keyup", function() {
+		var value = $(this).val().toLowerCase();
+		table.find('tbody tr').filter(function() {
+			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+		});
+	  });
 
-function toggleArrow(event) {
-	let element = event.target;
-	let caret, field, reverse;
-	if (element.tagName === 'SPAN') {
-		caret = element.getElementsByClassName('caret')[0];
-		field = element.id
-	}
-	else {
-		caret = element;
-		field = element.parentElement.id
-	}
-
-	let iconClassName = caret.className;
-	clearArrow();
-	if (iconClassName.includes(caretDownClassName)) {
-		caret.className = `caret ${caretUpClassName}`;
-		reverse = true;
-	} else {
-		reverse = false;
-		caret.className = `caret ${caretDownClassName}`;
-	}
-
-	tableData.sort(sort_by(field, reverse));
-	populateTable();
-}
-function populateTable() {
-	table.innerHTML = '';
-	for (let data of tableData) {
-		let row = table.insertRow(-1);
-		let rank = row.insertCell(0);
-		rank.innerHTML = data.rank;
-
-		let corporation = row.insertCell(1);
-		corporation.innerHTML = data.corporation;
-
-		let rating = row.insertCell(2);
-		rating.innerHTML = data.rating;
-
-		let delta = row.insertCell(3);
-		delta.innerHTML = data.delta;
-	}
-
-	filterTable();
-}
-
-function filterTable() {
-	let filter = input.value.toUpperCase();
-	rows = table.getElementsByTagName("TR");
-	let flag = false;
-
-	for (let row of rows) {
-	let cells = row.getElementsByTagName("TD");
-	for (let cell of cells) {
-		if (cell.textContent.toUpperCase().indexOf(filter) > -1) {
-			flag = true;
-			break;
-		}
-	}
-
-	if (flag) {
-		row.style.display = "";
-	} else {
-		row.style.display = "none";
-	}
-
-	flag = false;
-	}
-}
-
-populateTable();
-
-let tableColumns = document.getElementsByClassName('table-column');
-
-for (let column of tableColumns) {
-	column.addEventListener('click', function(event) {
-		toggleArrow(event);
-	});
-}
-
-input.addEventListener('keyup', function(event) {
-	filterTable();
 });
+	
