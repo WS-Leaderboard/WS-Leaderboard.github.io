@@ -15,7 +15,7 @@ function getSync(){
 
     $source = @file_get_contents($site);
     if ( $source !== FALSE ) {
-        $filename = '.'.$name.'html';
+        $filename = $_SERVER["DOCUMENT_ROOT"].$name.'html';
         $handle = fopen($filename,"w");
         fwrite($handle,$source);
         fclose($handle);
