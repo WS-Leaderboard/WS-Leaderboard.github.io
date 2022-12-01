@@ -20,7 +20,7 @@
 		}
         $html[] = "<tr>";
         foreach( $data as $k => $v ){
-            $html[] = '<th class="tablesorter-header tablesorter-headerUnSorted"><span class="w3-button table-column">'.( isset($overide[$k]) ? $overide[$k] : ucfirst($k) ). makeHtmlCaret() . '</span></th>';
+            $html[] = '<th class="tablesorter-header tablesorter-headerUnSorted"><span>'.( isset($overide[$k]) ? $overide[$k] : ucfirst($k) ). makeHtmlCaret() . '</span></th>';
         }
         $html[] = "</tr>";
         return implode('',$html);
