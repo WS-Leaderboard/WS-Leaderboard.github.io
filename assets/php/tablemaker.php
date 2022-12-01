@@ -15,7 +15,7 @@
 	}
     function makeHtmlTableHeader($data,$overide=[]){
         $html = [];
-		if ( count($data) > 1 ) {
+		if ( count($data) > 1 && is_array($data[0]) ) {
 			$data = $data[0];
 		}
         $html[] = "<tr>";
