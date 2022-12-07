@@ -1,487 +1,487 @@
 var rankingsData = [
  {
    "rank": "  1",
-   "corporation": "Legion            ",
-   "rating": 1644,
-   "delta": "8"
+   "corporation": "StarControl       ",
+   "rating": 1646,
+   "delta": "21"
  },
  {
    "rank": "  2",
-   "corporation": "StarControl       ",
-   "rating": 1625,
-   "delta": "31"
+   "corporation": "Legion            ",
+   "rating": 1644,
+   "delta": "0"
  },
  {
    "rank": "  3",
    "corporation": "Hinterm Mond      ",
-   "rating": 1586,
-   "delta": "1"
+   "rating": 1579,
+   "delta": "-7"
  },
  {
    "rank": "  4",
    "corporation": "BlackStar Order   ",
-   "rating": 1494,
-   "delta": "-12"
+   "rating": 1467,
+   "delta": "-26"
  },
  {
    "rank": "  5",
-   "corporation": "Kharon Shipping   ",
-   "rating": 1468,
-   "delta": "-28"
+   "corporation": "Auscorp           ",
+   "rating": 1451,
+   "delta": "-6"
  },
  {
    "rank": "  6",
-   "corporation": "Auscorp           ",
-   "rating": 1457,
-   "delta": "-8"
- },
- {
-   "rank": "~  ",
-   "corporation": "System Shock      ",
-   "rating": 1388,
-   "delta": "-24"
+   "corporation": "Kharon Shipping   ",
+   "rating": 1438,
+   "delta": "-30"
  },
  {
    "rank": "  7",
    "corporation": "DadCorp           ",
-   "rating": 1381,
-   "delta": "0"
+   "rating": 1395,
+   "delta": "13"
+ },
+ {
+   "rank": "~  ",
+   "corporation": "System Shock      ",
+   "rating": 1362,
+   "delta": "-26"
  },
  {
    "rank": "  8",
-   "corporation": "Karanth           ",
+   "corporation": "Karanth Corp.     ",
    "rating": 1359,
-   "delta": "-23"
+   "delta": "0"
+ },
+ {
+   "rank": "  9",
+   "corporation": "OntarioDynasty    ",
+   "rating": 1297,
+   "delta": "30"
  },
  {
    "rank": "~  ",
    "corporation": "Unimatrix Zero    ",
-   "rating": 1311,
-   "delta": "-20"
+   "rating": 1290,
+   "delta": "-22"
  },
  {
-   "rank": "  9",
+   "rank": "~  ",
    "corporation": "Spacecrevards     ",
-   "rating": 1309,
-   "delta": "-20"
+   "rating": 1287,
+   "delta": "-22"
  },
  {
    "rank": " 10",
    "corporation": "Ender             ",
    "rating": 1268,
-   "delta": "2"
+   "delta": "0"
  },
  {
    "rank": "~  ",
    "corporation": "DUNE              ",
    "rating": 1268,
-   "delta": "-18"
- },
- {
-   "rank": "~  ",
-   "corporation": "Yishun CC         ",
-   "rating": 1267,
-   "delta": "-18"
- },
- {
-   "rank": " 11",
-   "corporation": "OntarioDynasty    ",
-   "rating": 1267,
-   "delta": "-13"
- },
- {
-   "rank": " 12",
-   "corporation": "Grunthal Gang     ",
-   "rating": 1262,
-   "delta": "87"
+   "delta": "0"
  },
  {
    "rank": "~  ",
    "corporation": "RUS               ",
    "rating": 1250,
+   "delta": "0"
+ },
+ {
+   "rank": "~  ",
+   "corporation": "Yishun CC         ",
+   "rating": 1248,
+   "delta": "-19"
+ },
+ {
+   "rank": " 11",
+   "corporation": "Grunthal Gang     ",
+   "rating": 1233,
+   "delta": "-29"
+ },
+ {
+   "rank": " 12",
+   "corporation": "Ark Summit        ",
+   "rating": 1213,
    "delta": "-17"
  },
  {
+   "rank": "~  ",
+   "corporation": "Final             ",
+   "rating": 1204,
+   "delta": "0"
+ },
+ {
    "rank": " 13",
-   "corporation": "Ark Summit        ",
-   "rating": 1231,
-   "delta": "-16"
+   "corporation": "Best              ",
+   "rating": 1195,
+   "delta": "62"
  },
  {
    "rank": "~  ",
    "corporation": "ГОРИЗОНТ          ",
-   "rating": 1205,
-   "delta": "-15"
- },
- {
-   "rank": " 14",
-   "corporation": "Final             ",
-   "rating": 1204,
-   "delta": "-15"
+   "rating": 1189,
+   "delta": "-16"
  },
  {
    "rank": "~  ",
    "corporation": "Hades Corpo       ",
-   "rating": 1202,
-   "delta": "-15"
+   "rating": 1186,
+   "delta": "-16"
+ },
+ {
+   "rank": " 14",
+   "corporation": "Sith Empire       ",
+   "rating": 1182,
+   "delta": "11"
  },
  {
    "rank": " 15",
    "corporation": "Anla'Shok         ",
-   "rating": 1186,
-   "delta": "-19"
+   "rating": 1181,
+   "delta": "-5"
  },
  {
    "rank": " 16",
    "corporation": "The Time Lords    ",
-   "rating": 1179,
-   "delta": "-14"
+   "rating": 1164,
+   "delta": "-15"
  },
  {
    "rank": " 17",
    "corporation": "Nearland Ind      ",
-   "rating": 1179,
+   "rating": 1157,
+   "delta": "-22"
+ },
+ {
+   "rank": "~  ",
+   "corporation": "InfamousExiles    ",
+   "rating": 1153,
    "delta": "-14"
  },
  {
    "rank": " 18",
    "corporation": "Team Elite        ",
-   "rating": 1176,
-   "delta": "-2"
- },
- {
-   "rank": " 19",
-   "corporation": "Sith Empire       ",
-   "rating": 1171,
-   "delta": "11"
- },
- {
-   "rank": "~  ",
-   "corporation": "InfamousExiles    ",
-   "rating": 1167,
-   "delta": "-13"
- },
- {
-   "rank": " 20",
-   "corporation": "Imperium XIII     ",
-   "rating": 1145,
-   "delta": "-12"
- },
- {
-   "rank": " 21",
-   "corporation": "Embers Rising     ",
-   "rating": 1137,
+   "rating": 1146,
    "delta": "-30"
  },
  {
-   "rank": " 22",
-   "corporation": "Best              ",
-   "rating": 1133,
-   "delta": "206"
+   "rank": " 19",
+   "corporation": "Imperium XIII     ",
+   "rating": 1143,
+   "delta": "-2"
  },
  {
-   "rank": " 23",
+   "rank": " 20",
    "corporation": "Spacefleet        ",
-   "rating": 1125,
-   "delta": "3"
+   "rating": 1131,
+   "delta": "6"
  },
  {
    "rank": "~  ",
-   "corporation": "Watchers          ",
-   "rating": 1120,
-   "delta": "-11"
+   "corporation": "Tacitus           ",
+   "rating": 1123,
+   "delta": "19"
  },
  {
-   "rank": " 24",
+   "rank": "~  ",
+   "corporation": "The Watchers      ",
+   "rating": 1120,
+   "delta": "0"
+ },
+ {
+   "rank": " 21",
+   "corporation": "Dark Skai         ",
+   "rating": 1111,
+   "delta": "0"
+ },
+ {
+   "rank": "~  ",
    "corporation": "HORNET            ",
-   "rating": 1119,
-   "delta": "-11"
+   "rating": 1108,
+   "delta": "-12"
+ },
+ {
+   "rank": " 22",
+   "corporation": "Wintercomes       ",
+   "rating": 1106,
+   "delta": "18"
  },
  {
    "rank": "~  ",
    "corporation": "Black Solaris     ",
-   "rating": 1115,
+   "rating": 1104,
    "delta": "-11"
  },
  {
    "rank": "~  ",
    "corporation": "EradicatorElite   ",
-   "rating": 1115,
-   "delta": "-15"
- },
- {
-   "rank": " 25",
-   "corporation": "Dark Skai         ",
-   "rating": 1111,
-   "delta": "-1"
- },
- {
-   "rank": " 26",
-   "corporation": "Tacitus           ",
-   "rating": 1103,
-   "delta": "-10"
+   "rating": 1104,
+   "delta": "-11"
  },
  {
    "rank": "~  ",
    "corporation": "NERF              ",
-   "rating": 1099,
-   "delta": "-10"
- },
- {
-   "rank": " 27",
-   "corporation": "Wintercomes       ",
-   "rating": 1088,
-   "delta": "-9"
+   "rating": 1089,
+   "delta": "-11"
  },
  {
    "rank": "~  ",
    "corporation": "Canadian Army     ",
    "rating": 1087,
-   "delta": "-9"
+   "delta": "0"
  },
  {
-   "rank": " 28",
-   "corporation": "GermanIndustrie   ",
-   "rating": 1076,
-   "delta": "38"
+   "rank": " 23",
+   "corporation": "Embers Rising     ",
+   "rating": 1082,
+   "delta": "-55"
+ },
+ {
+   "rank": " 24",
+   "corporation": "Orion             ",
+   "rating": 1081,
+   "delta": "22"
  },
  {
    "rank": "~  ",
-   "corporation": "EMP               ",
+   "corporation": "ItBurnsWhenIEMP   ",
    "rating": 1069,
-   "delta": "-8"
+   "delta": "0"
  },
  {
-   "rank": " 29",
-   "corporation": "DTC               ",
-   "rating": 1065,
-   "delta": "-16"
+   "rank": " 25",
+   "corporation": "GermanIndustrie   ",
+   "rating": 1066,
+   "delta": "-9"
+ },
+ {
+   "rank": " 26",
+   "corporation": "Terranova         ",
+   "rating": 1058,
+   "delta": "5"
  },
  {
    "rank": "~  ",
    "corporation": "Greener Pastures  ",
-   "rating": 1061,
-   "delta": "-8"
+   "rating": 1053,
+   "delta": "-9"
  },
  {
-   "rank": " 30",
-   "corporation": "Orion             ",
-   "rating": 1059,
-   "delta": "28"
+   "rank": " 27",
+   "corporation": "Wacky Wabbits     ",
+   "rating": 1051,
+   "delta": "29"
  },
  {
    "rank": "~  ",
    "corporation": "Kyлak             ",
-   "rating": 1055,
+   "rating": 1047,
    "delta": "-8"
  },
  {
-   "rank": " 31",
-   "corporation": "Terranova         ",
-   "rating": 1053,
-   "delta": "20"
- },
- {
-   "rank": " 32",
+   "rank": " 28",
    "corporation": "Star Fall         ",
-   "rating": 1050,
-   "delta": "-7"
- },
- {
-   "rank": " 33",
-   "corporation": "Blood Brigade     ",
-   "rating": 1048,
-   "delta": "-26"
- },
- {
-   "rank": " 34",
-   "corporation": "Lexx              ",
-   "rating": 1047,
-   "delta": "-13"
- },
- {
-   "rank": " 35",
-   "corporation": "Bounty Hunters    ",
    "rating": 1042,
-   "delta": "52"
+   "delta": "-8"
  },
  {
-   "rank": " 36",
+   "rank": " 29",
+   "corporation": "Blood Brigade     ",
+   "rating": 1040,
+   "delta": "-8"
+ },
+ {
+   "rank": "~  ",
    "corporation": "Weyland Corp      ",
    "rating": 1039,
-   "delta": "-7"
+   "delta": "0"
  },
  {
-   "rank": " 37",
-   "corporation": "Void Consortium   ",
-   "rating": 1034,
-   "delta": "-7"
+   "rank": " 30",
+   "corporation": "Bounty Hunters    ",
+   "rating": 1033,
+   "delta": "-9"
+ },
+ {
+   "rank": " 31",
+   "corporation": "РОССИЯ            ",
+   "rating": 1032,
+   "delta": "51"
  },
  {
    "rank": "~  ",
    "corporation": "NOVA              ",
    "rating": 1031,
+   "delta": "0"
+ },
+ {
+   "rank": " 32",
+   "corporation": "Metal Nova        ",
+   "rating": 1029,
+   "delta": "6"
+ },
+ {
+   "rank": "~  ",
+   "corporation": "Void Consortium   ",
+   "rating": 1027,
    "delta": "-7"
  },
  {
    "rank": "~  ",
    "corporation": "BRhue             ",
-   "rating": 1031,
-   "delta": "-6"
+   "rating": 1024,
+   "delta": "-7"
  },
  {
-   "rank": " 38",
-   "corporation": "Metal Nova        ",
+   "rank": " 33",
+   "corporation": "Red Dawn          ",
    "rating": 1023,
-   "delta": "-43"
+   "delta": "19"
  },
  {
-   "rank": " 39",
+   "rank": " 34",
    "corporation": "Tormenta          ",
    "rating": 1022,
-   "delta": "8"
+   "delta": "0"
  },
  {
-   "rank": "~  ",
-   "corporation": "Wacky Wabbits     ",
-   "rating": 1021,
-   "delta": "-6"
- },
- {
-   "rank": "~  ",
-   "corporation": "Order of Hades    ",
-   "rating": 1018,
-   "delta": "-6"
- },
- {
-   "rank": "~  ",
-   "corporation": "Rise Up           ",
-   "rating": 1017,
-   "delta": "-6"
+   "rank": " 35",
+   "corporation": "DTC               ",
+   "rating": 1019,
+   "delta": "-46"
  },
  {
    "rank": "~  ",
    "corporation": "Famous Assassins  ",
    "rating": 1017,
-   "delta": "-6"
- },
- {
-   "rank": " 40",
-   "corporation": "$TAR$             ",
-   "rating": 1013,
-   "delta": "-6"
- },
- {
-   "rank": " 41",
-   "corporation": "Bastion           ",
-   "rating": 1010,
-   "delta": "-5"
+   "delta": "0"
  },
  {
    "rank": "~  ",
-   "corporation": "Star-Jump CORPS   ",
-   "rating": 1010,
-   "delta": "9"
+   "corporation": "Order of Hades    ",
+   "rating": 1012,
+   "delta": "-6"
  },
  {
-   "rank": " 42",
+   "rank": "~  ",
+   "corporation": "Rise Up           ",
+   "rating": 1011,
+   "delta": "-6"
+ },
+ {
+   "rank": " 36",
    "corporation": "Stargate Corp     ",
    "rating": 1009,
-   "delta": "9"
+   "delta": "0"
  },
  {
-   "rank": " 43",
+   "rank": "~  ",
    "corporation": "Furyan Corps.     ",
    "rating": 1009,
-   "delta": "-8"
+   "delta": "0"
  },
  {
    "rank": "~  ",
    "corporation": "Salamanders       ",
    "rating": 1009,
-   "delta": "-5"
+   "delta": "0"
  },
  {
-   "rank": " 44",
+   "rank": " 37",
    "corporation": "Continuum         ",
    "rating": 1008,
-   "delta": "-39"
+   "delta": "0"
  },
  {
-   "rank": " 45",
+   "rank": " 38",
    "corporation": "H3LL FLAY3RS      ",
    "rating": 1007,
-   "delta": "-18"
+   "delta": "0"
  },
  {
-   "rank": " 46",
+   "rank": "~  ",
+   "corporation": "Prosperity        ",
+   "rating": 1007,
+   "delta": "19"
+ },
+ {
+   "rank": " 39",
    "corporation": "UKR Spase         ",
    "rating": 1007,
-   "delta": "-5"
+   "delta": "0"
  },
  {
    "rank": "~  ",
    "corporation": "Widow Makers      ",
    "rating": 1007,
-   "delta": "-5"
+   "delta": "0"
  },
  {
    "rank": "~  ",
    "corporation": "Polaris           ",
    "rating": 1006,
-   "delta": "-5"
+   "delta": "0"
  },
  {
-   "rank": " 47",
+   "rank": " 40",
    "corporation": "Internationals    ",
    "rating": 1005,
-   "delta": "-19"
+   "delta": "0"
  },
  {
-   "rank": " 48",
-   "corporation": "Red Dawn          ",
+   "rank": "~  ",
+   "corporation": "Bastion           ",
    "rating": 1004,
-   "delta": "6"
+   "delta": "-6"
  },
  {
    "rank": "~  ",
    "corporation": "Stellar Exports   ",
    "rating": 1002,
-   "delta": "-5"
+   "delta": "0"
+ },
+ {
+   "rank": " 41",
+   "corporation": "$TAR$             ",
+   "rating": 1002,
+   "delta": "-11"
  },
  {
    "rank": "~  ",
    "corporation": "Urban Legends     ",
    "rating": 1001,
-   "delta": "-5"
+   "delta": "0"
  },
  {
    "rank": "~  ",
    "corporation": "Ancient Library   ",
    "rating": 1000,
-   "delta": "-4"
+   "delta": "0"
  },
  {
    "rank": "~  ",
    "corporation": "42-Omatic Corp    ",
    "rating": 1000,
-   "delta": "-2"
+   "delta": "0"
  },
  {
    "rank": "~  ",
    "corporation": "For Ever HWI      ",
    "rating": 1000,
-   "delta": "-1"
+   "delta": "0"
  },
  {
    "rank": "~  ",
    "corporation": "Titan Corp.       ",
    "rating": 997,
-   "delta": "34"
+   "delta": "0"
  },
  {
-   "rank": " 49",
-   "corporation": "Red Coat Mafia    ",
+   "rank": " 42",
+   "corporation": "Red_Coat_Mafia    ",
    "rating": 997,
    "delta": "0"
  },
@@ -540,10 +540,10 @@ var rankingsData = [
    "delta": "0"
  },
  {
-   "rank": " 50",
+   "rank": "~  ",
    "corporation": "ANBEPCAHTbl       ",
    "rating": 993,
-   "delta": "21"
+   "delta": "0"
  },
  {
    "rank": "~  ",
@@ -552,10 +552,22 @@ var rankingsData = [
    "delta": "0"
  },
  {
-   "rank": " 51",
+   "rank": "~  ",
+   "corporation": "USSR              ",
+   "rating": 992,
+   "delta": "16"
+ },
+ {
+   "rank": "~  ",
    "corporation": "Elite             ",
    "rating": 992,
    "delta": "0"
+ },
+ {
+   "rank": "~  ",
+   "corporation": "Star-Jump CORPS   ",
+   "rating": 991,
+   "delta": "-19"
  },
  {
    "rank": "~  ",
@@ -571,20 +583,14 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
-   "corporation": "Delta Strike      ",
-   "rating": 988,
-   "delta": "0"
+   "corporation": "Austria           ",
+   "rating": 989,
+   "delta": "20"
  },
  {
    "rank": "~  ",
-   "corporation": "Prosperity        ",
+   "corporation": "Delta Strike      ",
    "rating": 988,
-   "delta": "0"
- },
- {
-   "rank": " 52",
-   "corporation": "Galactic Empire   ",
-   "rating": 987,
    "delta": "0"
  },
  {
@@ -596,12 +602,6 @@ var rankingsData = [
  {
    "rank": "~  ",
    "corporation": "Saltarrocas       ",
-   "rating": 983,
-   "delta": "0"
- },
- {
-   "rank": " 53",
-   "corporation": "Black Sun         ",
    "rating": 983,
    "delta": "0"
  },
@@ -618,22 +618,16 @@ var rankingsData = [
    "delta": "0"
  },
  {
-   "rank": " 54",
-   "corporation": "The Star League   ",
-   "rating": 981,
-   "delta": "-7"
- },
- {
    "rank": "~  ",
    "corporation": "Rogue Hero's      ",
    "rating": 981,
    "delta": "0"
  },
  {
-   "rank": " 55",
-   "corporation": "POCCNR            ",
+   "rank": " 43",
+   "corporation": "Lexx              ",
    "rating": 981,
-   "delta": "0"
+   "delta": "-66"
  },
  {
    "rank": "~  ",
@@ -642,16 +636,10 @@ var rankingsData = [
    "delta": "0"
  },
  {
-   "rank": "~  ",
-   "corporation": "USSR              ",
-   "rating": 977,
-   "delta": "0"
- },
- {
-   "rank": "~  ",
-   "corporation": "Corporation       ",
-   "rating": 977,
-   "delta": "31"
+   "rank": " 44",
+   "corporation": "The Star League   ",
+   "rating": 979,
+   "delta": "-2"
  },
  {
    "rank": "~  ",
@@ -685,19 +673,25 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
+   "corporation": "Space Oddity      ",
+   "rating": 972,
+   "delta": "35"
+ },
+ {
+   "rank": "~  ",
    "corporation": "Argentina 1.0     ",
    "rating": 972,
    "delta": "0"
  },
  {
-   "rank": "~  ",
-   "corporation": "battlesquadron    ",
-   "rating": 971,
-   "delta": "0"
+   "rank": " 45",
+   "corporation": "Galactic Empire   ",
+   "rating": 972,
+   "delta": "-15"
  },
  {
    "rank": "~  ",
-   "corporation": "Sternenflotte     ",
+   "corporation": "battlesquadron    ",
    "rating": 971,
    "delta": "0"
  },
@@ -710,12 +704,6 @@ var rankingsData = [
  {
    "rank": "~  ",
    "corporation": "M4-Legends        ",
-   "rating": 969,
-   "delta": "0"
- },
- {
-   "rank": "~  ",
-   "corporation": "Austria           ",
    "rating": 969,
    "delta": "0"
  },
@@ -744,10 +732,10 @@ var rankingsData = [
    "delta": "0"
  },
  {
-   "rank": " 56",
+   "rank": "~  ",
    "corporation": "Imperial Armada   ",
    "rating": 965,
-   "delta": "31"
+   "delta": "0"
  },
  {
    "rank": "~  ",
@@ -762,19 +750,31 @@ var rankingsData = [
    "delta": "0"
  },
  {
+   "rank": " 46",
+   "corporation": "Corporation       ",
+   "rating": 962,
+   "delta": "-14"
+ },
+ {
+   "rank": "~  ",
+   "corporation": "Sternenflotte     ",
+   "rating": 961,
+   "delta": "-10"
+ },
+ {
    "rank": "~  ",
    "corporation": "The BR Project    ",
    "rating": 961,
    "delta": "0"
  },
  {
-   "rank": " 57",
-   "corporation": "Dropbears Inc     ",
+   "rank": " 47",
+   "corporation": "Dropbears Inc.    ",
    "rating": 960,
    "delta": "0"
  },
  {
-   "rank": " 58",
+   "rank": "~  ",
    "corporation": "kdy               ",
    "rating": 958,
    "delta": "0"
@@ -876,7 +876,7 @@ var rankingsData = [
    "delta": "0"
  },
  {
-   "rank": " 59",
+   "rank": " 48",
    "corporation": "Space Donuts      ",
    "rating": 946,
    "delta": "0"
@@ -895,13 +895,13 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
-   "corporation": "Quilliance        ",
+   "corporation": "Tёmный Bиxpь      ",
    "rating": 943,
    "delta": "0"
  },
  {
    "rank": "~  ",
-   "corporation": "Tёmный Bиxpь      ",
+   "corporation": "Quilliance        ",
    "rating": 943,
    "delta": "0"
  },
@@ -918,7 +918,7 @@ var rankingsData = [
    "delta": "0"
  },
  {
-   "rank": " 60",
+   "rank": "~  ",
    "corporation": "pirates spatial   ",
    "rating": 941,
    "delta": "0"
@@ -930,14 +930,14 @@ var rankingsData = [
    "delta": "0"
  },
  {
-   "rank": " 61",
-   "corporation": "Trade Station     ",
-   "rating": 937,
-   "delta": "-19"
+   "rank": " 49",
+   "corporation": "Black Sun         ",
+   "rating": 938,
+   "delta": "-45"
  },
  {
-   "rank": "~  ",
-   "corporation": "Space Oddity      ",
+   "rank": " 50",
+   "corporation": "Trade Station     ",
    "rating": 937,
    "delta": "0"
  },
@@ -969,7 +969,13 @@ var rankingsData = [
    "rank": "~  ",
    "corporation": "GalaxHitchikers   ",
    "rating": 936,
-   "delta": "25"
+   "delta": "0"
+ },
+ {
+   "rank": " 51",
+   "corporation": "pycb              ",
+   "rating": 935,
+   "delta": "24"
  },
  {
    "rank": "~  ",
@@ -1020,12 +1026,6 @@ var rankingsData = [
    "delta": "0"
  },
  {
-   "rank": " 62",
-   "corporation": "the heavy         ",
-   "rating": 932,
-   "delta": "0"
- },
- {
    "rank": "~  ",
    "corporation": "Galaxia           ",
    "rating": 932,
@@ -1038,34 +1038,28 @@ var rankingsData = [
    "delta": "0"
  },
  {
-   "rank": " 63",
+   "rank": "~  ",
    "corporation": "龙冂训练营             ",
    "rating": 930,
-   "delta": "-13"
+   "delta": "0"
  },
  {
-   "rank": " 64",
+   "rank": " 52",
    "corporation": "Black Mirror Co   ",
    "rating": 930,
    "delta": "0"
  },
  {
-   "rank": " 65",
+   "rank": "~  ",
    "corporation": "Gulinga           ",
    "rating": 930,
-   "delta": "-10"
+   "delta": "0"
  },
  {
    "rank": "~  ",
    "corporation": "Aggronauten       ",
    "rating": 930,
    "delta": "0"
- },
- {
-   "rank": " 66",
-   "corporation": "TPYNRNR           ",
-   "rating": 929,
-   "delta": "-11"
  },
  {
    "rank": "~  ",
@@ -1087,19 +1081,19 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
-   "corporation": "Delta Nation      ",
-   "rating": 925,
-   "delta": "0"
- },
- {
-   "rank": "~  ",
-   "corporation": "Corvus Ind.       ",
-   "rating": 925,
-   "delta": "0"
+   "corporation": "White Solaris     ",
+   "rating": 926,
+   "delta": "11"
  },
  {
    "rank": "~  ",
    "corporation": "HИФИГACEБ         ",
+   "rating": 925,
+   "delta": "0"
+ },
+ {
+   "rank": "~  ",
+   "corporation": "Delta Nation      ",
    "rating": 925,
    "delta": "0"
  },
@@ -1116,16 +1110,22 @@ var rankingsData = [
    "delta": "0"
  },
  {
-   "rank": " 67",
+   "rank": " 53",
    "corporation": "Ahamkara          ",
    "rating": 925,
-   "delta": "-27"
+   "delta": "0"
  },
  {
-   "rank": " 68",
+   "rank": "~  ",
    "corporation": "Enigma            ",
    "rating": 924,
    "delta": "0"
+ },
+ {
+   "rank": " 54",
+   "corporation": "LOST PIRATES      ",
+   "rating": 923,
+   "delta": "11"
  },
  {
    "rank": "~  ",
@@ -1135,15 +1135,9 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
-   "corporation": "Kpanhnn Kocmoc    ",
-   "rating": 923,
-   "delta": "0"
- },
- {
-   "rank": "~  ",
    "corporation": "AlfaOmega         ",
    "rating": 923,
-   "delta": "-1"
+   "delta": "0"
  },
  {
    "rank": "~  ",
@@ -1158,16 +1152,22 @@ var rankingsData = [
    "delta": "0"
  },
  {
-   "rank": " 69",
+   "rank": " 55",
    "corporation": "Star Dust         ",
    "rating": 922,
    "delta": "0"
  },
  {
+   "rank": " 56",
+   "corporation": "Star Wars         ",
+   "rating": 922,
+   "delta": "23"
+ },
+ {
    "rank": "~  ",
    "corporation": "Hellfire Club     ",
    "rating": 922,
-   "delta": "25"
+   "delta": "0"
  },
  {
    "rank": "~  ",
@@ -1178,12 +1178,6 @@ var rankingsData = [
  {
    "rank": "~  ",
    "corporation": "VALLKIRIA         ",
-   "rating": 920,
-   "delta": "0"
- },
- {
-   "rank": "~  ",
-   "corporation": "VoidCorp          ",
    "rating": 920,
    "delta": "0"
  },
@@ -1207,21 +1201,27 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
-   "corporation": "Ironbear Legion   ",
+   "corporation": "Corvus Ind.       ",
    "rating": 918,
+   "delta": "-7"
+ },
+ {
+   "rank": " 57",
+   "corporation": "the heavy         ",
+   "rating": 917,
+   "delta": "-15"
+ },
+ {
+   "rank": "~  ",
+   "corporation": "Society of Sin    ",
+   "rating": 917,
    "delta": "0"
  },
  {
-   "rank": " 70",
-   "corporation": "Society of Sin    ",
-   "rating": 917,
-   "delta": "-44"
- },
- {
-   "rank": " 71",
+   "rank": " 58",
    "corporation": "Españoles         ",
    "rating": 917,
-   "delta": "-22"
+   "delta": "0"
  },
  {
    "rank": "~  ",
@@ -1249,7 +1249,7 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
-   "corporation": "LossFarm No. 648  ",
+   "corporation": "LossFarm No.648   ",
    "rating": 916,
    "delta": "0"
  },
@@ -1272,10 +1272,16 @@ var rankingsData = [
    "delta": "0"
  },
  {
-   "rank": "~  ",
-   "corporation": "White Solaris     ",
+   "rank": " 59",
+   "corporation": "Rising star       ",
    "rating": 915,
-   "delta": "12"
+   "delta": "22"
+ },
+ {
+   "rank": "~  ",
+   "corporation": "AMG               ",
+   "rating": 915,
+   "delta": "9"
  },
  {
    "rank": "~  ",
@@ -1288,6 +1294,12 @@ var rankingsData = [
    "corporation": "KLM               ",
    "rating": 914,
    "delta": "0"
+ },
+ {
+   "rank": "~  ",
+   "corporation": "Ironbear Legion   ",
+   "rating": 914,
+   "delta": "-4"
  },
  {
    "rank": "~  ",
@@ -1333,27 +1345,21 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
-   "corporation": "Pandora's Star    ",
-   "rating": 913,
-   "delta": "0"
- },
- {
-   "rank": "~  ",
    "corporation": "Deutsch Staat D   ",
    "rating": 913,
    "delta": "0"
  },
  {
-   "rank": " 72",
-   "corporation": "LOST PIRATES      ",
+   "rank": " 60",
+   "corporation": "ТРУЛЯЛЯ           ",
    "rating": 912,
-   "delta": "0"
+   "delta": "-17"
  },
  {
-   "rank": " 73",
-   "corporation": "pycb              ",
+   "rank": "~  ",
+   "corporation": "Pandora's Star    ",
    "rating": 912,
-   "delta": "27"
+   "delta": "0"
  },
  {
    "rank": "~  ",
@@ -1389,7 +1395,7 @@ var rankingsData = [
    "rank": "~  ",
    "corporation": "Likapa            ",
    "rating": 911,
-   "delta": "21"
+   "delta": "0"
  },
  {
    "rank": "~  ",
@@ -1401,13 +1407,19 @@ var rankingsData = [
    "rank": "~  ",
    "corporation": "Lost Legion       ",
    "rating": 911,
-   "delta": "-20"
+   "delta": "0"
  },
  {
    "rank": "~  ",
    "corporation": "G.M.U.            ",
    "rating": 911,
    "delta": "0"
+ },
+ {
+   "rank": " 61",
+   "corporation": "VoidCorp          ",
+   "rating": 910,
+   "delta": "-10"
  },
  {
    "rank": "~  ",
@@ -1425,18 +1437,18 @@ var rankingsData = [
    "rank": "~  ",
    "corporation": "TITANS            ",
    "rating": 908,
-   "delta": "17"
+   "delta": "0"
+ },
+ {
+   "rank": "~  ",
+   "corporation": "Void              ",
+   "rating": 908,
+   "delta": "27"
  },
  {
    "rank": "~  ",
    "corporation": "SYNDICATE         ",
    "rating": 907,
-   "delta": "0"
- },
- {
-   "rank": "~  ",
-   "corporation": "AMG               ",
-   "rating": 906,
    "delta": "0"
  },
  {
@@ -1447,12 +1459,24 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
+   "corporation": "AltCorp Inc       ",
+   "rating": 905,
+   "delta": "9"
+ },
+ {
+   "rank": "~  ",
    "corporation": "Anarchy           ",
    "rating": 904,
    "delta": "0"
  },
  {
-   "rank": " 74",
+   "rank": "~  ",
+   "corporation": "TROLL SQUAD       ",
+   "rating": 904,
+   "delta": "41"
+ },
+ {
+   "rank": " 62",
    "corporation": "Polish Pirates    ",
    "rating": 903,
    "delta": "0"
@@ -1507,12 +1531,6 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
-   "corporation": "星䂓地㺷              ",
-   "rating": 900,
-   "delta": "0"
- },
- {
-   "rank": " 75",
    "corporation": "WFOS              ",
    "rating": 900,
    "delta": "0"
@@ -1530,16 +1548,16 @@ var rankingsData = [
    "delta": "0"
  },
  {
+   "rank": " 63",
+   "corporation": "Любители Пива     ",
+   "rating": 899,
+   "delta": "24"
+ },
+ {
    "rank": "~  ",
    "corporation": "Squadron          ",
    "rating": 899,
    "delta": "0"
- },
- {
-   "rank": "~  ",
-   "corporation": "Star Wars         ",
-   "rating": 899,
-   "delta": "-13"
  },
  {
    "rank": "~  ",
@@ -1578,12 +1596,6 @@ var rankingsData = [
    "delta": "0"
  },
  {
-   "rank": " 76",
-   "corporation": "Dumpster Fire     ",
-   "rating": 897,
-   "delta": "56"
- },
- {
    "rank": "~  ",
    "corporation": "Tnxnn Omyt        ",
    "rating": 896,
@@ -1605,7 +1617,7 @@ var rankingsData = [
    "rank": "~  ",
    "corporation": "USA Corp          ",
    "rating": 896,
-   "delta": "18"
+   "delta": "0"
  },
  {
    "rank": "~  ",
@@ -1617,12 +1629,6 @@ var rankingsData = [
    "rank": "~  ",
    "corporation": "Simply Uranus     ",
    "rating": 896,
-   "delta": "0"
- },
- {
-   "rank": "~  ",
-   "corporation": "AltCorp Inc       ",
-   "rating": 895,
    "delta": "0"
  },
  {
@@ -1687,6 +1693,12 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
+   "corporation": "OntarioDomicile   ",
+   "rating": 894,
+   "delta": "13"
+ },
+ {
+   "rank": "~  ",
    "corporation": "Aobpothbie Nioan  ",
    "rating": 894,
    "delta": "0"
@@ -1702,12 +1714,6 @@ var rankingsData = [
    "corporation": "The Herd          ",
    "rating": 894,
    "delta": "0"
- },
- {
-   "rank": " 77",
-   "corporation": "Rising star       ",
-   "rating": 893,
-   "delta": "-15"
  },
  {
    "rank": "~  ",
@@ -1731,7 +1737,7 @@ var rankingsData = [
    "rank": "~  ",
    "corporation": "The trade pub     ",
    "rating": 893,
-   "delta": "-10"
+   "delta": "0"
  },
  {
    "rank": "~  ",
@@ -1759,19 +1765,25 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
+   "corporation": "Kpanhnn Kocmoc    ",
+   "rating": 892,
+   "delta": "-31"
+ },
+ {
+   "rank": "~  ",
    "corporation": "Regulus           ",
    "rating": 892,
    "delta": "0"
  },
  {
    "rank": "~  ",
-   "corporation": "Soul System       ",
+   "corporation": "OPA               ",
    "rating": 892,
    "delta": "0"
  },
  {
    "rank": "~  ",
-   "corporation": "OPA               ",
+   "corporation": "Soul System       ",
    "rating": 892,
    "delta": "0"
  },
@@ -1827,12 +1839,6 @@ var rankingsData = [
    "rank": "~  ",
    "corporation": "Yellow Dwarf      ",
    "rating": 891,
-   "delta": "-9"
- },
- {
-   "rank": "~  ",
-   "corporation": "The Guardians     ",
-   "rating": 890,
    "delta": "0"
  },
  {
@@ -1861,13 +1867,7 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
-   "corporation": "Das Imperium      ",
-   "rating": 889,
-   "delta": "0"
- },
- {
-   "rank": "~  ",
-   "corporation": "COЮЗ Akanemnr     ",
+   "corporation": "СОЮЗ Akanemnr     ",
    "rating": 889,
    "delta": "0"
  },
@@ -1909,6 +1909,12 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
+   "corporation": "The Guardians     ",
+   "rating": 888,
+   "delta": "-3"
+ },
+ {
+   "rank": "~  ",
    "corporation": "Hermes            ",
    "rating": 888,
    "delta": "0"
@@ -1939,15 +1945,33 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
+   "corporation": "Lights Off        ",
+   "rating": 886,
+   "delta": "42"
+ },
+ {
+   "rank": "~  ",
    "corporation": "Dragon Eclipse    ",
    "rating": 886,
    "delta": "0"
  },
  {
+   "rank": " 64",
+   "corporation": "Dumpster Fire     ",
+   "rating": 886,
+   "delta": "-11"
+ },
+ {
    "rank": "~  ",
    "corporation": "Hun Generals      ",
    "rating": 885,
-   "delta": "-3"
+   "delta": "0"
+ },
+ {
+   "rank": "~  ",
+   "corporation": "星䂓地㺷              ",
+   "rating": 884,
+   "delta": "-16"
  },
  {
    "rank": "~  ",
@@ -1998,12 +2022,6 @@ var rankingsData = [
    "delta": "0"
  },
  {
-   "rank": " 78",
-   "corporation": "Void Dominion     ",
-   "rating": 883,
-   "delta": "-3"
- },
- {
    "rank": "~  ",
    "corporation": "Rabid Butterfly   ",
    "rating": 883,
@@ -2023,24 +2041,6 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
-   "corporation": "Corp Du Jour      ",
-   "rating": 881,
-   "delta": "0"
- },
- {
-   "rank": "~  ",
-   "corporation": "Void              ",
-   "rating": 881,
-   "delta": "0"
- },
- {
-   "rank": "~  ",
-   "corporation": "OntarioDomicile   ",
-   "rating": 881,
-   "delta": "0"
- },
- {
-   "rank": "~  ",
    "corporation": "401(K)            ",
    "rating": 881,
    "delta": "0"
@@ -2053,15 +2053,15 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
-   "corporation": "Crazy Monkeys     ",
-   "rating": 881,
-   "delta": "0"
- },
- {
-   "rank": "~  ",
    "corporation": "JerK              ",
    "rating": 880,
    "delta": "0"
+ },
+ {
+   "rank": " 65",
+   "corporation": "Void Dominion     ",
+   "rating": 880,
+   "delta": "-3"
  },
  {
    "rank": "~  ",
@@ -2095,6 +2095,18 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
+   "corporation": "Crazy Monkeys     ",
+   "rating": 879,
+   "delta": "-2"
+ },
+ {
+   "rank": "~  ",
+   "corporation": "Das Imperium      ",
+   "rating": 879,
+   "delta": "-11"
+ },
+ {
+   "rank": "~  ",
    "corporation": "Omega Nation      ",
    "rating": 878,
    "delta": "0"
@@ -2110,12 +2122,6 @@ var rankingsData = [
    "corporation": "Rusty legacy      ",
    "rating": 878,
    "delta": "0"
- },
- {
-   "rank": "~  ",
-   "corporation": "Rocinante         ",
-   "rating": 878,
-   "delta": "-3"
  },
  {
    "rank": "~  ",
@@ -2140,6 +2146,12 @@ var rankingsData = [
    "corporation": "The Force         ",
    "rating": 876,
    "delta": "0"
+ },
+ {
+   "rank": "~  ",
+   "corporation": "Rocinante         ",
+   "rating": 876,
+   "delta": "-1"
  },
  {
    "rank": "~  ",
@@ -2173,12 +2185,6 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
-   "corporation": "Любители Пива     ",
-   "rating": 875,
-   "delta": "0"
- },
- {
-   "rank": "~  ",
    "corporation": "Star Destroyers   ",
    "rating": 875,
    "delta": "0"
@@ -2188,12 +2194,6 @@ var rankingsData = [
    "corporation": "中国家民              ",
    "rating": 875,
    "delta": "0"
- },
- {
-   "rank": "~  ",
-   "corporation": "Curcubeu          ",
-   "rating": 875,
-   "delta": "-3"
  },
  {
    "rank": "~  ",
@@ -2227,13 +2227,7 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
-   "corporation": "IX Nernoh         ",
-   "rating": 874,
-   "delta": "0"
- },
- {
-   "rank": "~  ",
-   "corporation": "Prophecy          ",
+   "corporation": "IX Легион         ",
    "rating": 874,
    "delta": "0"
  },
@@ -2241,18 +2235,6 @@ var rankingsData = [
    "rank": "~  ",
    "corporation": "Crux Cadre        ",
    "rating": 874,
-   "delta": "0"
- },
- {
-   "rank": " 79",
-   "corporation": "The X-Files       ",
-   "rating": 874,
-   "delta": "0"
- },
- {
-   "rank": "~  ",
-   "corporation": "PocKocMoc         ",
-   "rating": 873,
    "delta": "0"
  },
  {
@@ -2265,13 +2247,19 @@ var rankingsData = [
    "rank": "~  ",
    "corporation": "Nюбители пива     ",
    "rating": 872,
-   "delta": "-6"
+   "delta": "0"
  },
  {
    "rank": "~  ",
    "corporation": "Parhapek          ",
    "rating": 872,
    "delta": "0"
+ },
+ {
+   "rank": "~  ",
+   "corporation": "Curcubeu          ",
+   "rating": 871,
+   "delta": "-4"
  },
  {
    "rank": "~  ",
@@ -2287,9 +2275,15 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
-   "corporation": "仙女座星雲             ",
+   "corporation": "Corp Du Jour      ",
    "rating": 871,
-   "delta": "-13"
+   "delta": "-11"
+ },
+ {
+   "rank": "~  ",
+   "corporation": "PocKocMoc         ",
+   "rating": 870,
+   "delta": "-3"
  },
  {
    "rank": "~  ",
@@ -2316,7 +2310,7 @@ var rankingsData = [
    "delta": "0"
  },
  {
-   "rank": " 80",
+   "rank": "~  ",
    "corporation": "Cnythnk           ",
    "rating": 869,
    "delta": "0"
@@ -2326,6 +2320,24 @@ var rankingsData = [
    "corporation": "Anomaly           ",
    "rating": 869,
    "delta": "0"
+ },
+ {
+   "rank": " 66",
+   "corporation": "Providence        ",
+   "rating": 869,
+   "delta": "31"
+ },
+ {
+   "rank": " 67",
+   "corporation": "The X - Files     ",
+   "rating": 868,
+   "delta": "-5"
+ },
+ {
+   "rank": "~  ",
+   "corporation": "Prophecy          ",
+   "rating": 868,
+   "delta": "-6"
  },
  {
    "rank": "~  ",
@@ -2341,25 +2353,25 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
+   "corporation": "NERF TOY'S        ",
+   "rating": 868,
+   "delta": "29"
+ },
+ {
+   "rank": "~  ",
    "corporation": "Star Fox          ",
    "rating": 867,
    "delta": "0"
  },
  {
-   "rank": " 81",
+   "rank": " 68",
    "corporation": "星舰地球              ",
-   "rating": 867,
-   "delta": "-18"
- },
- {
-   "rank": "~  ",
-   "corporation": "Knights Ronin     ",
    "rating": 867,
    "delta": "0"
  },
  {
-   "rank": " 82",
-   "corporation": "Deadspace         ",
+   "rank": "~  ",
+   "corporation": "Knights Ronin     ",
    "rating": 867,
    "delta": "0"
  },
@@ -2370,7 +2382,7 @@ var rankingsData = [
    "delta": "0"
  },
  {
-   "rank": " 83",
+   "rank": "~  ",
    "corporation": "Special Force     ",
    "rating": 866,
    "delta": "0"
@@ -2383,32 +2395,14 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
-   "corporation": "Highland Ind.     ",
-   "rating": 864,
-   "delta": "0"
- },
- {
-   "rank": "~  ",
-   "corporation": "TROLL SQUAD       ",
-   "rating": 863,
-   "delta": "43"
- },
- {
-   "rank": "~  ",
    "corporation": "ROGUE ONE         ",
    "rating": 863,
    "delta": "0"
  },
  {
-   "rank": " 84",
+   "rank": " 69",
    "corporation": "Diplomats Union   ",
    "rating": 862,
-   "delta": "0"
- },
- {
-   "rank": "~  ",
-   "corporation": "ANZAC Warriors    ",
-   "rating": 861,
    "delta": "0"
  },
  {
@@ -2436,10 +2430,16 @@ var rankingsData = [
    "delta": "0"
  },
  {
+   "rank": " 70",
+   "corporation": "MAQUIS            ",
+   "rating": 861,
+   "delta": "7"
+ },
+ {
    "rank": "~  ",
    "corporation": "Farming Inc.      ",
    "rating": 860,
-   "delta": "-17"
+   "delta": "0"
  },
  {
    "rank": "~  ",
@@ -2467,15 +2467,15 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
-   "corporation": "USA               ",
+   "corporation": "West Worlders     ",
    "rating": 860,
    "delta": "0"
  },
  {
    "rank": "~  ",
-   "corporation": "West Worlders     ",
-   "rating": 860,
-   "delta": "0"
+   "corporation": "Highland Ind.     ",
+   "rating": 859,
+   "delta": "-5"
  },
  {
    "rank": "~  ",
@@ -2497,13 +2497,7 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
-   "corporation": "Gummibarenbande   ",
-   "rating": 859,
-   "delta": "0"
- },
- {
-   "rank": "~  ",
-   "corporation": "The Picard        ",
+   "corporation": "Gummibärenbande   ",
    "rating": 859,
    "delta": "0"
  },
@@ -2526,7 +2520,7 @@ var rankingsData = [
    "delta": "0"
  },
  {
-   "rank": " 85",
+   "rank": " 71",
    "corporation": "혁명군               ",
    "rating": 858,
    "delta": "0"
@@ -2557,7 +2551,7 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
-   "corporation": "COЮЗ              ",
+   "corporation": "СОЮЗ              ",
    "rating": 856,
    "delta": "0"
  },
@@ -2570,12 +2564,6 @@ var rankingsData = [
  {
    "rank": "~  ",
    "corporation": "Killer Shadow     ",
-   "rating": 855,
-   "delta": "0"
- },
- {
-   "rank": "~  ",
-   "corporation": "Variants          ",
    "rating": 855,
    "delta": "0"
  },
@@ -2595,25 +2583,31 @@ var rankingsData = [
    "rank": "~  ",
    "corporation": "Peak Extraction   ",
    "rating": 854,
-   "delta": "-24"
+   "delta": "0"
  },
  {
-   "rank": " 86",
-   "corporation": "MAQUIS            ",
-   "rating": 854,
-   "delta": "-11"
+   "rank": " 72",
+   "corporation": "Deadspace         ",
+   "rating": 853,
+   "delta": "-13"
  },
  {
-   "rank": " 87",
+   "rank": "~  ",
+   "corporation": "ANZAC Warriors    ",
+   "rating": 853,
+   "delta": "-8"
+ },
+ {
+   "rank": " 73",
    "corporation": "Crazy Elite       ",
    "rating": 853,
-   "delta": "-20"
+   "delta": "0"
  },
  {
-   "rank": " 88",
+   "rank": " 74",
    "corporation": "Covenant          ",
    "rating": 853,
-   "delta": "-9"
+   "delta": "0"
  },
  {
    "rank": "~  ",
@@ -2622,10 +2616,10 @@ var rankingsData = [
    "delta": "0"
  },
  {
-   "rank": " 89",
-   "corporation": "Starsailors       ",
-   "rating": 853,
-   "delta": "-12"
+   "rank": "~  ",
+   "corporation": "PACCBET           ",
+   "rating": 852,
+   "delta": "25"
  },
  {
    "rank": "~  ",
@@ -2647,12 +2641,6 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
-   "corporation": "Ten Forward       ",
-   "rating": 851,
-   "delta": "0"
- },
- {
-   "rank": "~  ",
    "corporation": "Nebula            ",
    "rating": 850,
    "delta": "0"
@@ -2664,10 +2652,28 @@ var rankingsData = [
    "delta": "0"
  },
  {
+   "rank": " 75",
+   "corporation": "Starsailors       ",
+   "rating": 848,
+   "delta": "-5"
+ },
+ {
+   "rank": "~  ",
+   "corporation": "USA               ",
+   "rating": 848,
+   "delta": "-12"
+ },
+ {
    "rank": "~  ",
    "corporation": "YAL               ",
    "rating": 848,
    "delta": "0"
+ },
+ {
+   "rank": "~  ",
+   "corporation": "仙女座星雲             ",
+   "rating": 848,
+   "delta": "-23"
  },
  {
    "rank": "~  ",
@@ -2685,13 +2691,19 @@ var rankingsData = [
    "rank": "~  ",
    "corporation": "Little RasCats    ",
    "rating": 847,
-   "delta": "27"
+   "delta": "0"
  },
  {
    "rank": "~  ",
    "corporation": "Dauntless         ",
    "rating": 846,
    "delta": "0"
+ },
+ {
+   "rank": "~  ",
+   "corporation": "The Picard        ",
+   "rating": 845,
+   "delta": "-14"
  },
  {
    "rank": "~  ",
@@ -2736,14 +2748,8 @@ var rankingsData = [
    "delta": "0"
  },
  {
-   "rank": " 90",
-   "corporation": "Lacuna Ind.       ",
-   "rating": 844,
-   "delta": "0"
- },
- {
    "rank": "~  ",
-   "corporation": "Lights Off        ",
+   "corporation": "Lacuna Ind.       ",
    "rating": 844,
    "delta": "0"
  },
@@ -2751,13 +2757,7 @@ var rankingsData = [
    "rank": "~  ",
    "corporation": "Galactic Otters   ",
    "rating": 844,
-   "delta": "-24"
- },
- {
-   "rank": "~  ",
-   "corporation": "Bcenehckne 40%    ",
-   "rating": 843,
-   "delta": "-23"
+   "delta": "0"
  },
  {
    "rank": "~  ",
@@ -2787,7 +2787,7 @@ var rankingsData = [
    "rank": "~  ",
    "corporation": "brit boys         ",
    "rating": 841,
-   "delta": "21"
+   "delta": "0"
  },
  {
    "rank": "~  ",
@@ -2796,16 +2796,16 @@ var rankingsData = [
    "delta": "0"
  },
  {
-   "rank": " 91",
+   "rank": "~  ",
    "corporation": "华夏星海              ",
    "rating": 841,
-   "delta": "-23"
+   "delta": "0"
  },
  {
-   "rank": " 92",
+   "rank": "~  ",
    "corporation": "Star Jumpers      ",
    "rating": 840,
-   "delta": "-16"
+   "delta": "0"
  },
  {
    "rank": "~  ",
@@ -2928,7 +2928,7 @@ var rankingsData = [
    "delta": "0"
  },
  {
-   "rank": " 93",
+   "rank": " 76",
    "corporation": "First Squad       ",
    "rating": 839,
    "delta": "0"
@@ -2937,36 +2937,12 @@ var rankingsData = [
    "rank": "~  ",
    "corporation": "Jaggernaut        ",
    "rating": 839,
-   "delta": "-16"
+   "delta": "0"
  },
  {
    "rank": "~  ",
    "corporation": "水星联合织             ",
    "rating": 839,
-   "delta": "0"
- },
- {
-   "rank": "~  ",
-   "corporation": "NERF TOY'S        ",
-   "rating": 839,
-   "delta": "0"
- },
- {
-   "rank": "~  ",
-   "corporation": "Gallaecia         ",
-   "rating": 838,
-   "delta": "0"
- },
- {
-   "rank": "~  ",
-   "corporation": "Providence        ",
-   "rating": 838,
-   "delta": "-8"
- },
- {
-   "rank": "~  ",
-   "corporation": "Galactic gods     ",
-   "rating": 837,
    "delta": "0"
  },
  {
@@ -2982,34 +2958,28 @@ var rankingsData = [
    "delta": "0"
  },
  {
-   "rank": " 94",
-   "corporation": "United Galaxies   ",
-   "rating": 835,
-   "delta": "0"
- },
- {
-   "rank": "~  ",
+   "rank": " 77",
    "corporation": "GermanSpaceUno.   ",
    "rating": 835,
    "delta": "0"
  },
  {
-   "rank": " 95",
+   "rank": "~  ",
    "corporation": "Sprite            ",
    "rating": 834,
    "delta": "0"
  },
  {
-   "rank": " 96",
-   "corporation": "우주미아              ",
+   "rank": " 78",
+   "corporation": "Gallaecia         ",
    "rating": 833,
-   "delta": "-26"
+   "delta": "-4"
  },
  {
    "rank": "~  ",
    "corporation": "No Orbit          ",
    "rating": 833,
-   "delta": "-9"
+   "delta": "0"
  },
  {
    "rank": "~  ",
@@ -3025,9 +2995,21 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
+   "corporation": "Variants          ",
+   "rating": 831,
+   "delta": "-23"
+ },
+ {
+   "rank": "~  ",
    "corporation": "Rushar            ",
    "rating": 831,
-   "delta": "11"
+   "delta": "0"
+ },
+ {
+   "rank": " 79",
+   "corporation": "United Galaxies   ",
+   "rating": 830,
+   "delta": "-5"
  },
  {
    "rank": "~  ",
@@ -3037,12 +3019,24 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
-   "corporation": "PACCBET           ",
-   "rating": 827,
-   "delta": "0"
+   "corporation": "Galactic gods     ",
+   "rating": 829,
+   "delta": "-8"
  },
  {
-   "rank": " 97",
+   "rank": " 80",
+   "corporation": "우주미아              ",
+   "rating": 829,
+   "delta": "-4"
+ },
+ {
+   "rank": "~  ",
+   "corporation": "Ten Forward       ",
+   "rating": 829,
+   "delta": "-22"
+ },
+ {
+   "rank": " 81",
    "corporation": "Death Flight      ",
    "rating": 826,
    "delta": "0"
@@ -3051,13 +3045,13 @@ var rankingsData = [
    "rank": "~  ",
    "corporation": "djjdj             ",
    "rating": 826,
-   "delta": " -"
+   "delta": "0"
  },
  {
    "rank": "~  ",
    "corporation": "CbrtbleHeroAhnkn  ",
    "rating": 826,
-   "delta": "-13"
+   "delta": " -"
  },
  {
    "rank": "~  ",
@@ -3066,10 +3060,16 @@ var rankingsData = [
    "delta": " -"
  },
  {
-   "rank": " 98",
+   "rank": "~  ",
+   "corporation": "italian warrior   ",
+   "rating": 825,
+   "delta": "+15"
+ },
+ {
+   "rank": "~  ",
    "corporation": "Madison Holding   ",
    "rating": 824,
-   "delta": "-9"
+   "delta": " -"
  },
  {
    "rank": "~  ",
@@ -3079,9 +3079,21 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
+   "corporation": "GalacticTraders   ",
+   "rating": 823,
+   "delta": "+13"
+ },
+ {
+   "rank": "~  ",
    "corporation": "Oмикрон Альфа     ",
    "rating": 823,
    "delta": " -"
+ },
+ {
+   "rank": "~  ",
+   "corporation": "コーポレーション          ",
+   "rating": 823,
+   "delta": "+13"
  },
  {
    "rank": "~  ",
@@ -3090,58 +3102,64 @@ var rankingsData = [
    "delta": " -"
  },
  {
-   "rank": " 99",
+   "rank": "~  ",
+   "corporation": "Bcenehckne 40%    ",
+   "rating": 823,
+   "delta": "-21"
+ },
+ {
+   "rank": " 82",
    "corporation": "KARI              ",
    "rating": 822,
-   "delta": "-2"
+   "delta": " -"
+ },
+ {
+   "rank": "~  ",
+   "corporation": "Eastern Front     ",
+   "rating": 820,
+   "delta": "+10"
  },
  {
    "rank": "~  ",
    "corporation": "Rogue Corp        ",
    "rating": 818,
-   "delta": "-25"
+   "delta": " -"
  },
  {
    "rank": "~  ",
    "corporation": "SonsOvAnarchy     ",
    "rating": 817,
-   "delta": "-3"
+   "delta": " -"
  },
  {
    "rank": "~  ",
    "corporation": "星环星际朕盟            ",
    "rating": 817,
-   "delta": "-3"
+   "delta": " -"
  },
  {
    "rank": "~  ",
    "corporation": "OAKB              ",
    "rating": 817,
-   "delta": "-3"
+   "delta": " -"
  },
  {
    "rank": "~  ",
    "corporation": "CSI               ",
    "rating": 816,
-   "delta": "-4"
- },
- {
-   "rank": "~  ",
-   "corporation": "SpaceForceElite   ",
-   "rating": 813,
-   "delta": "-7"
+   "delta": " -"
  },
  {
    "rank": "~  ",
    "corporation": "Spy Corp          ",
    "rating": 812,
-   "delta": "-8"
+   "delta": " -"
  },
  {
    "rank": "~  ",
    "corporation": "Russia            ",
    "rating": 809,
-   "delta": "-11"
+   "delta": " -"
  },
  {
    "rank": "~  ",
@@ -3151,9 +3169,27 @@ var rankingsData = [
  },
  {
    "rank": "~  ",
+   "corporation": "Empire of Light   ",
+   "rating": 807,
+   "delta": "-3"
+ },
+ {
+   "rank": "~  ",
+   "corporation": "Stammtisch        ",
+   "rating": 807,
+   "delta": "-3"
+ },
+ {
+   "rank": "~  ",
    "corporation": "Lolis Corp        ",
    "rating": 806,
    "delta": " -"
+ },
+ {
+   "rank": "~  ",
+   "corporation": "Starlancer        ",
+   "rating": 806,
+   "delta": "-4"
  },
  {
    "rank": "~  ",
@@ -3162,16 +3198,28 @@ var rankingsData = [
    "delta": " -"
  },
  {
-   "rank": "100",
-   "corporation": "Path of Hades     ",
-   "rating": 796,
-   "delta": "-8"
+   "rank": "~  ",
+   "corporation": "SpaceForceElite   ",
+   "rating": 802,
+   "delta": "-10"
  },
  {
-   "rank": "101",
+   "rank": "~  ",
+   "corporation": "AH Espanoles      ",
+   "rating": 801,
+   "delta": "-9"
+ },
+ {
+   "rank": " 83",
+   "corporation": "Path of Hades     ",
+   "rating": 786,
+   "delta": "-11"
+ },
+ {
+   "rank": "~  ",
    "corporation": "世外桃源              ",
    "rating": 784,
-   "delta": "-23"
+   "delta": " -"
  },
  {
    "rank": "~  ",
@@ -3183,6 +3231,6 @@ var rankingsData = [
    "rank": "~  ",
    "corporation": "Solysis           ",
    "rating": 774,
-   "delta": "-5"
+   "delta": " -"
  }
 ];

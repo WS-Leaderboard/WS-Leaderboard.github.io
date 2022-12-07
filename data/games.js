@@ -1,5 +1,645 @@
 var gameData = [
  {
+   "team1": "StarControl",
+   "score1": 55,
+   "score2": 51,
+   "team2": "BlackStar Order",
+   "players": "10",
+   "date": "2022/12/04"
+ },
+ {
+   "team1": "Terranova",
+   "score1": 63,
+   "score2": 106,
+   "team2": "Hinterm Mond",
+   "players": "5",
+   "date": "2022/12/04"
+ },
+ {
+   "team1": "StarControl",
+   "score1": 134,
+   "score2": 33,
+   "team2": "DadCorp",
+   "players": "5",
+   "date": "2022/12/04"
+ },
+ {
+   "team1": "Blood Brigade",
+   "score1": 24,
+   "score2": 150,
+   "team2": "OntarioDynasty",
+   "players": "15",
+   "date": "2022/12/04"
+ },
+ {
+   "team1": "DadCorp",
+   "score1": 208,
+   "score2": 103,
+   "team2": "Auscorp",
+   "players": "5",
+   "date": "2022/12/03"
+ },
+ {
+   "team1": "Red Dawn",
+   "score1": 54,
+   "score2": 8,
+   "team2": "Gallaecia",
+   "players": "5",
+   "date": "2022/12/03"
+ },
+ {
+   "team1": "Grunthal Gang",
+   "score1": 297,
+   "score2": 53,
+   "team2": "Prophecy",
+   "players": "15",
+   "date": "2022/12/02"
+ },
+ {
+   "team1": "Spacefleet",
+   "score1": 76,
+   "score2": 26,
+   "team2": "Path of Hades",
+   "players": "15",
+   "date": "2022/12/02"
+ },
+ {
+   "team1": "Terranova",
+   "score1": 327,
+   "score2": 51,
+   "team2": "Deadspace",
+   "players": "15",
+   "date": "2022/11/28"
+ },
+ {
+   "team1": "StarControl",
+   "score1": 98,
+   "score2": 44,
+   "team2": "Hinterm Mond",
+   "players": "5",
+   "date": "2022/11/27"
+ },
+ {
+   "team1": "the heavy",
+   "score1": 98,
+   "score2": 129,
+   "team2": "AMG",
+   "players": "5",
+   "date": "2022/11/26"
+ },
+ {
+   "team1": "Best",
+   "score1": 319,
+   "score2": 2,
+   "team2": "VoidCorp",
+   "players": "15",
+   "date": "2022/11/26"
+ },
+ {
+   "team1": "Dumpster Fire",
+   "score1": 81,
+   "score2": 147,
+   "team2": "Wintercomes",
+   "players": "15",
+   "date": "2022/11/26"
+ },
+ {
+   "team1": "Blood Brigade",
+   "score1": 30,
+   "score2": 59,
+   "team2": "Space Oddity",
+   "players": "15",
+   "date": "2022/11/26"
+ },
+ {
+   "team1": "Auscorp",
+   "score1": 109,
+   "score2": 50,
+   "team2": "BlackStar Order",
+   "players": "10",
+   "date": "2022/11/26"
+ },
+ {
+   "team1": "Best",
+   "score1": 298,
+   "score2": 47,
+   "team2": "Anla'Shok",
+   "players": "15",
+   "date": "2022/11/25"
+ },
+ {
+   "team1": "Grunthal Gang",
+   "score1": 25,
+   "score2": 53,
+   "team2": "Team Elite",
+   "players": "5",
+   "date": "2022/11/25"
+ },
+ {
+   "team1": "Bounty Hunters",
+   "score1": 46,
+   "score2": 68,
+   "team2": "LOST PIRATES",
+   "players": "5",
+   "date": "2022/11/25"
+ },
+ {
+   "team1": "Spacefleet",
+   "score1": 147,
+   "score2": 102,
+   "team2": "MAQUIS",
+   "players": "15",
+   "date": "2022/11/24"
+ },
+ {
+   "team1": "OntarioDomicile",
+   "score1": 28,
+   "score2": 25,
+   "team2": "Embers Rising",
+   "players": "5",
+   "date": "2022/11/23"
+ },
+ {
+   "team1": "Legion",
+   "score1": 133,
+   "score2": 12,
+   "team2": "Pandora's Star",
+   "players": "10",
+   "date": "2022/11/23"
+ },
+ {
+   "team1": "Red Dawn",
+   "score1": 67,
+   "score2": 37,
+   "team2": "Corp Du Jour",
+   "players": "10",
+   "date": "2022/11/20"
+ },
+ {
+   "team1": "Anla'Shok",
+   "score1": 296,
+   "score2": 2,
+   "team2": "Path of Hades",
+   "players": "15",
+   "date": "2022/11/20"
+ },
+ {
+   "team1": "Dumpster Fire",
+   "score1": 3,
+   "score2": 44,
+   "team2": "Void",
+   "players": "15",
+   "date": "2022/11/20"
+ },
+ {
+   "team1": "Blood Brigade",
+   "score1": 104,
+   "score2": 1,
+   "team2": "AH Espanoles",
+   "players": "15",
+   "date": "2022/11/20"
+ },
+ {
+   "team1": "Auscorp",
+   "score1": 19,
+   "score2": 33,
+   "team2": "USSR",
+   "players": "5",
+   "date": "2022/11/19"
+ },
+ {
+   "team1": "Lexx",
+   "score1": 42,
+   "score2": 60,
+   "team2": "PACCBET",
+   "players": "10",
+   "date": "2022/11/19"
+ },
+ {
+   "team1": "Imperium XIII",
+   "score1": 126,
+   "score2": 5,
+   "team2": "The X - Files",
+   "players": "5",
+   "date": "2022/11/19"
+ },
+ {
+   "team1": "the heavy",
+   "score1": 66,
+   "score2": 55,
+   "team2": "Sternenflotte",
+   "players": "5",
+   "date": "2022/11/19"
+ },
+ {
+   "team1": "DTC",
+   "score1": 210,
+   "score2": 141,
+   "team2": "MAQUIS",
+   "players": "15",
+   "date": "2022/11/19"
+ },
+ {
+   "team1": "Spacefleet",
+   "score1": 130,
+   "score2": 61,
+   "team2": "Star-Jump CORPS",
+   "players": "15",
+   "date": "2022/11/19"
+ },
+ {
+   "team1": "Team Elite",
+   "score1": 44,
+   "score2": 143,
+   "team2": "РОССИЯ",
+   "players": "10",
+   "date": "2022/11/18"
+ },
+ {
+   "team1": "Grunthal Gang",
+   "score1": 146,
+   "score2": 38,
+   "team2": "Curcubeu",
+   "players": "10",
+   "date": "2022/11/18"
+ },
+ {
+   "team1": "Anla'Shok",
+   "score1": 146,
+   "score2": 29,
+   "team2": "United Galaxies",
+   "players": "15",
+   "date": "2022/11/16"
+ },
+ {
+   "team1": "Metal Nova",
+   "score1": 95,
+   "score2": 0,
+   "team2": "Das Imperium",
+   "players": "10",
+   "date": "2022/11/15"
+ },
+ {
+   "team1": "Dumpster Fire",
+   "score1": 88,
+   "score2": 1,
+   "team2": "Bcenehckne 40%",
+   "players": "15",
+   "date": "2022/11/15"
+ },
+ {
+   "team1": "Team Elite",
+   "score1": 114,
+   "score2": 3,
+   "team2": "The X - Files",
+   "players": "5",
+   "date": "2022/11/13"
+ },
+ {
+   "team1": "Lexx",
+   "score1": 49,
+   "score2": 55,
+   "team2": "Star Wars",
+   "players": "10",
+   "date": "2022/11/13"
+ },
+ {
+   "team1": "Sith Empire",
+   "score1": 220,
+   "score2": 46,
+   "team2": "Black Sun",
+   "players": "15",
+   "date": "2022/11/13"
+ },
+ {
+   "team1": "DTC",
+   "score1": 76,
+   "score2": 139,
+   "team2": "Austria",
+   "players": "15",
+   "date": "2022/11/13"
+ },
+ {
+   "team1": "StarControl",
+   "score1": 268,
+   "score2": 57,
+   "team2": "Terranova",
+   "players": "10",
+   "date": "2022/11/13"
+ },
+ {
+   "team1": "Blood Brigade",
+   "score1": 160,
+   "score2": 9,
+   "team2": "USA",
+   "players": "15",
+   "date": "2022/11/13"
+ },
+ {
+   "team1": "Red Dawn",
+   "score1": 20,
+   "score2": 6,
+   "team2": "Starlancer",
+   "players": "5",
+   "date": "2022/11/12"
+ },
+ {
+   "team1": "the heavy",
+   "score1": 95,
+   "score2": 101,
+   "team2": "Auscorp",
+   "players": "5",
+   "date": "2022/11/12"
+ },
+ {
+   "team1": "Best",
+   "score1": 246,
+   "score2": 36,
+   "team2": "ANZAC Warriors",
+   "players": "15",
+   "date": "2022/11/12"
+ },
+ {
+   "team1": "Spacefleet",
+   "score1": 168,
+   "score2": 25,
+   "team2": "$TAR$",
+   "players": "10",
+   "date": "2022/11/12"
+ },
+ {
+   "team1": "Anla'Shok",
+   "score1": 329,
+   "score2": 6,
+   "team2": "Crazy Monkeys",
+   "players": "5",
+   "date": "2022/11/11"
+ },
+ {
+   "team1": "Lexx",
+   "score1": 1,
+   "score2": 15,
+   "team2": "コーポレーション",
+   "players": "5",
+   "date": "2022/11/10"
+ },
+ {
+   "team1": "HИФИГACEБ",
+   "score1": 33,
+   "score2": 58,
+   "team2": "Imperium XIII",
+   "players": "10",
+   "date": "2022/11/10"
+ },
+ {
+   "team1": "Bounty Hunters",
+   "score1": 167,
+   "score2": 59,
+   "team2": "The Picard",
+   "players": "15",
+   "date": "2022/11/10"
+ },
+ {
+   "team1": "Metal Nova",
+   "score1": 6,
+   "score2": 8,
+   "team2": "Prosperity",
+   "players": "10",
+   "date": "2022/11/10"
+ },
+ {
+   "team1": "Dumpster Fire",
+   "score1": 110,
+   "score2": 0,
+   "team2": "Tycho Corp",
+   "players": "15",
+   "date": "2022/11/09"
+ },
+ {
+   "team1": "Team Elite",
+   "score1": 73,
+   "score2": 115,
+   "team2": "Orion",
+   "players": "10",
+   "date": "2022/11/07"
+ },
+ {
+   "team1": "Lexx",
+   "score1": 55,
+   "score2": 2,
+   "team2": "Galactic gods",
+   "players": "10",
+   "date": "2022/11/07"
+ },
+ {
+   "team1": "Tacitus",
+   "score1": 82,
+   "score2": 5,
+   "team2": "Sith Empire",
+   "players": "10",
+   "date": "2022/11/07"
+ },
+ {
+   "team1": "Spacefleet",
+   "score1": 25,
+   "score2": 106,
+   "team2": "TROLL SQUAD",
+   "players": "15",
+   "date": "2022/11/07"
+ },
+ {
+   "team1": "DTC",
+   "score1": 108,
+   "score2": 50,
+   "team2": "SpaceForceElite",
+   "players": "15",
+   "date": "2022/11/07"
+ },
+ {
+   "team1": "DTC",
+   "score1": 22,
+   "score2": 96,
+   "team2": "Любители Пива",
+   "players": "10",
+   "date": "2022/11/07"
+ },
+ {
+   "team1": "OntarioDynasty",
+   "score1": 65,
+   "score2": 23,
+   "team2": "Rocinante",
+   "players": "5",
+   "date": "2022/11/07"
+ },
+ {
+   "team1": "GermanSpaceUno.",
+   "score1": 1,
+   "score2": 181,
+   "team2": "Auscorp",
+   "players": "5",
+   "date": "2022/11/06"
+ },
+ {
+   "team1": "Black Sun",
+   "score1": 77,
+   "score2": 89,
+   "team2": "MAQUIS",
+   "players": "15",
+   "date": "2022/11/06"
+ },
+ {
+   "team1": "Anla'Shok",
+   "score1": 99,
+   "score2": 93,
+   "team2": "Austria",
+   "players": "15",
+   "date": "2022/11/06"
+ },
+ {
+   "team1": "BlackStar Order",
+   "score1": 191,
+   "score2": 80,
+   "team2": "The Star League",
+   "players": "15",
+   "date": "2022/11/06"
+ },
+ {
+   "team1": "Imperium XIII",
+   "score1": 49,
+   "score2": 34,
+   "team2": "Void Dominion",
+   "players": "5",
+   "date": "2022/11/05"
+ },
+ {
+   "team1": "Best",
+   "score1": 233,
+   "score2": 103,
+   "team2": "Galactic Empire",
+   "players": "15",
+   "date": "2022/11/05"
+ },
+ {
+   "team1": "Rising star",
+   "score1": 164,
+   "score2": 45,
+   "team2": "Ten Forward",
+   "players": "15",
+   "date": "2022/11/05"
+ },
+ {
+   "team1": "Providence",
+   "score1": 143,
+   "score2": 68,
+   "team2": "Kpanhnn Kocmoc",
+   "players": "15",
+   "date": "2022/11/05"
+ },
+ {
+   "team1": "DadCorp",
+   "score1": 189,
+   "score2": 37,
+   "team2": "Terranova",
+   "players": "15",
+   "date": "2022/11/05"
+ },
+ {
+   "team1": "Lights Off",
+   "score1": 166,
+   "score2": 74,
+   "team2": "Embers Rising",
+   "players": "15",
+   "date": "2022/11/05"
+ },
+ {
+   "team1": "Blood Brigade",
+   "score1": 150,
+   "score2": 13,
+   "team2": "ТРУЛЯЛЯ",
+   "players": "15",
+   "date": "2022/11/05"
+ },
+ {
+   "team1": "Bounty Hunters",
+   "score1": 43,
+   "score2": 66,
+   "team2": "White Solaris",
+   "players": "5",
+   "date": "2022/11/04"
+ },
+ {
+   "team1": "Dumpster Fire",
+   "score1": 1,
+   "score2": 23,
+   "team2": "Eastern Front",
+   "players": "5",
+   "date": "2022/11/04"
+ },
+ {
+   "team1": "Metal Nova",
+   "score1": 68,
+   "score2": 3,
+   "team2": "Corporation",
+   "players": "10",
+   "date": "2022/11/04"
+ },
+ {
+   "team1": "Grunthal Gang",
+   "score1": 119,
+   "score2": 141,
+   "team2": "РОССИЯ",
+   "players": "10",
+   "date": "2022/11/04"
+ },
+ {
+   "team1": "Wintercomes",
+   "score1": 81,
+   "score2": 15,
+   "team2": "Empire of Light",
+   "players": "5",
+   "date": "2022/11/03"
+ },
+ {
+   "team1": "Dumpster Fire",
+   "score1": 64,
+   "score2": 12,
+   "team2": "仙女座星雲",
+   "players": "15",
+   "date": "2022/11/02"
+ },
+ {
+   "team1": "Team Elite",
+   "score1": 44,
+   "score2": 29,
+   "team2": "The Guardians",
+   "players": "5",
+   "date": "2022/11/02"
+ },
+ {
+   "team1": "Dumpster Fire",
+   "score1": 2,
+   "score2": 137,
+   "team2": "NERF TOY'S",
+   "players": "15",
+   "date": "2022/11/02"
+ },
+ {
+   "team1": "OntarioDynasty",
+   "score1": 180,
+   "score2": 60,
+   "team2": "Nearland Ind",
+   "players": "15",
+   "date": "2022/11/01"
+ },
+ {
+   "team1": "Wacky Wabbits",
+   "score1": 291,
+   "score2": 0,
+   "team2": "星䂓地㺷",
+   "players": "15",
+   "date": "2022/11/01"
+ },
+ {
    "team1": "Legion",
    "score1": 98,
    "score2": 50,
@@ -24,6 +664,22 @@ var gameData = [
    "date": "2022/10/31"
  },
  {
+   "team1": "DTC",
+   "score1": 58,
+   "score2": 50,
+   "team2": "the heavy",
+   "players": "5",
+   "date": "2022/10/31"
+ },
+ {
+   "team1": "Imperium XIII",
+   "score1": 105,
+   "score2": 29,
+   "team2": "PocKocMoc",
+   "players": "5",
+   "date": "2022/10/31"
+ },
+ {
    "team1": "Best",
    "score1": 254,
    "score2": 32,
@@ -37,6 +693,22 @@ var gameData = [
    "score2": 132,
    "team2": "Hinterm Mond",
    "players": "5",
+   "date": "2022/10/30"
+ },
+ {
+   "team1": "Wintercomes",
+   "score1": 67,
+   "score2": 45,
+   "team2": "Stammtisch",
+   "players": "5",
+   "date": "2022/10/30"
+ },
+ {
+   "team1": "DTC",
+   "score1": 1,
+   "score2": 98,
+   "team2": "pycb",
+   "players": "10",
    "date": "2022/10/30"
  },
  {
@@ -102,6 +774,14 @@ var gameData = [
    "team2": "Spy Corp",
    "players": "10",
    "date": "2022/10/26"
+ },
+ {
+   "team1": "Lexx",
+   "score1": 5,
+   "score2": 10,
+   "team2": "GalacticTraders",
+   "players": "5",
+   "date": "2022/10/25"
  },
  {
    "team1": "Spacefleet",
@@ -235,7 +915,7 @@ var gameData = [
    "team1": "Sith Empire",
    "score1": 361,
    "score2": 18,
-   "team2": "TPYNRNR",
+   "team2": "ТРУЛЯЛЯ",
    "players": "15",
    "date": "2022/10/17"
  },
@@ -264,11 +944,27 @@ var gameData = [
    "date": "2022/10/17"
  },
  {
+   "team1": "Wacky Wabbits",
+   "score1": 109,
+   "score2": 16,
+   "team2": "Highland Ind.",
+   "players": "5",
+   "date": "2022/10/17"
+ },
+ {
    "team1": "Legion",
    "score1": 254,
    "score2": 46,
    "team2": "Furyan Corps.",
    "players": "10",
+   "date": "2022/10/16"
+ },
+ {
+   "team1": "Imperium XIII",
+   "score1": 45,
+   "score2": 19,
+   "team2": "Ironbear Legion",
+   "players": "5",
    "date": "2022/10/16"
  },
  {
@@ -392,6 +1088,14 @@ var gameData = [
    "date": "2022/10/10"
  },
  {
+   "team1": "Wacky Wabbits",
+   "score1": 66,
+   "score2": 37,
+   "team2": "Starsailors",
+   "players": "5",
+   "date": "2022/10/10"
+ },
+ {
    "team1": "Lexx",
    "score1": 15,
    "score2": 28,
@@ -429,6 +1133,14 @@ var gameData = [
    "score2": 16,
    "team2": "TITANS",
    "players": "10",
+   "date": "2022/10/08"
+ },
+ {
+   "team1": "Imperium XIII",
+   "score1": 33,
+   "score2": 64,
+   "team2": "italian warrior",
+   "players": "5",
    "date": "2022/10/08"
  },
  {
@@ -517,6 +1229,14 @@ var gameData = [
    "score2": 26,
    "team2": "Solysis",
    "players": "15",
+   "date": "2022/10/04"
+ },
+ {
+   "team1": "Wacky Wabbits",
+   "score1": 300,
+   "score2": 0,
+   "team2": "우주미아",
+   "players": "5",
    "date": "2022/10/04"
  },
  {
@@ -827,7 +1547,7 @@ var gameData = [
    "team1": "Black Mirror Co",
    "score1": 62,
    "score2": 30,
-   "team2": "LossFarm No. 648",
+   "team2": "LossFarm No.648",
    "players": "15",
    "date": "2022/09/18"
  },
@@ -896,10 +1616,18 @@ var gameData = [
    "date": "2022/09/17"
  },
  {
+   "team1": "the heavy",
+   "score1": 109,
+   "score2": 198,
+   "team2": "AltCorp Inc",
+   "players": "5",
+   "date": "2022/09/17"
+ },
+ {
    "team1": "Diplomats Union",
    "score1": 130,
    "score2": 141,
-   "team2": "POCCNR",
+   "team2": "РОССИЯ",
    "players": "10",
    "date": "2022/09/16"
  },
@@ -971,7 +1699,7 @@ var gameData = [
    "team1": "StarControl",
    "score1": 271,
    "score2": 22,
-   "team2": "Red Coat Mafia",
+   "team2": "Red_Coat_Mafia",
    "players": "10",
    "date": "2022/09/12"
  },
@@ -1035,7 +1763,7 @@ var gameData = [
    "team1": "Blood Brigade",
    "score1": 160,
    "score2": 6,
-   "team2": "TPYNRNR",
+   "team2": "ТРУЛЯЛЯ",
    "players": "15",
    "date": "2022/09/10"
  },
@@ -1075,7 +1803,7 @@ var gameData = [
    "team1": "Grunthal Gang",
    "score1": 161,
    "score2": 138,
-   "team2": "POCCNR",
+   "team2": "РОССИЯ",
    "players": "15",
    "date": "2022/09/09"
  },
@@ -1419,7 +2147,7 @@ var gameData = [
    "team1": "Imperium XIII",
    "score1": 18,
    "score2": 246,
-   "team2": "Karanth",
+   "team2": "Karanth Corp.",
    "players": "5",
    "date": "2022/08/26"
  },
@@ -1515,7 +2243,7 @@ var gameData = [
    "team1": "Nearland Ind",
    "score1": 194,
    "score2": 79,
-   "team2": "IX Nernoh",
+   "team2": "IX Легион",
    "players": "15",
    "date": "2022/08/20"
  },
@@ -1811,7 +2539,7 @@ var gameData = [
    "team1": "Grunthal Gang",
    "score1": 111,
    "score2": 60,
-   "team2": "Dropbears Inc",
+   "team2": "Dropbears Inc.",
    "players": "10",
    "date": "2022/08/07"
  },
@@ -1835,7 +2563,7 @@ var gameData = [
    "team1": "Blood Brigade",
    "score1": 123,
    "score2": 1,
-   "team2": "TPYNRNR",
+   "team2": "ТРУЛЯЛЯ",
    "players": "15",
    "date": "2022/08/06"
  },
@@ -1944,7 +2672,7 @@ var gameData = [
    "date": "2022/07/31"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 50,
    "score2": 105,
    "team2": "Auscorp",
@@ -1955,7 +2683,7 @@ var gameData = [
    "team1": "DTC",
    "score1": 52,
    "score2": 19,
-   "team2": "Red Coat Mafia",
+   "team2": "Red_Coat_Mafia",
    "players": "5",
    "date": "2022/07/30"
  },
@@ -2003,7 +2731,7 @@ var gameData = [
    "team1": "Kharon Shipping",
    "score1": 53,
    "score2": 20,
-   "team2": "The X-Files",
+   "team2": "The X - Files",
    "players": "5",
    "date": "2022/07/30"
  },
@@ -2088,7 +2816,7 @@ var gameData = [
    "date": "2022/07/24"
  },
  {
-   "team1": "Dropbears Inc",
+   "team1": "Dropbears Inc.",
    "score1": 13,
    "score2": 32,
    "team2": "Sol",
@@ -2232,7 +2960,7 @@ var gameData = [
    "date": "2022/07/20"
  },
  {
-   "team1": "Dropbears Inc",
+   "team1": "Dropbears Inc.",
    "score1": 40,
    "score2": 20,
    "team2": "Kpanhnn Kocmoc",
@@ -2323,7 +3051,7 @@ var gameData = [
    "team1": "YAL",
    "score1": 158,
    "score2": 58,
-   "team2": "LossFarm No. 648",
+   "team2": "LossFarm No.648",
    "players": "15",
    "date": "2022/07/16"
  },
@@ -2336,7 +3064,7 @@ var gameData = [
    "date": "2022/07/16"
  },
  {
-   "team1": "Dropbears Inc",
+   "team1": "Dropbears Inc.",
    "score1": 25,
    "score2": 13,
    "team2": "Three Rivers",
@@ -2427,7 +3155,7 @@ var gameData = [
    "team1": "Spacefleet",
    "score1": 13,
    "score2": 37,
-   "team2": "Red Coat Mafia",
+   "team2": "Red_Coat_Mafia",
    "players": "5",
    "date": "2022/07/12"
  },
@@ -2456,7 +3184,7 @@ var gameData = [
    "date": "2022/07/11"
  },
  {
-   "team1": "Dropbears Inc",
+   "team1": "Dropbears Inc.",
    "score1": 76,
    "score2": 79,
    "team2": "Terranova",
@@ -2499,7 +3227,7 @@ var gameData = [
    "team1": "Nearland Ind",
    "score1": 212,
    "score2": 26,
-   "team2": "TPYNRNR",
+   "team2": "ТРУЛЯЛЯ",
    "players": "15",
    "date": "2022/07/09"
  },
@@ -2707,7 +3435,7 @@ var gameData = [
    "team1": "$TAR$",
    "score1": 128,
    "score2": 35,
-   "team2": "The X-Files",
+   "team2": "The X - Files",
    "players": "10",
    "date": "2022/07/02"
  },
@@ -2811,7 +3539,7 @@ var gameData = [
    "team1": "$TAR$",
    "score1": 65,
    "score2": 42,
-   "team2": "Dropbears Inc",
+   "team2": "Dropbears Inc.",
    "players": "10",
    "date": "2022/06/25"
  },
@@ -2923,7 +3651,7 @@ var gameData = [
    "team1": "Unimatrix Zero",
    "score1": 181,
    "score2": 130,
-   "team2": "Watchers",
+   "team2": "The Watchers",
    "players": "15",
    "date": "2022/06/18"
  },
@@ -2931,7 +3659,7 @@ var gameData = [
    "team1": "StarControl",
    "score1": 197,
    "score2": 48,
-   "team2": "POCCNR",
+   "team2": "РОССИЯ",
    "players": "10",
    "date": "2022/06/18"
  },
@@ -3091,7 +3819,7 @@ var gameData = [
    "team1": "Nearland Ind",
    "score1": 196,
    "score2": 127,
-   "team2": "IX Nernoh",
+   "team2": "IX Легион",
    "players": "15",
    "date": "2022/06/12"
  },
@@ -3123,7 +3851,7 @@ var gameData = [
    "team1": "StarControl",
    "score1": 131,
    "score2": 95,
-   "team2": "Karanth",
+   "team2": "Karanth Corp.",
    "players": "10",
    "date": "2022/06/11"
  },
@@ -3315,7 +4043,7 @@ var gameData = [
    "team1": "Space Donuts",
    "score1": 189,
    "score2": 19,
-   "team2": "The X-Files",
+   "team2": "The X - Files",
    "players": "10",
    "date": "2022/06/03"
  },
@@ -3707,7 +4435,7 @@ var gameData = [
    "team1": "Nearland Ind",
    "score1": 260,
    "score2": 26,
-   "team2": "TPYNRNR",
+   "team2": "ТРУЛЯЛЯ",
    "players": "15",
    "date": "2022/05/21"
  },
@@ -3792,7 +4520,7 @@ var gameData = [
    "date": "2022/05/20"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 190,
    "score2": 36,
    "team2": "Furyan Corps.",
@@ -3915,7 +4643,7 @@ var gameData = [
    "team1": "Sith Empire",
    "score1": 104,
    "score2": 15,
-   "team2": "TPYNRNR",
+   "team2": "ТРУЛЯЛЯ",
    "players": "15",
    "date": "2022/05/15"
  },
@@ -4051,7 +4779,7 @@ var gameData = [
    "team1": "OntarioDynasty",
    "score1": 115,
    "score2": 73,
-   "team2": "Watchers",
+   "team2": "The Watchers",
    "players": "10",
    "date": "2022/05/13"
  },
@@ -4195,7 +4923,7 @@ var gameData = [
    "team1": "Space Donuts",
    "score1": 93,
    "score2": 35,
-   "team2": "The X-Files",
+   "team2": "The X - Files",
    "players": "10",
    "date": "2022/05/07"
  },
@@ -4267,7 +4995,7 @@ var gameData = [
    "team1": "the heavy",
    "score1": 61,
    "score2": 67,
-   "team2": "EMP",
+   "team2": "ItBurnsWhenIEMP",
    "players": "10",
    "date": "2022/05/06"
  },
@@ -4483,7 +5211,7 @@ var gameData = [
    "team1": "Nearland Ind",
    "score1": 225,
    "score2": 97,
-   "team2": "IX Nernoh",
+   "team2": "IX Легион",
    "players": "15",
    "date": "2022/04/30"
  },
@@ -4499,7 +5227,7 @@ var gameData = [
    "team1": "Kharon Shipping",
    "score1": 92,
    "score2": 63,
-   "team2": "Karanth",
+   "team2": "Karanth Corp.",
    "players": "5",
    "date": "2022/04/30"
  },
@@ -4915,7 +5643,7 @@ var gameData = [
    "team1": "StarControl",
    "score1": 66,
    "score2": 21,
-   "team2": "Gummibarenbande",
+   "team2": "Gummibärenbande",
    "players": "5",
    "date": "2022/04/16"
  },
@@ -5059,7 +5787,7 @@ var gameData = [
    "team1": "Orion",
    "score1": 70,
    "score2": 9,
-   "team2": "Red Coat Mafia",
+   "team2": "Red_Coat_Mafia",
    "players": "5",
    "date": "2022/04/10"
  },
@@ -5219,7 +5947,7 @@ var gameData = [
    "team1": "Star Fall",
    "score1": 87,
    "score2": 77,
-   "team2": "Karanth",
+   "team2": "Karanth Corp.",
    "players": "5",
    "date": "2022/04/05"
  },
@@ -5251,7 +5979,7 @@ var gameData = [
    "team1": "Spacecrevards",
    "score1": 223,
    "score2": 26,
-   "team2": "Watchers",
+   "team2": "The Watchers",
    "players": "10",
    "date": "2022/04/03"
  },
@@ -5456,7 +6184,7 @@ var gameData = [
    "date": "2022/03/28"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 168,
    "score2": 76,
    "team2": "DadCorp",
@@ -5491,7 +6219,7 @@ var gameData = [
    "team1": "Hinterm Mond",
    "score1": 252,
    "score2": 59,
-   "team2": "Watchers",
+   "team2": "The Watchers",
    "players": "10",
    "date": "2022/03/27"
  },
@@ -5771,7 +6499,7 @@ var gameData = [
    "team1": "Unimatrix Zero",
    "score1": 92,
    "score2": 113,
-   "team2": "POCCNR",
+   "team2": "РОССИЯ",
    "players": "10",
    "date": "2022/03/19"
  },
@@ -6072,7 +6800,7 @@ var gameData = [
    "date": "2022/03/05"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 79,
    "score2": 39,
    "team2": "Auscorp",
@@ -6248,7 +6976,7 @@ var gameData = [
    "date": "2022/02/28"
  },
  {
-   "team1": "Watchers",
+   "team1": "The Watchers",
    "score1": 206,
    "score2": 68,
    "team2": "BRhue",
@@ -6320,7 +7048,7 @@ var gameData = [
    "date": "2022/02/27"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 185,
    "score2": 7,
    "team2": "Elite",
@@ -6520,7 +7248,7 @@ var gameData = [
    "date": "2022/02/18"
  },
  {
-   "team1": "Watchers",
+   "team1": "The Watchers",
    "score1": 30,
    "score2": 55,
    "team2": "Sith Empire",
@@ -6555,7 +7283,7 @@ var gameData = [
    "team1": "Famous Assassins",
    "score1": 98,
    "score2": 79,
-   "team2": "IX Nernoh",
+   "team2": "IX Легион",
    "players": "15",
    "date": "2022/02/14"
  },
@@ -6752,7 +7480,7 @@ var gameData = [
    "date": "2022/02/08"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 123,
    "score2": 2,
    "team2": "Zanganos",
@@ -6875,7 +7603,7 @@ var gameData = [
    "team1": "Ark Summit",
    "score1": 122,
    "score2": 92,
-   "team2": "COЮЗ Akanemnr",
+   "team2": "СОЮЗ Akanemnr",
    "players": "15",
    "date": "2022/02/04"
  },
@@ -6931,7 +7659,7 @@ var gameData = [
    "team1": "Ender",
    "score1": 149,
    "score2": 24,
-   "team2": "EMP",
+   "team2": "ItBurnsWhenIEMP",
    "players": "10",
    "date": "2022/01/31"
  },
@@ -6963,7 +7691,7 @@ var gameData = [
    "team1": "BlackStar Order",
    "score1": 143,
    "score2": 13,
-   "team2": "Watchers",
+   "team2": "The Watchers",
    "players": "15",
    "date": "2022/01/31"
  },
@@ -7128,7 +7856,7 @@ var gameData = [
    "date": "2022/01/24"
  },
  {
-   "team1": "Watchers",
+   "team1": "The Watchers",
    "score1": 340,
    "score2": 33,
    "team2": "ГОРИЗОНТ",
@@ -7283,7 +8011,7 @@ var gameData = [
    "team1": "Ender",
    "score1": 137,
    "score2": 48,
-   "team2": "COЮЗ",
+   "team2": "СОЮЗ",
    "players": "10",
    "date": "2022/01/17"
  },
@@ -7459,7 +8187,7 @@ var gameData = [
    "team1": "StarControl",
    "score1": 265,
    "score2": 12,
-   "team2": "LossFarm No. 648",
+   "team2": "LossFarm No.648",
    "players": "10",
    "date": "2022/01/10"
  },
@@ -7563,7 +8291,7 @@ var gameData = [
    "team1": "Spacefleet",
    "score1": 301,
    "score2": 4,
-   "team2": "Red Coat Mafia",
+   "team2": "Red_Coat_Mafia",
    "players": "15",
    "date": "2022/01/04"
  },
@@ -7867,7 +8595,7 @@ var gameData = [
    "team1": "Spacecrevards",
    "score1": 93,
    "score2": 92,
-   "team2": "POCCNR",
+   "team2": "РОССИЯ",
    "players": "10",
    "date": "2021/12/23"
  },
@@ -8072,7 +8800,7 @@ var gameData = [
    "date": "2021/12/12"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 44,
    "score2": 30,
    "team2": "InfamousExiles",
@@ -8107,7 +8835,7 @@ var gameData = [
    "team1": "Kharon Shipping",
    "score1": 169,
    "score2": 70,
-   "team2": "POCCNR",
+   "team2": "РОССИЯ",
    "players": "10",
    "date": "2021/12/11"
  },
@@ -8120,7 +8848,7 @@ var gameData = [
    "date": "2021/12/10"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 50,
    "score2": 38,
    "team2": "Star Fall",
@@ -8219,7 +8947,7 @@ var gameData = [
    "team1": "Hinterm Mond",
    "score1": 367,
    "score2": 53,
-   "team2": "Watchers",
+   "team2": "The Watchers",
    "players": "15",
    "date": "2021/12/06"
  },
@@ -8403,7 +9131,7 @@ var gameData = [
    "team1": "ГОРИЗОНТ",
    "score1": 57,
    "score2": 19,
-   "team2": "Karanth",
+   "team2": "Karanth Corp.",
    "players": "5",
    "date": "2021/11/26"
  },
@@ -8440,7 +9168,7 @@ var gameData = [
    "date": "2021/11/23"
  },
  {
-   "team1": "COЮЗ",
+   "team1": "СОЮЗ",
    "score1": 0,
    "score2": 386,
    "team2": "Hinterm Mond",
@@ -8448,7 +9176,7 @@ var gameData = [
    "date": "2021/11/23"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 59,
    "score2": 38,
    "team2": "M3K",
@@ -8475,7 +9203,7 @@ var gameData = [
    "team1": "Anla'Shok",
    "score1": 102,
    "score2": 1,
-   "team2": "EMP",
+   "team2": "ItBurnsWhenIEMP",
    "players": "15",
    "date": "2021/11/21"
  },
@@ -8624,7 +9352,7 @@ var gameData = [
    "date": "2021/11/14"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 35,
    "score2": 57,
    "team2": "Space Penguins",
@@ -8632,7 +9360,7 @@ var gameData = [
    "date": "2021/11/13"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 207,
    "score2": 24,
    "team2": "Gulinga",
@@ -8643,7 +9371,7 @@ var gameData = [
    "team1": "Auscorp",
    "score1": 114,
    "score2": 73,
-   "team2": "Watchers",
+   "team2": "The Watchers",
    "players": "15",
    "date": "2021/11/13"
  },
@@ -8651,7 +9379,7 @@ var gameData = [
    "team1": "Tacitus",
    "score1": 36,
    "score2": 67,
-   "team2": "IX Nernoh",
+   "team2": "IX Легион",
    "players": "10",
    "date": "2021/11/13"
  },
@@ -8795,7 +9523,7 @@ var gameData = [
    "team1": "Kharon Shipping",
    "score1": 151,
    "score2": 34,
-   "team2": "Watchers",
+   "team2": "The Watchers",
    "players": "10",
    "date": "2021/11/07"
  },
@@ -8971,7 +9699,7 @@ var gameData = [
    "team1": "DUNE",
    "score1": 268,
    "score2": 0,
-   "team2": "COЮЗ",
+   "team2": "СОЮЗ",
    "players": "10",
    "date": "2021/10/30"
  },
@@ -9027,7 +9755,7 @@ var gameData = [
    "team1": "DTC",
    "score1": 167,
    "score2": 101,
-   "team2": "Gummibarenbande",
+   "team2": "Gummibärenbande",
    "players": "15",
    "date": "2021/10/30"
  },
@@ -9035,7 +9763,7 @@ var gameData = [
    "team1": "Tacitus",
    "score1": 291,
    "score2": 1,
-   "team2": "TPYNRNR",
+   "team2": "ТРУЛЯЛЯ",
    "players": "15",
    "date": "2021/10/30"
  },
@@ -9043,7 +9771,7 @@ var gameData = [
    "team1": "Kharon Shipping",
    "score1": 81,
    "score2": 52,
-   "team2": "Karanth",
+   "team2": "Karanth Corp.",
    "players": "5",
    "date": "2021/10/30"
  },
@@ -9147,7 +9875,7 @@ var gameData = [
    "team1": "Imperium XIII",
    "score1": 81,
    "score2": 15,
-   "team2": "The X-Files",
+   "team2": "The X - Files",
    "players": "5",
    "date": "2021/10/23"
  },
@@ -9168,7 +9896,7 @@ var gameData = [
    "date": "2021/10/23"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 223,
    "score2": 13,
    "team2": "ГОРИЗОНТ",
@@ -9248,7 +9976,7 @@ var gameData = [
    "date": "2021/10/19"
  },
  {
-   "team1": "Watchers",
+   "team1": "The Watchers",
    "score1": 194,
    "score2": 1,
    "team2": "中国家民",
@@ -9304,7 +10032,7 @@ var gameData = [
    "date": "2021/10/17"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 153,
    "score2": 21,
    "team2": "Nюбители пива",
@@ -9323,7 +10051,7 @@ var gameData = [
    "team1": "Auscorp",
    "score1": 406,
    "score2": 0,
-   "team2": "COЮЗ",
+   "team2": "СОЮЗ",
    "players": "15",
    "date": "2021/10/16"
  },
@@ -9411,7 +10139,7 @@ var gameData = [
    "team1": "the heavy",
    "score1": 60,
    "score2": 34,
-   "team2": "Karanth",
+   "team2": "Karanth Corp.",
    "players": "5",
    "date": "2021/10/10"
  },
@@ -9491,7 +10219,7 @@ var gameData = [
    "team1": "Team Elite",
    "score1": 86,
    "score2": 13,
-   "team2": "The X-Files",
+   "team2": "The X - Files",
    "players": "5",
    "date": "2021/10/09"
  },
@@ -9504,10 +10232,10 @@ var gameData = [
    "date": "2021/10/09"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 27,
    "score2": 7,
-   "team2": "EMP",
+   "team2": "ItBurnsWhenIEMP",
    "players": "5",
    "date": "2021/10/09"
  },
@@ -9579,7 +10307,7 @@ var gameData = [
    "team1": "Elite",
    "score1": 32,
    "score2": 115,
-   "team2": "TPYNRNR",
+   "team2": "ТРУЛЯЛЯ",
    "players": "15",
    "date": "2021/10/05"
  },
@@ -9696,7 +10424,7 @@ var gameData = [
    "date": "2021/10/02"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 220,
    "score2": 10,
    "team2": "Polaris",
@@ -9811,7 +10539,7 @@ var gameData = [
    "team1": "OntarioDynasty",
    "score1": 96,
    "score2": 78,
-   "team2": "Watchers",
+   "team2": "The Watchers",
    "players": "15",
    "date": "2021/09/26"
  },
@@ -9824,7 +10552,7 @@ var gameData = [
    "date": "2021/09/26"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 36,
    "score2": 4,
    "team2": "Topговая Федерация",
@@ -9931,7 +10659,7 @@ var gameData = [
    "team1": "Dark Skai",
    "score1": 126,
    "score2": 7,
-   "team2": "Red Coat Mafia",
+   "team2": "Red_Coat_Mafia",
    "players": "15",
    "date": "2021/09/22"
  },
@@ -9944,7 +10672,7 @@ var gameData = [
    "date": "2021/09/22"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 202,
    "score2": 62,
    "team2": "HORNET",
@@ -10003,7 +10731,7 @@ var gameData = [
    "team1": "StarControl",
    "score1": 122,
    "score2": 63,
-   "team2": "EMP",
+   "team2": "ItBurnsWhenIEMP",
    "players": "5",
    "date": "2021/09/19"
  },
@@ -10096,7 +10824,7 @@ var gameData = [
    "date": "2021/09/16"
  },
  {
-   "team1": "Red Coat Mafia",
+   "team1": "Red_Coat_Mafia",
    "score1": 116,
    "score2": 1,
    "team2": "Dauntless",
@@ -10136,7 +10864,7 @@ var gameData = [
    "date": "2021/09/15"
  },
  {
-   "team1": "EMP",
+   "team1": "ItBurnsWhenIEMP",
    "score1": 101,
    "score2": 14,
    "team2": "Final",
@@ -10200,7 +10928,7 @@ var gameData = [
    "date": "2021/09/12"
  },
  {
-   "team1": "COЮЗ",
+   "team1": "СОЮЗ",
    "score1": 4,
    "score2": 164,
    "team2": "ГОРИЗОНТ",
@@ -10403,7 +11131,7 @@ var gameData = [
    "team1": "Blood Brigade",
    "score1": 87,
    "score2": 97,
-   "team2": "LossFarm No. 648",
+   "team2": "LossFarm No.648",
    "players": "10",
    "date": "2021/09/05"
  },
@@ -10424,7 +11152,7 @@ var gameData = [
    "date": "2021/09/05"
  },
  {
-   "team1": "TPYNRNR",
+   "team1": "ТРУЛЯЛЯ",
    "score1": 105,
    "score2": 22,
    "team2": "Black Sun",
@@ -10456,7 +11184,7 @@ var gameData = [
    "date": "2021/09/05"
  },
  {
-   "team1": "Red Coat Mafia",
+   "team1": "Red_Coat_Mafia",
    "score1": 159,
    "score2": 103,
    "team2": "Kpanhnn Kocmoc",
@@ -10523,7 +11251,7 @@ var gameData = [
    "team1": "Tacitus",
    "score1": 196,
    "score2": 24,
-   "team2": "COЮЗ",
+   "team2": "СОЮЗ",
    "players": "15",
    "date": "2021/09/04"
  },
@@ -10707,7 +11435,7 @@ var gameData = [
    "team1": "Unimatrix Zero",
    "score1": 51,
    "score2": 163,
-   "team2": "Karanth",
+   "team2": "Karanth Corp.",
    "players": "5",
    "date": "2021/08/27"
  },
@@ -10715,7 +11443,7 @@ var gameData = [
    "team1": "Weyland Corp",
    "score1": 46,
    "score2": 43,
-   "team2": "Gummibarenbande",
+   "team2": "Gummibärenbande",
    "players": "10",
    "date": "2021/08/27"
  },
@@ -10771,7 +11499,7 @@ var gameData = [
    "team1": "Ark Summit",
    "score1": 148,
    "score2": 30,
-   "team2": "EMP",
+   "team2": "ItBurnsWhenIEMP",
    "players": "15",
    "date": "2021/08/23"
  },
@@ -10787,7 +11515,7 @@ var gameData = [
    "team1": "Elite",
    "score1": 100,
    "score2": 5,
-   "team2": "The X-Files",
+   "team2": "The X - Files",
    "players": "10",
    "date": "2021/08/23"
  },
@@ -11040,7 +11768,7 @@ var gameData = [
    "date": "2021/08/14"
  },
  {
-   "team1": "COЮЗ",
+   "team1": "СОЮЗ",
    "score1": 50,
    "score2": 177,
    "team2": "USSR",
@@ -11075,7 +11803,7 @@ var gameData = [
    "team1": "KARI",
    "score1": 233,
    "score2": 0,
-   "team2": "COЮЗ",
+   "team2": "СОЮЗ",
    "players": "15",
    "date": "2021/08/14"
  },
@@ -11483,7 +12211,7 @@ var gameData = [
    "team1": "Weyland Corp",
    "score1": 77,
    "score2": 11,
-   "team2": "COЮЗ",
+   "team2": "СОЮЗ",
    "players": "10",
    "date": "2021/07/31"
  },
@@ -11499,7 +12227,7 @@ var gameData = [
    "team1": "Black Sun",
    "score1": 70,
    "score2": 31,
-   "team2": "TPYNRNR",
+   "team2": "ТРУЛЯЛЯ",
    "players": "15",
    "date": "2021/07/31"
  },
@@ -11651,7 +12379,7 @@ var gameData = [
    "team1": "Black Sun",
    "score1": 138,
    "score2": 12,
-   "team2": "COЮЗ",
+   "team2": "СОЮЗ",
    "players": "15",
    "date": "2021/07/24"
  },
@@ -11723,7 +12451,7 @@ var gameData = [
    "team1": "Yishun CC",
    "score1": 104,
    "score2": 51,
-   "team2": "Watchers",
+   "team2": "The Watchers",
    "players": "15",
    "date": "2021/07/20"
  },
@@ -11931,7 +12659,7 @@ var gameData = [
    "team1": "Canadian Army",
    "score1": 113,
    "score2": 88,
-   "team2": "Dropbears Inc",
+   "team2": "Dropbears Inc.",
    "players": "15",
    "date": "2021/07/12"
  },
@@ -12003,7 +12731,7 @@ var gameData = [
    "team1": "Legion",
    "score1": 344,
    "score2": 0,
-   "team2": "Karanth",
+   "team2": "Karanth Corp.",
    "players": "5",
    "date": "2021/07/10"
  },
@@ -12131,7 +12859,7 @@ var gameData = [
    "team1": "Auscorp",
    "score1": 77,
    "score2": 29,
-   "team2": "TPYNRNR",
+   "team2": "ТРУЛЯЛЯ",
    "players": "15",
    "date": "2021/07/04"
  },
@@ -12355,7 +13083,7 @@ var gameData = [
    "team1": "Imperium XIII",
    "score1": 134,
    "score2": 37,
-   "team2": "The X-Files",
+   "team2": "The X - Files",
    "players": "10",
    "date": "2021/06/26"
  },
@@ -12440,7 +13168,7 @@ var gameData = [
    "date": "2021/06/22"
  },
  {
-   "team1": "EMP",
+   "team1": "ItBurnsWhenIEMP",
    "score1": 31,
    "score2": 0,
    "team2": "龙门训练营",
@@ -12451,7 +13179,7 @@ var gameData = [
    "team1": "Furyan Corps.",
    "score1": 16,
    "score2": 167,
-   "team2": "COЮЗ",
+   "team2": "СОЮЗ",
    "players": "10",
    "date": "2021/06/22"
  },
@@ -12611,7 +13339,7 @@ var gameData = [
    "team1": "Black Sun",
    "score1": 76,
    "score2": 30,
-   "team2": "Gummibarenbande",
+   "team2": "Gummibärenbande",
    "players": "10",
    "date": "2021/06/19"
  },
@@ -12635,7 +13363,7 @@ var gameData = [
    "team1": "System Shock",
    "score1": 63,
    "score2": 0,
-   "team2": "Watchers",
+   "team2": "The Watchers",
    "players": "5",
    "date": "2021/06/18"
  },
@@ -12648,7 +13376,7 @@ var gameData = [
    "date": "2021/06/18"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 160,
    "score2": 48,
    "team2": "Void Dominion",
@@ -12747,7 +13475,7 @@ var gameData = [
    "team1": "ГОРИЗОНТ",
    "score1": 79,
    "score2": 68,
-   "team2": "EMP",
+   "team2": "ItBurnsWhenIEMP",
    "players": "15",
    "date": "2021/06/13"
  },
@@ -12803,7 +13531,7 @@ var gameData = [
    "team1": "HORNET",
    "score1": 49,
    "score2": 39,
-   "team2": "Karanth",
+   "team2": "Karanth Corp.",
    "players": "5",
    "date": "2021/06/13"
  },
@@ -12931,7 +13659,7 @@ var gameData = [
    "team1": "HORNET",
    "score1": 152,
    "score2": 45,
-   "team2": "Watchers",
+   "team2": "The Watchers",
    "players": "15",
    "date": "2021/06/07"
  },
@@ -13011,7 +13739,7 @@ var gameData = [
    "team1": "OntarioDominion",
    "score1": 35,
    "score2": 30,
-   "team2": "Karanth",
+   "team2": "Karanth Corp.",
    "players": "5",
    "date": "2021/06/06"
  },
@@ -13139,7 +13867,7 @@ var gameData = [
    "team1": "Hinterm Mond",
    "score1": 117,
    "score2": 72,
-   "team2": "Watchers",
+   "team2": "The Watchers",
    "players": "15",
    "date": "2021/05/31"
  },
@@ -13176,7 +13904,7 @@ var gameData = [
    "date": "2021/05/30"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 89,
    "score2": 13,
    "team2": "NERF",
@@ -13203,7 +13931,7 @@ var gameData = [
    "team1": "ГОРИЗОНТ",
    "score1": 107,
    "score2": 2,
-   "team2": "TPYNRNR",
+   "team2": "ТРУЛЯЛЯ",
    "players": "5",
    "date": "2021/05/30"
  },
@@ -13371,7 +14099,7 @@ var gameData = [
    "team1": "StarControl",
    "score1": 57,
    "score2": 48,
-   "team2": "EMP",
+   "team2": "ItBurnsWhenIEMP",
    "players": "10",
    "date": "2021/05/23"
  },
@@ -13392,7 +14120,7 @@ var gameData = [
    "date": "2021/05/23"
  },
  {
-   "team1": "Watchers",
+   "team1": "The Watchers",
    "score1": 131,
    "score2": 27,
    "team2": "The Asylum",
@@ -13435,7 +14163,7 @@ var gameData = [
    "team1": "Legion",
    "score1": 168,
    "score2": 0,
-   "team2": "Watchers",
+   "team2": "The Watchers",
    "players": "10",
    "date": "2021/05/22"
  },
@@ -13539,7 +14267,7 @@ var gameData = [
    "team1": "StarControl",
    "score1": 126,
    "score2": 39,
-   "team2": "Watchers",
+   "team2": "The Watchers",
    "players": "10",
    "date": "2021/05/16"
  },
@@ -13547,7 +14275,7 @@ var gameData = [
    "team1": "Kyлak",
    "score1": 7,
    "score2": 157,
-   "team2": "EMP",
+   "team2": "ItBurnsWhenIEMP",
    "players": "10",
    "date": "2021/05/16"
  },
@@ -13576,7 +14304,7 @@ var gameData = [
    "date": "2021/05/16"
  },
  {
-   "team1": "COЮЗ",
+   "team1": "СОЮЗ",
    "score1": 64,
    "score2": 98,
    "team2": "Crazy Elite",
@@ -13611,7 +14339,7 @@ var gameData = [
    "team1": "Hydra",
    "score1": 60,
    "score2": 5,
-   "team2": "COЮЗ",
+   "team2": "СОЮЗ",
    "players": "10",
    "date": "2021/05/16"
  },
@@ -13627,7 +14355,7 @@ var gameData = [
    "team1": "System Shock",
    "score1": 75,
    "score2": 5,
-   "team2": "Karanth",
+   "team2": "Karanth Corp.",
    "players": "5",
    "date": "2021/05/16"
  },
@@ -13739,7 +14467,7 @@ var gameData = [
    "team1": "Bastion",
    "score1": 23,
    "score2": 28,
-   "team2": "Karanth",
+   "team2": "Karanth Corp.",
    "players": "5",
    "date": "2021/05/14"
  },
@@ -13851,7 +14579,7 @@ var gameData = [
    "team1": "Final",
    "score1": 90,
    "score2": 44,
-   "team2": "Watchers",
+   "team2": "The Watchers",
    "players": "15",
    "date": "2021/05/09"
  },
@@ -13915,7 +14643,7 @@ var gameData = [
    "team1": "Black Sun",
    "score1": 56,
    "score2": 30,
-   "team2": "COЮЗ",
+   "team2": "СОЮЗ",
    "players": "10",
    "date": "2021/05/08"
  },
@@ -14003,7 +14731,7 @@ var gameData = [
    "team1": "KARI",
    "score1": 6,
    "score2": 102,
-   "team2": "TPYNRNR",
+   "team2": "ТРУЛЯЛЯ",
    "players": "15",
    "date": "2021/05/07"
  },
@@ -14176,7 +14904,7 @@ var gameData = [
    "date": "2021/05/02"
  },
  {
-   "team1": "Watchers",
+   "team1": "The Watchers",
    "score1": 171,
    "score2": 11,
    "team2": "Españoles",
@@ -14299,23 +15027,23 @@ var gameData = [
    "team1": "Black Sun",
    "score1": 104,
    "score2": 81,
-   "team2": "TPYNRNR",
+   "team2": "ТРУЛЯЛЯ",
    "players": "15",
    "date": "2021/04/30"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 59,
    "score2": 46,
-   "team2": "POCCNR",
+   "team2": "РОССИЯ",
    "players": "10",
    "date": "2021/04/30"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 40,
    "score2": 51,
-   "team2": "Watchers",
+   "team2": "The Watchers",
    "players": "5",
    "date": "2021/04/30"
  },
@@ -14411,7 +15139,7 @@ var gameData = [
    "team1": "Unimatrix Zero",
    "score1": 24,
    "score2": 18,
-   "team2": "Gummibarenbande",
+   "team2": "Gummibärenbande",
    "players": "5",
    "date": "2021/04/24"
  },
@@ -14424,7 +15152,7 @@ var gameData = [
    "date": "2021/04/24"
  },
  {
-   "team1": "TPYNRNR",
+   "team1": "ТРУЛЯЛЯ",
    "score1": 154,
    "score2": 61,
    "team2": "Bastion",
@@ -14472,7 +15200,7 @@ var gameData = [
    "date": "2021/04/24"
  },
  {
-   "team1": "Watchers",
+   "team1": "The Watchers",
    "score1": 52,
    "score2": 28,
    "team2": "ГОРИЗОНТ",
@@ -14480,7 +15208,7 @@ var gameData = [
    "date": "2021/04/24"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 194,
    "score2": 42,
    "team2": "Gulinga",
@@ -14627,7 +15355,7 @@ var gameData = [
    "team1": "Final",
    "score1": 75,
    "score2": 49,
-   "team2": "Watchers",
+   "team2": "The Watchers",
    "players": "15",
    "date": "2021/04/18"
  },
@@ -14691,7 +15419,7 @@ var gameData = [
    "team1": "Imperium XIII",
    "score1": 91,
    "score2": 24,
-   "team2": "COЮЗ",
+   "team2": "СОЮЗ",
    "players": "10",
    "date": "2021/04/17"
  },
@@ -14763,7 +15491,7 @@ var gameData = [
    "team1": "Ender",
    "score1": 65,
    "score2": 49,
-   "team2": "Watchers",
+   "team2": "The Watchers",
    "players": "15",
    "date": "2021/04/12"
  },
@@ -14811,7 +15539,7 @@ var gameData = [
    "team1": "Kharon Shipping",
    "score1": 167,
    "score2": 4,
-   "team2": "POCCNR",
+   "team2": "РОССИЯ",
    "players": "10",
    "date": "2021/04/10"
  },
@@ -14947,7 +15675,7 @@ var gameData = [
    "team1": "System Shock",
    "score1": 28,
    "score2": 62,
-   "team2": "Karanth",
+   "team2": "Karanth Corp.",
    "players": "5",
    "date": "2021/04/05"
  },
@@ -15027,7 +15755,7 @@ var gameData = [
    "team1": "Imperium XIII",
    "score1": 66,
    "score2": 21,
-   "team2": "The X-Files",
+   "team2": "The X - Files",
    "players": "5",
    "date": "2021/04/03"
  },
@@ -15179,12 +15907,12 @@ var gameData = [
    "team1": "W.O.A",
    "score1": 101,
    "score2": 40,
-   "team2": "TPYNRNR",
+   "team2": "ТРУЛЯЛЯ",
    "players": "15",
    "date": "2021/03/29"
  },
  {
-   "team1": "Watchers",
+   "team1": "The Watchers",
    "score1": 1,
    "score2": 0,
    "team2": "KARI",
@@ -15267,7 +15995,7 @@ var gameData = [
    "team1": "Space Oddity",
    "score1": 117,
    "score2": 58,
-   "team2": "Red Coat Mafia",
+   "team2": "Red_Coat_Mafia",
    "players": "15",
    "date": "2021/03/27"
  },
@@ -15280,7 +16008,7 @@ var gameData = [
    "date": "2021/03/26"
  },
  {
-   "team1": "COЮЗ",
+   "team1": "СОЮЗ",
    "score1": 0,
    "score2": 80,
    "team2": "NOVA",
@@ -15320,7 +16048,7 @@ var gameData = [
    "date": "2021/03/26"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 133,
    "score2": 0,
    "team2": "Avantgarde",
@@ -15475,7 +16203,7 @@ var gameData = [
    "team1": "Auscorp",
    "score1": 58,
    "score2": 44,
-   "team2": "Watchers",
+   "team2": "The Watchers",
    "players": "10",
    "date": "2021/03/20"
  },
@@ -15515,7 +16243,7 @@ var gameData = [
    "team1": "Unimatrix Zero",
    "score1": 75,
    "score2": 52,
-   "team2": "POCCNR",
+   "team2": "РОССИЯ",
    "players": "10",
    "date": "2021/03/20"
  },
@@ -15595,7 +16323,7 @@ var gameData = [
    "team1": "DadCorp",
    "score1": 9,
    "score2": 27,
-   "team2": "Watchers",
+   "team2": "The Watchers",
    "players": "5",
    "date": "2021/03/16"
  },
@@ -15736,7 +16464,7 @@ var gameData = [
    "date": "2021/03/12"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 29,
    "score2": 30,
    "team2": "NERF",
@@ -15779,7 +16507,7 @@ var gameData = [
    "team1": "VoidCorp",
    "score1": 72,
    "score2": 72,
-   "team2": "TPYNRNR",
+   "team2": "ТРУЛЯЛЯ",
    "players": "15",
    "date": "2021/03/11"
  },
@@ -15792,7 +16520,7 @@ var gameData = [
    "date": "2021/03/11"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 154,
    "score2": 15,
    "team2": "Farland Ind.",
@@ -15867,7 +16595,7 @@ var gameData = [
    "team1": "BlackStar Order",
    "score1": 88,
    "score2": 71,
-   "team2": "Watchers",
+   "team2": "The Watchers",
    "players": "15",
    "date": "2021/03/07"
  },
@@ -15915,7 +16643,7 @@ var gameData = [
    "team1": "InfamousExiles",
    "score1": 54,
    "score2": 25,
-   "team2": "POCCNR",
+   "team2": "РОССИЯ",
    "players": "10",
    "date": "2021/03/06"
  },
@@ -15963,7 +16691,7 @@ var gameData = [
    "team1": "Imperium XIII",
    "score1": 80,
    "score2": 16,
-   "team2": "The X-Files",
+   "team2": "The X - Files",
    "players": "5",
    "date": "2021/03/06"
  },
@@ -16003,7 +16731,7 @@ var gameData = [
    "team1": "Kharon Shipping",
    "score1": 161,
    "score2": 32,
-   "team2": "Karanth",
+   "team2": "Karanth Corp.",
    "players": "10",
    "date": "2021/03/05"
  },
@@ -16179,7 +16907,7 @@ var gameData = [
    "team1": "Kharon Shipping",
    "score1": 334,
    "score2": 15,
-   "team2": "POCCNR",
+   "team2": "РОССИЯ",
    "players": "10",
    "date": "2021/02/27"
  },
@@ -16291,7 +17019,7 @@ var gameData = [
    "team1": "DadCorp",
    "score1": 50,
    "score2": 30,
-   "team2": "Watchers",
+   "team2": "The Watchers",
    "players": "10",
    "date": "2021/02/24"
  },
@@ -16419,7 +17147,7 @@ var gameData = [
    "team1": "DUNE",
    "score1": 59,
    "score2": 13,
-   "team2": "POCCNR",
+   "team2": "РОССИЯ",
    "players": "10",
    "date": "2021/02/20"
  },
@@ -16451,7 +17179,7 @@ var gameData = [
    "team1": "BlackStar Order",
    "score1": 443,
    "score2": 2,
-   "team2": "Red Coat Mafia",
+   "team2": "Red_Coat_Mafia",
    "players": "15",
    "date": "2021/02/17"
  },
@@ -16488,7 +17216,7 @@ var gameData = [
    "date": "2021/02/16"
  },
  {
-   "team1": "Watchers",
+   "team1": "The Watchers",
    "score1": 248,
    "score2": 17,
    "team2": "KARI",
@@ -16531,7 +17259,7 @@ var gameData = [
    "team1": "Españoles",
    "score1": 27,
    "score2": 84,
-   "team2": "Watchers",
+   "team2": "The Watchers",
    "players": "10",
    "date": "2021/02/15"
  },
@@ -16560,7 +17288,7 @@ var gameData = [
    "date": "2021/02/15"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 143,
    "score2": 25,
    "team2": "OntarioDynasty",
@@ -16619,7 +17347,7 @@ var gameData = [
    "team1": "Wintercomes",
    "score1": 248,
    "score2": 22,
-   "team2": "COЮЗ",
+   "team2": "СОЮЗ",
    "players": "15",
    "date": "2021/02/13"
  },
@@ -16720,10 +17448,10 @@ var gameData = [
    "date": "2021/02/08"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 61,
    "score2": 31,
-   "team2": "EMP",
+   "team2": "ItBurnsWhenIEMP",
    "players": "5",
    "date": "2021/02/08"
  },
@@ -16736,7 +17464,7 @@ var gameData = [
    "date": "2021/02/08"
  },
  {
-   "team1": "Watchers",
+   "team1": "The Watchers",
    "score1": 122,
    "score2": 14,
    "team2": "Kyлak",
@@ -16787,7 +17515,7 @@ var gameData = [
    "team1": "OntarioDynasty",
    "score1": 66,
    "score2": 29,
-   "team2": "POCCNR",
+   "team2": "РОССИЯ",
    "players": "10",
    "date": "2021/02/07"
  },
@@ -16803,7 +17531,7 @@ var gameData = [
    "team1": "$TAR$",
    "score1": 60,
    "score2": 32,
-   "team2": "LossFarm No. 648",
+   "team2": "LossFarm No.648",
    "players": "10",
    "date": "2021/02/07"
  },
@@ -16920,7 +17648,7 @@ var gameData = [
    "date": "2021/02/01"
  },
  {
-   "team1": "Karanth",
+   "team1": "Karanth Corp.",
    "score1": 94,
    "score2": 27,
    "team2": "DadCorp",
@@ -16987,7 +17715,7 @@ var gameData = [
    "team1": "System Shock",
    "score1": 173,
    "score2": 2,
-   "team2": "Dropbears Inc",
+   "team2": "Dropbears Inc.",
    "players": "5",
    "date": "2021/01/30"
  },
@@ -16995,7 +17723,7 @@ var gameData = [
    "team1": "$TAR$",
    "score1": 29,
    "score2": 109,
-   "team2": "Red Coat Mafia",
+   "team2": "Red_Coat_Mafia",
    "players": "15",
    "date": "2021/01/30"
  },
@@ -17059,7 +17787,7 @@ var gameData = [
    "team1": "Wintercomes",
    "score1": 147,
    "score2": 99,
-   "team2": "TPYNRNR",
+   "team2": "ТРУЛЯЛЯ",
    "players": "15",
    "date": "2021/01/26"
  },
@@ -17099,7 +17827,7 @@ var gameData = [
    "team1": "Trade Station",
    "score1": 28,
    "score2": 215,
-   "team2": "Karanth",
+   "team2": "Karanth Corp.",
    "players": "15",
    "date": "2021/01/25"
  },
@@ -17291,7 +18019,7 @@ var gameData = [
    "team1": "BlackStar Order",
    "score1": 386,
    "score2": 19,
-   "team2": "TPYNRNR",
+   "team2": "ТРУЛЯЛЯ",
    "players": "",
    "date": "2021/01/16"
  },
@@ -17307,7 +18035,7 @@ var gameData = [
    "team1": "Hades Corpo",
    "score1": 80,
    "score2": 18,
-   "team2": "EMP",
+   "team2": "ItBurnsWhenIEMP",
    "players": "5",
    "date": "2021/01/16"
  },
@@ -17331,7 +18059,7 @@ var gameData = [
    "team1": "Trade Station",
    "score1": 73,
    "score2": 164,
-   "team2": "Watchers",
+   "team2": "The Watchers",
    "players": "15",
    "date": "2021/01/12"
  },
@@ -17392,7 +18120,7 @@ var gameData = [
    "date": "2021/01/10"
  },
  {
-   "team1": "EMP",
+   "team1": "ItBurnsWhenIEMP",
    "score1": 173,
    "score2": 78,
    "team2": "Unimatrix Zero",
@@ -17411,7 +18139,7 @@ var gameData = [
    "team1": "Legion",
    "score1": 48,
    "score2": 30,
-   "team2": "Karanth",
+   "team2": "Karanth Corp.",
    "players": "",
    "date": "2021/01/08"
  },
@@ -17715,7 +18443,7 @@ var gameData = [
    "team1": "Wintercomes",
    "score1": 61,
    "score2": 27,
-   "team2": "POCCNR",
+   "team2": "РОССИЯ",
    "players": "",
    "date": "2020/12/12"
  },
@@ -17731,7 +18459,7 @@ var gameData = [
    "team1": "DadCorp",
    "score1": 127,
    "score2": 4,
-   "team2": "TPYNRNR",
+   "team2": "ТРУЛЯЛЯ",
    "players": "",
    "date": "2020/12/12"
  },
@@ -17763,7 +18491,7 @@ var gameData = [
    "team1": "BlackStar Order",
    "score1": 199,
    "score2": 12,
-   "team2": "Watchers",
+   "team2": "The Watchers",
    "players": "",
    "date": "2020/12/08"
  },
@@ -17923,7 +18651,7 @@ var gameData = [
    "team1": "Auscorp",
    "score1": 77,
    "score2": 6,
-   "team2": "Karanth",
+   "team2": "Karanth Corp.",
    "players": "",
    "date": "2020/11/22"
  },
