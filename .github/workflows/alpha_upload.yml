@@ -1,0 +1,46 @@
+# This workflow will build a golang project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go
+
+name: AlphaLoad
+
+#on:
+#  push:
+#    branches: [ "env/alpha" ]
+#    paths-ignore:
+#      - '.github' # ignore github actions changes
+
+on:
+  workflow_dispatch:
+    # Inputs the workflow accepts.
+    inputs:
+      run:
+        # Friendly description to be shown in the UI instead of 'name'
+        description: 'Run description'
+        # Default value if no value is explicitly provided
+        default: 'auto'
+        required: false
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: ftp-action
+      # You may pin to the exact commit or the version.
+      # uses: sebastianpopp/ftp-action@eb75c5cb29d23ee4a729720a27dfb66403cb0f6d
+      uses: sebastianpopp/ftp-action@v2.0.0
+      with:
+        # FTP host
+        host: "${{ secrets.ALPHA_FTP_HOST }}"
+        # FTP user
+        user: "${{ secrets.ALPHA_FTP_USER }}"
+        # FTP password
+        password: "${{ secrets.ALPHA_FTP_PASSWORD }}"
+        # Force SSL encryption
+        # forceSsl: # optional, default is false
+        # Local directory
+        # localDir: # optional, default is .
+        # Remote directory
+        # remoteDir: # optional, default is .
