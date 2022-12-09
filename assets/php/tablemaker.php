@@ -3,7 +3,7 @@
 	OBJ
 */
 class TableMaker {
-	public $data = [];
+	private $data = [];
 	public $headeroveride = [];
 	public $header = [];
 	public $caret = '<i class="caret fa fa-caret-up"></i><i class="caret fa fa-caret-down"></i>';
