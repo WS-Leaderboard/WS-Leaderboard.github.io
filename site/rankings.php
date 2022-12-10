@@ -1,9 +1,9 @@
 <?php
 header('Content-Type: text/plain; charset=utf-8');
-include '../assets/php/tablemaker.php';
+include_once '../assets/php/tablemaker.php';
 
 $f = '../data/full_rankings.csv';
-$rankings = csvToArray($f, ',');
 $header = ["delta"=>"Δ"];
-echo '<thead>' . makeHtmlTableHeader($rankings,$header) . '</thead><tbody id="full_list">'. makeHtmlTable($rankings) . '</tbody>';
+$t = new TableMaker($f,$header);
+echo '<thead>' . $t->makeHeader() . '</thead><tbody id="full_list">'. $t->makeBody() . '</tbody>';
 ?>
