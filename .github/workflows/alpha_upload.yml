@@ -26,6 +26,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+      with:
+        ref: 'env/alpha'
     
     - name: ftp-action
       # You may pin to the exact commit or the version.
