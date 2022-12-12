@@ -5,115 +5,36 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <?php
-include_once './assets/php/tablemaker.php';
+include_once 'assets/php/tablemaker.php';
+include_once 'assets/php/statsmaker.php';
 
-	$f = './data/full_archive.csv';
-	$games = new TableMaker($f);
-	$f = './data/full_rankings.csv';
-	$rankings = new TableMaker($f);
+$f = 'data/full_archive.csv';
+$games = new TableMaker($f);
+$f = 'data/full_rankings.csv';
+$rankings = new TableMaker($f);
 
-	
-	$top = [];
-	$t = 0;
-	$cs_totals = [];
-	while($t < 50){
-		$top[$rankings->data[$t]['corporation']] = $rankings->data[$t];
-		$t++;
-	}
-	$corpall = [];
-	foreach( $games->data as $g ){
-		if ( $g['players']>0 ){
-			// GC: Counts game types for each Corp
-			$type = $g['players'] . "v" . $g['players'];
-			$team1 = $g['team1'];
-			$team2 = $g['team2'];
-			if (isset($top[$team1])){
-				$top[$team1][$type] += 1;
-			}else{
-				$corpall[$team1] +=1;
-			}
-			if (isset($top[$team2])){
-				$top[$team2][$type] += 1;
-			}else{
-				$corpall[$team2] +=1;
-			}
-			$max = max( [$g['score1'],$g['score2']] );
-			$diff = abs( $g['score1'] - $g['score2'] );
-			// GS: Total Games
-			$cs_totals[$type]['total'] += 1;
-			// GS: Average Relics for Winner
-			$cs_totals[$type]['relics'] += $max;
-			// GS: Average Points Difference
-			$cs_totals[$type]['diff'] += $diff;
-			// GS: Highest Relics
-			if ($max > $cs_totals[$type]['high']) {
-				$cs_totals[$type]['high'] = $max;
-				$cs_totals[$type]['highdate'] = $g['date'];
-			}
-			// GS: Percentage of Close* Games
-			$d = round(($diff*100) / $max,2);
-			if ( $d <= 30) {
-				$cs_totals[$type]['close'] += $d;
-				$cs_totals[$type]['closecount'] += 1;
-			}
-		}
-	}
+$games = $games->data;
+$rankings = $rankings->data;
 
-	
-/*
-	Corporation statistics
-*/
-	$t = 0;
-	$cs_top20 = 0;
-	$cs_top50 = 0;
-	$cs_all = 0;
-	$cs_most = 0;
-	/*
-		Count totals for Top20 and 50
-	*/
-	foreach($top as $v){
-		$total = $v['5v5'] + $v['15v15'] + $v['10v10'];
+$st = new StatsMaker($rankings,$games);
 
-		if ($t < 20){
-			$cs_top20 += $total;
-		}else{
-			$cs_top50 += $total;
-		}
-		if ($total > $cs_most) { $cs_most = $total; }
-		$t++;
-	}
-	/*
-		Count totals for rest
-	*/
-	foreach($corpall as $total){
-		$cs_all += $total;
-		if ($total > $cs_most) { $cs_most = $total; }
-	}
-	$stats =[];
-	$stats['cs']['top20'] = round(($cs_top20 / 20),1);
-	$stats['cs']['top50'] = round((($cs_top20+$cs_top50) / 50),1);
-	$stats['cs']['all'] = round((($cs_top20+$cs_top50+$cs_all) / (50+count($corpall))),1);
-	$stats['cs']['most'] = $cs_most;
-	foreach($cs_totals as $k => $v){
-		$stats['gs']['total'][$k] = $v['total'];
-		$stats['gs']['relics'][$k] = round($v['relics'] / $v['total']);
-		$stats['gs']['diff'][$k] = round($v['diff'] / $v['total']);
-		$stats['gs']['high'][$k] = $v['high'] . '<br>' . $v['highdate'];
-		$stats['gs']['close'][$k] = round($v['close']/ $v['closecount'],1) . "%";
-	}
-	echo var_dump($stats['gs']);
-
-	function getHTMLgs($gs,$name){
-		$type = [ '15v15', '10v10', '5v5' ];
-		$h = '';
-		foreach($type as $t ){
-			$h .= '<td>' . $gs[$t] . '</td>';
-		}
-		return '<tr><td><b>'.$name.'</b></td>'.$h.'</tr>';
-	}
-/*
-
-*/
+$cs = [
+	'head'=>['name'=>'Corporation Statistics','top20'=>'Top 20', 'top50'=>'Top 50', 'all'=>'All'],
+	'body' => [
+		['name'=>'Average Games per Corporation', 'top20'=>'%', 'top50'=>'%', 'all'=>'%'],
+		['name'=>'Most Games Submitted', '' , '' , 'most'=>'%']
+			]
+	];
+$gs = [
+	'head'=>['name'=>'Game Statistics','15v15'=>'15 v 15', '10v10'=>'10 v 10', '5v5'=>'5 v 5'],
+	'body' => [
+		['name'=>'Total Games', 'total'=>'%'],
+		['name'=>'Average Relics for Winner', 'relics'=>'%'],
+		['name'=>'Average Points Difference', 'diff'=>'%'],
+		['name'=>'Percentage of Close* Games', 'close'=>'%'],
+		['name'=>'Highest Relics', 'high'=>'%']
+			]
+	];
 	
 ?>
 <html>
@@ -176,30 +97,7 @@ include_once './assets/php/tablemaker.php';
 								<under>Updated for v8.3</under>
 								<br><br>
 								<span class="table-wrapper">
-									<table style="max-width: 800px">
-										<thead>
-											<tr>
-												<th width=50%><h3 style="margin: 0">Corporation Statistics</h3></th>
-												<th>Top 20</th>
-												<th>Top 50</th>
-												<th>All</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td><b>Average Games per Corporation</b></td>
-												<td><?=$stats['cs']['top20']?></td>
-												<td><?=$stats['cs']['top50']?></td>
-												<td><?=$stats['cs']['all']?></td>
-											</tr>
-											<tr>
-												<td><b>Most Games Submitted</b></td>
-												<td></td>
-												<td></td>
-												<td><?=$stats['cs']['most']?></td>
-											</tr>
-										</tbody>
-									</table>
+									<?=$st->makeCS($cs)?>
 								</span>
 								<h3>Ratings of Top 20</h3>
 								<div class="row gtr-uniform">
@@ -215,23 +113,7 @@ include_once './assets/php/tablemaker.php';
 								</div>
 								<br>
 								<span class="table-wrapper">
-									<table style="max-width: 800px">
-										<thead>
-											<tr>
-												<th width=50%><h3 style="margin: 0">Game Statistics</h3></th>
-												<th>15 v 15</th>
-												<th>10 v 10</th>
-												<th>5 v 5</th>
-											</tr>
-										</thead>
-										<tbody>
-											<?=getHTMLgs($stats['gs']['total'],"Total Games")?>
-											<?=getHTMLgs($stats['gs']['relics'],"Average Relics for Winner")?>
-											<?=getHTMLgs($stats['gs']['diff'],"Average Points Difference")?>
-											<?=getHTMLgs($stats['gs']['close'],"Percentage of Close* Games")?>
-											<?=getHTMLgs($stats['gs']['high'],"Highest Relics")?>
-										</tbody>
-									</table>
+									<?=$st->makeGS($gs)?>
 									<under>* Close is defined as: a score difference of < 30% of the winners relic count.</under>
 									<br><br>
 								<span>
