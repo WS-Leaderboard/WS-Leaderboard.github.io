@@ -5,7 +5,7 @@
 class TableMaker {
 	public $data = [];
 	private $headeroveride = [];
-	private $header = [];
+	public $header = [];
 	public $caret = '<i class="caret fa fa-caret-up"></i><i class="caret fa fa-caret-down"></i>';
 
 	function __construct($f, $overide=[], $delimiter=',') {
