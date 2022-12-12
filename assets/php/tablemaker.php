@@ -3,7 +3,7 @@
 	OBJ
 */
 class TableMaker {
-	private $data = [];
+	public $data = [];
 	public $headeroveride = [];
 	public $header = [];
 	public $caret = '<i class="caret fa fa-caret-up"></i><i class="caret fa fa-caret-down"></i>';
@@ -51,6 +51,7 @@ class TableMaker {
 		{
 			while (($row = fgetcsv($handle, 1000, $delimiter)) !== FALSE)
 			{
+				foreach($row as $rk => $rv){ $row[$rk] = trim($rv); }
 				if(!$header){
 					$header = $row;
 				} else {

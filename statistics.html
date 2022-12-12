@@ -4,6 +4,118 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+<?php
+include_once './assets/php/tablemaker.php';
+
+	$f = './data/full_archive.csv';
+	$games = new TableMaker($f);
+	$f = './data/full_rankings.csv';
+	$rankings = new TableMaker($f);
+
+	
+	$top = [];
+	$t = 0;
+	$cs_totals = [];
+	while($t < 50){
+		$top[$rankings->data[$t]['corporation']] = $rankings->data[$t];
+		$t++;
+	}
+	$corpall = [];
+	foreach( $games->data as $g ){
+		if ( $g['players']>0 ){
+			// GC: Counts game types for each Corp
+			$type = $g['players'] . "v" . $g['players'];
+			$team1 = $g['team1'];
+			$team2 = $g['team2'];
+			if (isset($top[$team1])){
+				$top[$team1][$type] += 1;
+			}else{
+				$corpall[$team1] +=1;
+			}
+			if (isset($top[$team2])){
+				$top[$team2][$type] += 1;
+			}else{
+				$corpall[$team2] +=1;
+			}
+			$max = max( [$g['score1'],$g['score2']] );
+			$diff = abs( $g['score1'] - $g['score2'] );
+			// GS: Total Games
+			$cs_totals[$type]['total'] += 1;
+			// GS: Average Relics for Winner
+			$cs_totals[$type]['relics'] += $max;
+			// GS: Average Points Difference
+			$cs_totals[$type]['diff'] += $diff;
+			// GS: Highest Relics
+			if ($max > $cs_totals[$type]['high']) {
+				$cs_totals[$type]['high'] = $max;
+				$cs_totals[$type]['highdate'] = $g['date'];
+			}
+			// GS: Percentage of Close* Games
+			$d = round(($diff*100) / $max,2);
+			if ( $d <= 30) {
+				$cs_totals[$type]['close'] += $d;
+				$cs_totals[$type]['closecount'] += 1;
+			}
+		}
+	}
+
+	
+/*
+	Corporation statistics
+*/
+	$t = 0;
+	$cs_top20 = 0;
+	$cs_top50 = 0;
+	$cs_all = 0;
+	$cs_most = 0;
+	/*
+		Count totals for Top20 and 50
+	*/
+	foreach($top as $v){
+		$total = $v['5v5'] + $v['15v15'] + $v['10v10'];
+
+		if ($t < 20){
+			$cs_top20 += $total;
+		}else{
+			$cs_top50 += $total;
+		}
+		if ($total > $cs_most) { $cs_most = $total; }
+		$t++;
+	}
+	/*
+		Count totals for rest
+	*/
+	foreach($corpall as $total){
+		$cs_all += $total;
+		if ($total > $cs_most) { $cs_most = $total; }
+	}
+	$stats =[];
+	$stats['cs']['top20'] = round(($cs_top20 / 20),1);
+	$stats['cs']['top50'] = round((($cs_top20+$cs_top50) / 50),1);
+	$stats['cs']['all'] = round((($cs_top20+$cs_top50+$cs_all) / (50+count($corpall))),1);
+	$stats['cs']['most'] = $cs_most;
+	foreach($cs_totals as $k => $v){
+		$stats['gs']['total'][$k] = $v['total'];
+		$stats['gs']['relics'][$k] = round($v['relics'] / $v['total']);
+		$stats['gs']['diff'][$k] = round($v['diff'] / $v['total']);
+		$stats['gs']['high'][$k] = $v['high'] . '<br>' . $v['highdate'];
+		$stats['gs']['close'][$k] = round($v['close']/ $v['closecount'],1) . "%";
+	}
+	echo var_dump($stats['gs']);
+
+	function getHTMLgs($gs,$name){
+		$type = [ '15v15', '10v10', '5v5' ];
+		$h = '';
+		foreach($type as $t ){
+			$h .= '<td>' . $gs[$t] . '</td>';
+		}
+		return '<tr><td><b>'.$name.'</b></td>'.$h.'</tr>';
+	}
+/*
+
+*/
+	
+?>
 <html>
 	<head>
 		<title>WS Community Leaderboard</title>
@@ -76,15 +188,15 @@
 										<tbody>
 											<tr>
 												<td><b>Average Games per Corporation</b></td>
-												<td>55.5</td>
-												<td>45.5</td>
-												<td>8.5</td>
+												<td><?=$stats['cs']['top20']?></td>
+												<td><?=$stats['cs']['top50']?></td>
+												<td><?=$stats['cs']['all']?></td>
 											</tr>
 											<tr>
 												<td><b>Most Games Submitted</b></td>
 												<td></td>
 												<td></td>
-												<td>104</td>
+												<td><?=$stats['cs']['most']?></td>
 											</tr>
 										</tbody>
 									</table>
@@ -113,36 +225,11 @@
 											</tr>
 										</thead>
 										<tbody>
-											<tr>
-												<td><b>Total Games</b></td>
-												<td>962</td>
-												<td>751</td>	
-												<td>528</td>
-											</tr>
-											<tr>
-												<td><b>Average Relics for Winner</b></td>
-												<td>161</td>
-												<td>112</td>
-												<td>66</td>
-											</tr>
-											<tr>
-												<td><b>Average Points Difference</b></td>
-												<td>122</td>
-												<td>83</td>
-												<td>46</td>
-											</tr>
-											<tr>
-												<td><b>Percentage of Close* Games</b></td>
-												<td>13.4%</td>
-												<td>13.4%</td>
-												<td>15.0%</td>
-											</tr>
-											<tr>
-												<td><b>Highest Relics</b></td>
-												<td>685<br>14-Nov-2021</td>
-												<td>469<br>15-May-2022</td>
-												<td>344<br>10-Jul-2021</td>
-											</tr>
+											<?=getHTMLgs($stats['gs']['total'],"Total Games")?>
+											<?=getHTMLgs($stats['gs']['relics'],"Average Relics for Winner")?>
+											<?=getHTMLgs($stats['gs']['diff'],"Average Points Difference")?>
+											<?=getHTMLgs($stats['gs']['close'],"Percentage of Close* Games")?>
+											<?=getHTMLgs($stats['gs']['high'],"Highest Relics")?>
 										</tbody>
 									</table>
 									<under>* Close is defined as: a score difference of < 30% of the winners relic count.</under>
