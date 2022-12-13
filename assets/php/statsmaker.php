@@ -42,7 +42,7 @@ class StatsMaker {
 		$this->$rankings = $rankings;
 
 		for ( $t=0; $t<7; $t++ ){
-			$this->$dwms[$d] = 0;
+			$this->$dwms[] = 0;
 		}
 		$gs_totals = [];
 		$corpall = [];
@@ -97,7 +97,7 @@ class StatsMaker {
 				}
 				// DWMS : Day of Week for Match Start
 				// w : 0 (for Sunday) through 6 (for Saturday) (N : 1 (for Monday) through 7 (for Sunday) )
-				$d = date('w', makeTimeStamp($g[$this->f_date],-5) );
+				$d = date('w', $this->makeTimeStamp($g[$this->f_date],-5) );
 				$this->$dwms[$d] += 1;
 			}
 		}
