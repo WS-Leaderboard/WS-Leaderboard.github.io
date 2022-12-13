@@ -41,6 +41,9 @@ class StatsMaker {
 		$this->$games = $games;
 		$this->$rankings = $rankings;
 
+		for ( $t=0; $t<7; $t++ ){
+			$this->$dwms[$d] = 0;
+		}
 		$gs_totals = [];
 		$corpall = [];
 		/*
@@ -92,6 +95,10 @@ class StatsMaker {
 					$gs_totals[$type]['close'] += $d;
 					$gs_totals[$type]['closecount'] += 1;
 				}
+				// DWMS : Day of Week for Match Start
+				// w : 0 (for Sunday) through 6 (for Saturday) (N : 1 (for Monday) through 7 (for Sunday) )
+				$d = date('w', makeTimeStamp($g[$this->f_date],-5) );
+				$this->$dwms[$d] += 1;
 			}
 		}
 		/*
@@ -145,6 +152,15 @@ class StatsMaker {
 			$this->asgs[$k] = round(($this->gs['total'][$k]*100)/$total,1);
 		}
 	}
+	private function makeTimeStamp($d,$inc=0){
+        $d = explode('/',$d);
+        // mktime(hour, minute, second, month, day, year) 
+        return mktime(0, 0, 0, $d[1], $d[2]+$inc, $d[0]);
+    }
+	private function getClass($class){
+		if (is_array($class)) { $class = implode(' ',$class); }
+		return (empty($class)?'':' class="'.$class."'");
+	}
 	/*
 	***
 		HTML outputs
@@ -166,7 +182,7 @@ class StatsMaker {
 	public function makeGS($table, $class=''){
 		$html = [];
 		$gs = $this->gs;
-		$html[] = '<table><thead><tr>';
+		$html[] = '<table'.$this->getClass($class).'><thead><tr>';
 		$head = [];
 		foreach($table['head'] as $k => $v){
 			if ($k == 'name') {
@@ -206,7 +222,7 @@ class StatsMaker {
 	public function makeCS($table, $class=''){
 		$html = [];
 		$cs = $this->cs;
-		$html[] = '<table><thead><tr>';
+		$html[] = '<table'.$this->getClass($class).'><thead><tr>';
 			foreach($table['head'] as $k => $v){
 				if ($k == 'name') { $v = '<h3>'.$v.'</h3>'; }
 				$html[] = '<th>'.$v.'</th>';
@@ -226,7 +242,9 @@ class StatsMaker {
 		$html[] = '</tbody></table>';
 		return implode('',$html);
 	}
+	public function makeDWMS(){
 
+	}
 	//https://chartscss.org/
 }
 
