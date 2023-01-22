@@ -1,5 +1,805 @@
 var gameData = [
  {
+   "team1": "Wintercomes",
+   "score1": 67,
+   "score2": 45,
+   "team2": "Stammtisch",
+   "players": "5",
+   "date": "2023/01/21"
+ },
+ {
+   "team1": "Terranova",
+   "score1": 176,
+   "score2": 141,
+   "team2": "Auscorp",
+   "players": "15",
+   "date": "2023/01/21"
+ },
+ {
+   "team1": "Tartaros Armada",
+   "score1": 92,
+   "score2": 72,
+   "team2": "Spacefleet",
+   "players": "5",
+   "date": "2023/01/20"
+ },
+ {
+   "team1": "Grunthal Gang",
+   "score1": 171,
+   "score2": 121,
+   "team2": "РОССИЯ",
+   "players": "15",
+   "date": "2023/01/20"
+ },
+ {
+   "team1": "Bounty Hunters",
+   "score1": 206,
+   "score2": 7,
+   "team2": "Lost Legion",
+   "players": "10",
+   "date": "2023/01/20"
+ },
+ {
+   "team1": "Lexx",
+   "score1": 52,
+   "score2": 7,
+   "team2": "Death Flight",
+   "players": "15",
+   "date": "2023/01/19"
+ },
+ {
+   "team1": "Best",
+   "score1": 440,
+   "score2": 1,
+   "team2": "Madison Holding",
+   "players": "15",
+   "date": "2023/01/18"
+ },
+ {
+   "team1": "Metal Nova",
+   "score1": 10,
+   "score2": 8,
+   "team2": "Avabel Online",
+   "players": "5",
+   "date": "2023/01/18"
+ },
+ {
+   "team1": "StarControl",
+   "score1": 308,
+   "score2": 5,
+   "team2": "冥犬哨兵",
+   "players": "10",
+   "date": "2023/01/16"
+ },
+ {
+   "team1": "DTC",
+   "score1": 52,
+   "score2": 22,
+   "team2": "The Picard",
+   "players": "10",
+   "date": "2023/01/15"
+ },
+ {
+   "team1": "DTC",
+   "score1": 24,
+   "score2": 71,
+   "team2": "Star Dust",
+   "players": "5",
+   "date": "2023/01/15"
+ },
+ {
+   "team1": "AlfaOmega",
+   "score1": 7,
+   "score2": 233,
+   "team2": "Grunthal Gang",
+   "players": "10",
+   "date": "2023/01/15"
+ },
+ {
+   "team1": "Lexx",
+   "score1": 90,
+   "score2": 17,
+   "team2": "We R Bad",
+   "players": "10",
+   "date": "2023/01/14"
+ },
+ {
+   "team1": "Tartaros Armada",
+   "score1": 152,
+   "score2": 12,
+   "team2": "Sith Empire",
+   "players": "15",
+   "date": "2023/01/14"
+ },
+ {
+   "team1": "Widow Makers",
+   "score1": 60,
+   "score2": 56,
+   "team2": "Bloodtide",
+   "players": "10",
+   "date": "2023/01/14"
+ },
+ {
+   "team1": "Best",
+   "score1": 333,
+   "score2": 15,
+   "team2": "United Galaxies",
+   "players": "15",
+   "date": "2023/01/14"
+ },
+ {
+   "team1": "Blood Brigade",
+   "score1": 100,
+   "score2": 13,
+   "team2": "On en a Gros !",
+   "players": "10",
+   "date": "2023/01/14"
+ },
+ {
+   "team1": "Spacefleet",
+   "score1": 133,
+   "score2": 63,
+   "team2": "Tacitus",
+   "players": "10",
+   "date": "2023/01/14"
+ },
+ {
+   "team1": "Bounty Hunters",
+   "score1": 136,
+   "score2": 45,
+   "team2": "The Watchers",
+   "players": "10",
+   "date": "2023/01/14"
+ },
+ {
+   "team1": "pycb",
+   "score1": 172,
+   "score2": 128,
+   "team2": "РОССИЯ",
+   "players": "15",
+   "date": "2023/01/13"
+ },
+ {
+   "team1": "Anla'Shok",
+   "score1": 215,
+   "score2": 4,
+   "team2": "Dauntless",
+   "players": "15",
+   "date": "2023/01/12"
+ },
+ {
+   "team1": "Ark Summit",
+   "score1": 139,
+   "score2": 35,
+   "team2": "Flying Dutchmen",
+   "players": "15",
+   "date": "2023/01/11"
+ },
+ {
+   "team1": "Metal Nova",
+   "score1": 2,
+   "score2": 23,
+   "team2": "Space Anomalies",
+   "players": "10",
+   "date": "2023/01/10"
+ },
+ {
+   "team1": "Alpaca Haven",
+   "score1": 301,
+   "score2": 33,
+   "team2": "$TAR$",
+   "players": "15",
+   "date": "2023/01/10"
+ },
+ {
+   "team1": "Lexx",
+   "score1": 93,
+   "score2": 45,
+   "team2": "Czech Rebels",
+   "players": "10",
+   "date": "2023/01/09"
+ },
+ {
+   "team1": "Red Dawn",
+   "score1": 10,
+   "score2": 241,
+   "team2": "Yishun CC",
+   "players": "10",
+   "date": "2023/01/09"
+ },
+ {
+   "team1": "StarControl",
+   "score1": 130,
+   "score2": 4,
+   "team2": "Legionnaires",
+   "players": "5",
+   "date": "2023/01/09"
+ },
+ {
+   "team1": "DTC",
+   "score1": 137,
+   "score2": 21,
+   "team2": "Alpha Nation",
+   "players": "10",
+   "date": "2023/01/08"
+ },
+ {
+   "team1": "Spacefleet",
+   "score1": 141,
+   "score2": 203,
+   "team2": "Stargate Corp",
+   "players": "15",
+   "date": "2023/01/08"
+ },
+ {
+   "team1": "Blood Brigade",
+   "score1": 147,
+   "score2": 42,
+   "team2": "The trade pub",
+   "players": "15",
+   "date": "2023/01/08"
+ },
+ {
+   "team1": "Widow Makers",
+   "score1": 226,
+   "score2": 9,
+   "team2": "On en a Gros !",
+   "players": "10",
+   "date": "2023/01/07"
+ },
+ {
+   "team1": "Best",
+   "score1": 230,
+   "score2": 88,
+   "team2": "Anla'Shok",
+   "players": "15",
+   "date": "2023/01/07"
+ },
+ {
+   "team1": "Kharon Shipping",
+   "score1": 187,
+   "score2": 73,
+   "team2": "BattleCo",
+   "players": "10",
+   "date": "2023/01/07"
+ },
+ {
+   "team1": "Lexx",
+   "score1": 76,
+   "score2": 82,
+   "team2": "Metal Nova",
+   "players": "10",
+   "date": "2023/01/04"
+ },
+ {
+   "team1": "Hinterm Mond",
+   "score1": 150,
+   "score2": 7,
+   "team2": "Axiom",
+   "players": "5",
+   "date": "2023/01/03"
+ },
+ {
+   "team1": "Madison Holding",
+   "score1": 83,
+   "score2": 21,
+   "team2": "Spacefleet",
+   "players": "15",
+   "date": "2023/01/02"
+ },
+ {
+   "team1": "Terranova",
+   "score1": 45,
+   "score2": 141,
+   "team2": "DUNE",
+   "players": "10",
+   "date": "2023/01/01"
+ },
+ {
+   "team1": "DTC",
+   "score1": 17,
+   "score2": 86,
+   "team2": "Gwiezdna Horda",
+   "players": "5",
+   "date": "2023/01/01"
+ },
+ {
+   "team1": "Anla'Shok",
+   "score1": 138,
+   "score2": 52,
+   "team2": "TROLL SQUAD",
+   "players": "15",
+   "date": "2023/01/01"
+ },
+ {
+   "team1": "Blood Brigade",
+   "score1": 16,
+   "score2": 191,
+   "team2": "Canadian Army",
+   "players": "15",
+   "date": "2022/12/31"
+ },
+ {
+   "team1": "Best",
+   "score1": 582,
+   "score2": 0,
+   "team2": "Galactic Empire",
+   "players": "15",
+   "date": "2022/12/31"
+ },
+ {
+   "team1": "Lexx",
+   "score1": 54,
+   "score2": 65,
+   "team2": "Sprite",
+   "players": "10",
+   "date": "2022/12/30"
+ },
+ {
+   "team1": "Metal Nova",
+   "score1": 64,
+   "score2": 3,
+   "team2": "Knights Ronin",
+   "players": "5",
+   "date": "2022/12/29"
+ },
+ {
+   "team1": "Farland Ind.",
+   "score1": 0,
+   "score2": 392,
+   "team2": "Grunthal Gang",
+   "players": "15",
+   "date": "2022/12/29"
+ },
+ {
+   "team1": "Dumpster Fire",
+   "score1": 12,
+   "score2": 49,
+   "team2": "蓝色星系",
+   "players": "15",
+   "date": "2022/12/29"
+ },
+ {
+   "team1": "Widow Makers",
+   "score1": 29,
+   "score2": 5,
+   "team2": "Anarchy",
+   "players": "5",
+   "date": "2022/12/28"
+ },
+ {
+   "team1": "Weyland Corp",
+   "score1": 82,
+   "score2": 77,
+   "team2": "Spacefleet",
+   "players": "10",
+   "date": "2022/12/27"
+ },
+ {
+   "team1": "Alpaca Haven",
+   "score1": 154,
+   "score2": 83,
+   "team2": "3enehar kopna",
+   "players": "15",
+   "date": "2022/12/27"
+ },
+ {
+   "team1": "Anla'Shok",
+   "score1": 315,
+   "score2": 2,
+   "team2": "SpaceForceElite",
+   "players": "15",
+   "date": "2022/12/26"
+ },
+ {
+   "team1": "Terranova",
+   "score1": 43,
+   "score2": 113,
+   "team2": "OntarioDynasty",
+   "players": "5",
+   "date": "2022/12/25"
+ },
+ {
+   "team1": "Blood Brigade",
+   "score1": 214,
+   "score2": 0,
+   "team2": "ТРУЛЯЛЯ",
+   "players": "15",
+   "date": "2022/12/25"
+ },
+ {
+   "team1": "Hinterm Mond",
+   "score1": 83,
+   "score2": 144,
+   "team2": "StarControl",
+   "players": "5",
+   "date": "2022/12/24"
+ },
+ {
+   "team1": "Lexx",
+   "score1": 44,
+   "score2": 21,
+   "team2": "Dumpster Fire",
+   "players": "10",
+   "date": "2022/12/24"
+ },
+ {
+   "team1": "Bounty Hunters",
+   "score1": 73,
+   "score2": 77,
+   "team2": "Little RasCats",
+   "players": "10",
+   "date": "2022/12/24"
+ },
+ {
+   "team1": "DTC",
+   "score1": 62,
+   "score2": 93,
+   "team2": "Ender",
+   "players": "15",
+   "date": "2022/12/23"
+ },
+ {
+   "team1": "BattleCo",
+   "score1": 77,
+   "score2": 145,
+   "team2": "Grunthal Gang",
+   "players": "10",
+   "date": "2022/12/23"
+ },
+ {
+   "team1": "Anla'Shok",
+   "score1": 111,
+   "score2": 22,
+   "team2": "MAQUIS",
+   "players": "15",
+   "date": "2022/12/22"
+ },
+ {
+   "team1": "Red Dawn",
+   "score1": 74,
+   "score2": 4,
+   "team2": "Regulus",
+   "players": "5",
+   "date": "2022/12/21"
+ },
+ {
+   "team1": "Spacefleet",
+   "score1": 182,
+   "score2": 38,
+   "team2": "Flying Dutchmen",
+   "players": "15",
+   "date": "2022/12/20"
+ },
+ {
+   "team1": "Alpaca Haven",
+   "score1": 67,
+   "score2": 51,
+   "team2": "Revolver",
+   "players": "15",
+   "date": "2022/12/20"
+ },
+ {
+   "team1": "Lexx",
+   "score1": 33,
+   "score2": 56,
+   "team2": "蓝色星系",
+   "players": "15",
+   "date": "2022/12/18"
+ },
+ {
+   "team1": "Blood Brigade",
+   "score1": 179,
+   "score2": 23,
+   "team2": "СОЮЗ",
+   "players": "15",
+   "date": "2022/12/18"
+ },
+ {
+   "team1": "Sith Empire",
+   "score1": 56,
+   "score2": 57,
+   "team2": "Octoberpierynm",
+   "players": "15",
+   "date": "2022/12/18"
+ },
+ {
+   "team1": "Hinterm Mond",
+   "score1": 63,
+   "score2": 51,
+   "team2": "Yishun CC",
+   "players": "5",
+   "date": "2022/12/18"
+ },
+ {
+   "team1": "Widow Makers",
+   "score1": 111,
+   "score2": 38,
+   "team2": "Bloodtide",
+   "players": "10",
+   "date": "2022/12/18"
+ },
+ {
+   "team1": "Dumpster Fire",
+   "score1": 131,
+   "score2": 22,
+   "team2": "UsualSuspects",
+   "players": "15",
+   "date": "2022/12/18"
+ },
+ {
+   "team1": "StarControl",
+   "score1": 81,
+   "score2": 191,
+   "team2": "Legion",
+   "players": "10",
+   "date": "2022/12/18"
+ },
+ {
+   "team1": "Anla'Shok",
+   "score1": 164,
+   "score2": 20,
+   "team2": "Crazy Elite",
+   "players": "15",
+   "date": "2022/12/17"
+ },
+ {
+   "team1": "Best",
+   "score1": 282,
+   "score2": 19,
+   "team2": "DTC",
+   "players": "15",
+   "date": "2022/12/17"
+ },
+ {
+   "team1": "Metal Nova",
+   "score1": 8,
+   "score2": 30,
+   "team2": "Kopnopaunr Mno",
+   "players": "10",
+   "date": "2022/12/17"
+ },
+ {
+   "team1": "Industrial W.O",
+   "score1": 17,
+   "score2": 10,
+   "team2": "Imperium XIII",
+   "players": "5",
+   "date": "2022/12/17"
+ },
+ {
+   "team1": "Imperium XIII",
+   "score1": 64,
+   "score2": 11,
+   "team2": "Core",
+   "players": "5",
+   "date": "2022/12/17"
+ },
+ {
+   "team1": "Ark Summit",
+   "score1": 105,
+   "score2": 98,
+   "team2": "ANZAC Warriors",
+   "players": "15",
+   "date": "2022/12/16"
+ },
+ {
+   "team1": "Legion",
+   "score1": 299,
+   "score2": 19,
+   "team2": "Covenant",
+   "players": "15",
+   "date": "2022/12/16"
+ },
+ {
+   "team1": "Grunthal Gang",
+   "score1": 205,
+   "score2": 118,
+   "team2": "РОССИЯ",
+   "players": "15",
+   "date": "2022/12/16"
+ },
+ {
+   "team1": "Best",
+   "score1": 309,
+   "score2": 27,
+   "team2": "Lacuna Ind.",
+   "players": "15",
+   "date": "2022/12/14"
+ },
+ {
+   "team1": "Spacefleet",
+   "score1": 74,
+   "score2": 54,
+   "team2": "Galactic Empire",
+   "players": "10",
+   "date": "2022/12/13"
+ },
+ {
+   "team1": "Alpaca Haven",
+   "score1": 190,
+   "score2": 20,
+   "team2": "The Force",
+   "players": "15",
+   "date": "2022/12/13"
+ },
+ {
+   "team1": "Dumpster Fire",
+   "score1": 51,
+   "score2": 24,
+   "team2": "Helion Prime",
+   "players": "15",
+   "date": "2022/12/13"
+ },
+ {
+   "team1": "Dumpster Fire",
+   "score1": 2,
+   "score2": 5,
+   "team2": "Eastern Front",
+   "players": "5",
+   "date": "2022/12/13"
+ },
+ {
+   "team1": "Hinterm Mond",
+   "score1": 147,
+   "score2": 30,
+   "team2": "Curcubeu",
+   "players": "5",
+   "date": "2022/12/12"
+ },
+ {
+   "team1": "Lexx",
+   "score1": 55,
+   "score2": 19,
+   "team2": "Peak Extraction",
+   "players": "15",
+   "date": "2022/12/12"
+ },
+ {
+   "team1": "Anla'Shok",
+   "score1": 96,
+   "score2": 65,
+   "team2": "Rocket-by Baby",
+   "players": "15",
+   "date": "2022/12/12"
+ },
+ {
+   "team1": "Sith Empire",
+   "score1": 330,
+   "score2": 19,
+   "team2": "Serenity",
+   "players": "15",
+   "date": "2022/12/11"
+ },
+ {
+   "team1": "StarControl",
+   "score1": 59,
+   "score2": 35,
+   "team2": "OntarioDynasty",
+   "players": "5",
+   "date": "2022/12/11"
+ },
+ {
+   "team1": "Metal Nova",
+   "score1": 1,
+   "score2": 65,
+   "team2": "Lacuna Ind.",
+   "players": "10",
+   "date": "2022/12/10"
+ },
+ {
+   "team1": "Grunthal Gang",
+   "score1": 59,
+   "score2": 269,
+   "team2": "RUS",
+   "players": "15",
+   "date": "2022/12/10"
+ },
+ {
+   "team1": "Space Pirate",
+   "score1": 15,
+   "score2": 21,
+   "team2": "Imperium XIII",
+   "players": "5",
+   "date": "2022/12/10"
+ },
+ {
+   "team1": "DTC",
+   "score1": 186,
+   "score2": 75,
+   "team2": "Bounty Hunters",
+   "players": "15",
+   "date": "2022/12/10"
+ },
+ {
+   "team1": "Blood Brigade",
+   "score1": 161,
+   "score2": 10,
+   "team2": "SNSS",
+   "players": "15",
+   "date": "2022/12/10"
+ },
+ {
+   "team1": "Tartaros Armada",
+   "score1": 262,
+   "score2": 3,
+   "team2": "AH Espanoles",
+   "players": "15",
+   "date": "2022/12/10"
+ },
+ {
+   "team1": "Red Dawn",
+   "score1": 35,
+   "score2": 13,
+   "team2": "Czech Wolfs",
+   "players": "5",
+   "date": "2022/12/09"
+ },
+ {
+   "team1": "Imperium XIII",
+   "score1": 78,
+   "score2": 21,
+   "team2": "OKC Thunder",
+   "players": "5",
+   "date": "2022/12/09"
+ },
+ {
+   "team1": "Best",
+   "score1": 302,
+   "score2": 45,
+   "team2": "MAQUIS",
+   "players": "15",
+   "date": "2022/12/09"
+ },
+ {
+   "team1": "Dumpster Fire",
+   "score1": 9,
+   "score2": 61,
+   "team2": "77=49",
+   "players": "15",
+   "date": "2022/12/09"
+ },
+ {
+   "team1": "Lexx",
+   "score1": 40,
+   "score2": 49,
+   "team2": "Freelancer",
+   "players": "10",
+   "date": "2022/12/08"
+ },
+ {
+   "team1": "Spacefleet",
+   "score1": 84,
+   "score2": 57,
+   "team2": "United Galaxies",
+   "players": "15",
+   "date": "2022/12/08"
+ },
+ {
+   "team1": "Anla'Shok",
+   "score1": 165,
+   "score2": 7,
+   "team2": "SpaceForceElite",
+   "players": "15",
+   "date": "2022/12/07"
+ },
+ {
+   "team1": "Alpaca Haven",
+   "score1": 330,
+   "score2": 0,
+   "team2": "우주미아",
+   "players": "15",
+   "date": "2022/12/05"
+ },
+ {
+   "team1": "Widow Makers",
+   "score1": 69,
+   "score2": 17,
+   "team2": "YETI Collective",
+   "players": "10",
+   "date": "2022/12/05"
+ },
+ {
    "team1": "StarControl",
    "score1": 55,
    "score2": 51,
@@ -32,6 +832,22 @@ var gameData = [
    "date": "2022/12/04"
  },
  {
+   "team1": "Ancient Library",
+   "score1": 76,
+   "score2": 30,
+   "team2": "Alpaca Haven",
+   "players": "15",
+   "date": "2022/12/04"
+ },
+ {
+   "team1": "Imperium XIII",
+   "score1": 50,
+   "score2": 14,
+   "team2": "Gwiezdna Horda",
+   "players": "5",
+   "date": "2022/12/04"
+ },
+ {
    "team1": "DadCorp",
    "score1": 208,
    "score2": 103,
@@ -45,6 +861,22 @@ var gameData = [
    "score2": 8,
    "team2": "Gallaecia",
    "players": "5",
+   "date": "2022/12/03"
+ },
+ {
+   "team1": "Metal Nova",
+   "score1": 13,
+   "score2": 40,
+   "team2": "pycb",
+   "players": "10",
+   "date": "2022/12/03"
+ },
+ {
+   "team1": "DTC",
+   "score1": 53,
+   "score2": 72,
+   "team2": "Galactic Otters",
+   "players": "15",
    "date": "2022/12/03"
  },
  {
@@ -64,10 +896,50 @@ var gameData = [
    "date": "2022/12/02"
  },
  {
+   "team1": "Anla'Shok",
+   "score1": 103,
+   "score2": 38,
+   "team2": "Ahamkara",
+   "players": "15",
+   "date": "2022/12/01"
+ },
+ {
+   "team1": "Sith Empire",
+   "score1": 250,
+   "score2": 25,
+   "team2": "On en a Gros !",
+   "players": "15",
+   "date": "2022/11/30"
+ },
+ {
+   "team1": "Widow Makers",
+   "score1": 85,
+   "score2": 65,
+   "team2": "Orion",
+   "players": "5",
+   "date": "2022/11/29"
+ },
+ {
    "team1": "Terranova",
    "score1": 327,
    "score2": 51,
    "team2": "Deadspace",
+   "players": "15",
+   "date": "2022/11/28"
+ },
+ {
+   "team1": "Metal Nova",
+   "score1": 38,
+   "score2": 68,
+   "team2": "Hawa Bcenehhar",
+   "players": "10",
+   "date": "2022/11/28"
+ },
+ {
+   "team1": "Alpaca Haven",
+   "score1": 261,
+   "score2": 10,
+   "team2": "USA",
    "players": "15",
    "date": "2022/11/28"
  },
@@ -77,6 +949,14 @@ var gameData = [
    "score2": 44,
    "team2": "Hinterm Mond",
    "players": "5",
+   "date": "2022/11/27"
+ },
+ {
+   "team1": "Lexx",
+   "score1": 3,
+   "score2": 51,
+   "team2": "exirium",
+   "players": "10",
    "date": "2022/11/27"
  },
  {
@@ -120,6 +1000,14 @@ var gameData = [
    "date": "2022/11/26"
  },
  {
+   "team1": "Imperium XIII",
+   "score1": 100,
+   "score2": 68,
+   "team2": "Ironbear Legion",
+   "players": "10",
+   "date": "2022/11/26"
+ },
+ {
    "team1": "Best",
    "score1": 298,
    "score2": 47,
@@ -144,6 +1032,14 @@ var gameData = [
    "date": "2022/11/25"
  },
  {
+   "team1": "DTC",
+   "score1": 5,
+   "score2": 34,
+   "team2": "Serenity",
+   "players": "15",
+   "date": "2022/11/25"
+ },
+ {
    "team1": "Spacefleet",
    "score1": 147,
    "score2": 102,
@@ -165,6 +1061,14 @@ var gameData = [
    "score2": 12,
    "team2": "Pandora's Star",
    "players": "10",
+   "date": "2022/11/23"
+ },
+ {
+   "team1": "Alpaca Haven",
+   "score1": 263,
+   "score2": 7,
+   "team2": "世外桃源",
+   "players": "15",
    "date": "2022/11/23"
  },
  {
@@ -197,6 +1101,14 @@ var gameData = [
    "score2": 1,
    "team2": "AH Espanoles",
    "players": "15",
+   "date": "2022/11/20"
+ },
+ {
+   "team1": "Metal Nova",
+   "score1": 4,
+   "score2": 89,
+   "team2": "Yellow Dwarf",
+   "players": "10",
    "date": "2022/11/20"
  },
  {
@@ -248,6 +1160,14 @@ var gameData = [
    "date": "2022/11/19"
  },
  {
+   "team1": "Wintercomes",
+   "score1": 86,
+   "score2": 0,
+   "team2": "Star Destroyers",
+   "players": "10",
+   "date": "2022/11/19"
+ },
+ {
    "team1": "Team Elite",
    "score1": 44,
    "score2": 143,
@@ -268,6 +1188,14 @@ var gameData = [
    "score1": 146,
    "score2": 29,
    "team2": "United Galaxies",
+   "players": "15",
+   "date": "2022/11/16"
+ },
+ {
+   "team1": "Alpaca Haven",
+   "score1": 224,
+   "score2": 10,
+   "team2": "Aepxaba Pycb",
    "players": "15",
    "date": "2022/11/16"
  },
@@ -333,6 +1261,14 @@ var gameData = [
    "score2": 9,
    "team2": "USA",
    "players": "15",
+   "date": "2022/11/13"
+ },
+ {
+   "team1": "Hinterm Mond",
+   "score1": 148,
+   "score2": 69,
+   "team2": "DadCorp",
+   "players": "5",
    "date": "2022/11/13"
  },
  {
@@ -416,6 +1352,14 @@ var gameData = [
    "date": "2022/11/09"
  },
  {
+   "team1": "Alpaca Haven",
+   "score1": 131,
+   "score2": 32,
+   "team2": "T E H b",
+   "players": "15",
+   "date": "2022/11/09"
+ },
+ {
    "team1": "Team Elite",
    "score1": 73,
    "score2": 115,
@@ -468,6 +1412,14 @@ var gameData = [
    "score1": 65,
    "score2": 23,
    "team2": "Rocinante",
+   "players": "5",
+   "date": "2022/11/07"
+ },
+ {
+   "team1": "Hinterm Mond",
+   "score1": 214,
+   "score2": 12,
+   "team2": "Nyhhbin Oehnkc",
    "players": "5",
    "date": "2022/11/07"
  },
@@ -636,6 +1588,14 @@ var gameData = [
    "score1": 291,
    "score2": 0,
    "team2": "星䂓地㺷",
+   "players": "15",
+   "date": "2022/11/01"
+ },
+ {
+   "team1": "Alpaca Haven",
+   "score1": 184,
+   "score2": 14,
+   "team2": "The Picard",
    "players": "15",
    "date": "2022/11/01"
  },
