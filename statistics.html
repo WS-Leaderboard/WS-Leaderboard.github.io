@@ -1,93 +1,46 @@
-<!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>WS Community Leaderboard</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
+<?php
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
+$games = new TableMaker(WSL_PATH_GAMES);
+$rankings = new TableMaker(WSL_PATH_RANKINGS);
 
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="logo" /></span><span class="title">Home</span>
-								</a>
+$games = $games->data;
+$rankings = $rankings->data;
 
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
+$st = new StatsMaker($rankings,$games);
 
-						</div>
-					</header>
+$cs = [
+	'head'=>['name'=>'Corporation Statistics','top20'=>'Top 20', 'top50'=>'Top 50', 'all'=>'All'],
+	'body' => [
+		['name'=>'Average Games per Corporation', 'top20'=>'%', 'top50'=>'%', 'all'=>'%'],
+		['name'=>'Most Games Submitted', '' , '' , 'most'=>'%']
+			]
+	];
+$gs = [
+	'head'=>['name'=>'Game Statistics','15v15'=>'15 v 15', '10v10'=>'10 v 10', '5v5'=>'5 v 5'],
+	'body' => [
+		['name'=>'Total Games', 'total'=>'%'],
+		['name'=>'Average Relics for Winner', 'relics'=>'%'],
+		['name'=>'Average Points Difference', 'diff'=>'%'],
+		['name'=>'Percentage of Close* Games', 'close'=>'%'],
+		['name'=>'Highest Relics', 'high'=>'%']
+			]
+	];
 
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="full-rankings.html">Full Rankings</a></li>
-							<li><a href="game_archive.html">Game Archives</a></li>
-							<li><a href="statistics.html">Statistics</a></li>
-							<li><a href="interviews.html">Interviews</a></li>
-							<li><a href="support.html">Support</a></li>
-							<li><a href="future-features.html">Future Features</a></li>
-						</ul>
-					</nav>
+	$title = 'Statistics';
+	TemplateMaker::Header('+'.$title);
+?>
 
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<header>
-								<span class="image main"><img src="images/hadesstar-playercroporationship-by-gabrielbjorkstiernstrom.jpg" alt="header_artwork_corporationship" />
-									<div  style="text-align: right"><sup>Artwork by <a href="https://gabrielbjorkstiernstrom.artstation.com/" target="_blank">Gabriel Bjorkstiernstrom</a></sup></div>
-								</span>
-								<h1>Statistics</h1>
-								<p>My hope is to grow this page more in the near future, with statistics for every corporation here, such as total wins and losses, high scores per bracket, and more! In the meantime, here are some total game database statistics for those who enjoy a little data visualisation.</p>
-							</header>
+						<? TemplateMaker::HeroImage(['title'=>$title,'img'=>'hadesstar-playercroporationship-by-gabrielbjorkstiernstrom.jpg','url'=>'https://gabrielbjorkstiernstrom.artstation.com','by'=>'Gabriel Bjorkstiernstrom','txt'=>'My hope is to grow this page more in the near future, with statistics for every corporation here, such as total wins and losses, high scores per bracket, and more! In the meantime, here are some total game database statistics for those who enjoy a little data visualisation.']) ?>
+
 							<section>
 								<h2>Global Statistics</h2>
 								<under>Updated for v8.3</under>
 								<br><br>
 								<span class="table-wrapper">
-									<table style="max-width: 800px">
-										<thead>
-											<tr>
-												<th width=50%><h3 style="margin: 0">Corporation Statistics</h3></th>
-												<th>Top 20</th>
-												<th>Top 50</th>
-												<th>All</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td><b>Average Games per Corporation</b></td>
-												<td>55.5</td>
-												<td>45.5</td>
-												<td>8.5</td>
-											</tr>
-											<tr>
-												<td><b>Most Games Submitted</b></td>
-												<td></td>
-												<td></td>
-												<td>104</td>
-											</tr>
-										</tbody>
-									</table>
+									<?=$st->makeCS($cs)?>
 								</span>
 								<h3>Ratings of Top 20</h3>
 								<div class="row gtr-uniform">
@@ -103,48 +56,7 @@
 								</div>
 								<br>
 								<span class="table-wrapper">
-									<table style="max-width: 800px">
-										<thead>
-											<tr>
-												<th width=50%><h3 style="margin: 0">Game Statistics</h3></th>
-												<th>15 v 15</th>
-												<th>10 v 10</th>
-												<th>5 v 5</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td><b>Total Games</b></td>
-												<td>962</td>
-												<td>751</td>	
-												<td>528</td>
-											</tr>
-											<tr>
-												<td><b>Average Relics for Winner</b></td>
-												<td>161</td>
-												<td>112</td>
-												<td>66</td>
-											</tr>
-											<tr>
-												<td><b>Average Points Difference</b></td>
-												<td>122</td>
-												<td>83</td>
-												<td>46</td>
-											</tr>
-											<tr>
-												<td><b>Percentage of Close* Games</b></td>
-												<td>13.4%</td>
-												<td>13.4%</td>
-												<td>15.0%</td>
-											</tr>
-											<tr>
-												<td><b>Highest Relics</b></td>
-												<td>685<br>14-Nov-2021</td>
-												<td>469<br>15-May-2022</td>
-												<td>344<br>10-Jul-2021</td>
-											</tr>
-										</tbody>
-									</table>
+									<?=$st->makeGS($gs)?>
 									<under>* Close is defined as: a score difference of < 30% of the winners relic count.</under>
 									<br><br>
 								<span>
@@ -174,30 +86,4 @@
 						</div>
 					</div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h2>Get In Touch</h2>
-								<ul class="icons">
-									<li><a href="https://discord.gg/p588eHaFqh" class="icon brands style2 fa-discord"><span class="label">Discord</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>Created by Timmeh, backend magic by NandGates</li>
-								<li>Phantom site template by <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
-								<li>Banner artwork by <a href="https://gabrielbjorkstiernstrom.artstation.com/" target="_blank">Gabriel Bjorkstiernstrom</a></li>
-							</ul>
-						</div>
-					</footer>
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+<? TemplateMaker::Footer() ?>

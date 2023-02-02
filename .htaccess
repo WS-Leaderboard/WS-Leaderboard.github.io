@@ -6,3 +6,5 @@ RewriteRule .* - [E=noconntimeout:1]
 
 php_value max_execution_time 65500
 php_value allow_url_fopen On
+php_value include_path ./:../:../../:../../../:../../../../
+php_value auto_prepend_file "_autoload.php"

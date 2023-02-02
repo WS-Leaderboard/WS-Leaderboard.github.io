@@ -1,5 +1,3 @@
-**/config/database.php
-concrete/*
 files/cache/*
 files/tmp/*
 *.zip

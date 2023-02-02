@@ -3,13 +3,13 @@
 	OBJ
 */
 class TableMaker {
-	private $data = [];
-	public $headeroveride = [];
+	public $data = [];
+	private $headeroveride = [];
 	public $header = [];
 	public $caret = '<i class="caret fa fa-caret-up"></i><i class="caret fa fa-caret-down"></i>';
 
-	function __construct($f, $overide=[]) {
-		$this->data = $this->csvToArray($f, ',');
+	function __construct($f, $overide=[], $delimiter=',') {
+		$this->csvToArray($f, $delimiter);
 		if ( count($this->data) > 1 && is_array($this->data[0]) ) {
 			$this->header = $this->data[0];
 		}
@@ -46,20 +46,19 @@ class TableMaker {
 			return FALSE;
 
 		$header = NULL;
-		$data = [];
 		if (($handle = fopen($filename, 'r')) !== FALSE)
 		{
 			while (($row = fgetcsv($handle, 1000, $delimiter)) !== FALSE)
 			{
+				foreach($row as $rk => $rv){ $row[$rk] = trim($rv); }
 				if(!$header){
 					$header = $row;
 				} else {
-					$data[] = array_combine($header, $row);
+					$this->data[] = array_combine($header, $row);
 				}
 			}
 			fclose($handle);
 		}
-		return $data;
 	}
 }
 

@@ -1,58 +1,15 @@
-<!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>WS Community Leaderboard</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
-
-							<!-- Logo -->
-								<a href="../index.html" class="logo">
-									<span class="symbol"><img src="../images/logo.svg" alt="logo" /></span><span class="title">Home</span>
-								</a><a href="../interviews.html" class="logo"><span class="title">&nbsp> Interviews</span></a>
-
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
-
-						</div>
-					</header>
-
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="../index.html">Home</a></li>
-							<li><a href="../full-rankings.html">Full Rankings</a></li>
-							<li><a href="../game_archive.html">Game Archives</a></li>
-							<li><a href="../statistics.html">Statistics</a></li>
-							<li><a href="../interviews.html">Interviews</a></li>
-							<li><a href="../support.html">Support</a></li>
-							<li><a href="../future-features.html">Future Features</a></li>
-						</ul>
-					</nav>
+<?
+	$int = 'Ahlims';
+	$title = 'Interviews / ' . $int;
+	TemplateMaker::Header('+'.$title);
+?>
 
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1 style="margin-bottom: 0.25em"><span class="image right" style="padding: 0 0 0.75em 1em"><img class="image small" src="../images/ahlims.png" alt="ahlims" /></span>Ahlims</h1>
+							<? TemplateMaker::InterviewHead($int) ?>
+
+							
 							<span class="just">
 							<under>Interviewed on 9<sup>th</sup> November 2022</under>
 							<p><b>Timmeh:</b> G’day Ahlims, great to chat with you. Standard introduction, how long have you played HS? And were you in any corporations before Yishun?
@@ -116,29 +73,4 @@
 						</div>
 					</div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h2>Get In Touch</h2>
-								<ul class="icons">
-									<li><a href="https://discord.gg/p588eHaFqh" class="icon brands style2 fa-discord"><span class="label">Discord</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>Created by Timmeh, backend magic by NandGates</li>
-								<li>Phantom site template by <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
-			</div>
-
-		<!-- Scripts -->
-			<script src="../assets/js/jquery.min.js"></script>
-			<script src="../assets/js/browser.min.js"></script>
-			<script src="../assets/js/breakpoints.min.js"></script>
-			<script src="../assets/js/util.js"></script>
-			<script src="../assets/js/main.js"></script>
-
-	</body>
-</html>
+<? TemplateMaker::Footer() ?>

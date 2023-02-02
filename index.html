@@ -1,132 +1,16 @@
-<!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>WS Community Leaderboard</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
-
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="logo" /></span><span class="title">Home</span>
-								</a>
-
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
-
-						</div>
-					</header>
-
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="full-rankings.html">Full Rankings</a></li>
-							<li><a href="game_archive.html">Game Archives</a></li>
-							<li><a href="statistics.html">Statistics</a></li>
-							<li><a href="interviews.html">Interviews</a></li>
-							<li><a href="support.html">Support</a></li>
-							<li><a href="future-features.html">Future Features</a></li>
-						</ul>
-					</nav>
-
+<?
+	$title = 'White Star Community Leaderboard';
+	TemplateMaker::Header();
+?>
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<header>
-								<span class="image main"><img src="images/hadesstar-battleship-by-gabrielbjorkstiernstrom.jpg" alt="header_artwork_battleship" />
-									<div  style="text-align: right"><sup>Artwork by <a href="https://gabrielbjorkstiernstrom.artstation.com/" target="_blank">Gabriel Bjorkstiernstrom</a></sup></div>
-								</span>
-								<h1>White Star Community Leaderboard</h1>
-							</header>
-							<p>Version 8 of the Hades Star - White Star leaderboard project. A community driven ranking system for the best White Star teams.</p>
+							<? TemplateMaker::HeroImage(['title'=>$title,'img'=>'hadesstar-battleship-by-gabrielbjorkstiernstrom.jpg','url'=>'https://gabrielbjorkstiernstrom.artstation.com','by'=>'Gabriel Bjorkstiernstrom','txt'=>'Version '. WSL_VERSION .' of the Hades Star - White Star leaderboard project. A community driven ranking system for the best White Star teams.']) ?>
+
 							<section class="tiles">
-								<article class="style1">
-									<span class="image">
-										<img src="images/leaderboard-star.svg" alt="leaderboard"/>
-									</span>
-									<a href="full-rankings.html">
-										<h2>Full Rankings</h2>
-										<div class="content">
-											<p>Rankings of all corporations.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style2">
-									<span class="image">
-										<img src="images/archive.svg" alt="archive" />
-									</span>
-									<a href="game_archive.html">
-										<h2>Game Archives</h2>
-										<div class="content">
-											<p>All historical processed games.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style3">
-									<span class="image">
-										<img src="images/stats-square-up.svg" alt="stats-square" />
-									</span>
-									<a href="statistics.html">
-										<h2>Statistics</h2>
-										<div class="content">
-											<p>Database Stats</p>
-										</div>
-									</a>
-								</article>
-								<article class="style4">
-									<span class="image">
-										<img src="images/mic-speaking.svg" alt="mic" />
-									</span>
-									<a href="interviews.html">
-										<h2>Interviews</h2>
-										<div class="content">
-											<p>Thoughts and advice from the best.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style5">
-									<span class="image">
-										<img src="images/discord.svg" alt="discord" />
-									</span>
-									<a href="support.html">
-										<h2>Support</h2>
-										<div class="content">
-											<p>Join our discord.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style6">
-									<span class="image">
-										<img src="images/grid-add.svg" alt="grid-add" />
-									</span>
-									<a href="future-features.html">
-										<h2>Future Features</h2>
-										<div class="content">
-											<p>Upcoming website functionality.</p>
-										</div>
-									</a>
-								</article>
+								<? TemplateMaker::HeroMenu() ?>
 							</section>
+
 						</div>
 						<div class="inner">
 							<br><br>
@@ -150,30 +34,4 @@
 						</div>
 					</div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h2>Get In Touch</h2>
-								<ul class="icons">
-									<li><a href="https://discord.gg/p588eHaFqh" class="icon brands style2 fa-discord"><span class="label">Discord</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>Created by Timmeh, backend magic by NandGates</li>
-								<li>Phantom site template by <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
-								<li>Banner artwork by <a href="https://gabrielbjorkstiernstrom.artstation.com/" target="_blank">Gabriel Bjorkstiernstrom</a></li>
-							</ul>
-						</div>
-					</footer>
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+<? TemplateMaker::Footer() ?>
