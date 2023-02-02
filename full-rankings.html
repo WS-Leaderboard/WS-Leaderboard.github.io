@@ -1,102 +1,23 @@
-<!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>WS Community Leaderboard</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
-
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="logo" /></span><span class="title">Home</span>
-								</a>
-
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
-
-						</div>
-					</header>
-
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="full-rankings.html">Full Rankings</a></li>
-							<li><a href="game_archive.html">Game Archives</a></li>
-							<li><a href="statistics.html">Statistics</a></li>
-							<li><a href="interviews.html">Interviews</a></li>
-							<li><a href="support.html">Support</a></li>
-							<li><a href="future-features.html">Future Features</a></li>
-						</ul>
-					</nav>
-
+<?
+	$title = 'Full Rankings';
+	TemplateMaker::Header('+'.$title);
+?>
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<header>
-								<span class="image main"><img src="images/hadesstar-playerdrones-by-gabrielbjorkstiernstrom.jpg" alt="header_artwork_drones" />
-									<div  style="text-align: right"><sup>Artwork by <a href="https://gabrielbjorkstiernstrom.artstation.com/" target="_blank">Gabriel Bjorkstiernstrom</a></sup></div>
-								</span>
-								<h1>Full Rankings</h1>
-							</header>
+							<? TemplateMaker::HeroImage(['title'=>$title,'img'=>'hadesstar-playerdrones-by-gabrielbjorkstiernstrom.jpg','url'=>'https://gabrielbjorkstiernstrom.artstation.com','by'=>'Gabriel Bjorkstiernstrom']) ?>
+
 							<p>The method applied to process the results of submitted games is known as the Elo rating system. Wikipedia has a decent rundown of it <a href="https://en.wikipedia.org/wiki/Elo_rating_system">here</a> if you would like to know more. This goes through the history, the formula used, and many of the applications it has been used for over the years. This is a great place to start if you want to know how the ratings are achieved.</p>
-							<a href="./data/full_rankings.csv" class="button primary icon solid fa-download">Download CSV</a>   <a href="./data/full_rankings_v8.2.csv" class="button primary icon solid fa-download">v8.2</a>   <a href="./data/full_rankings_v8.1.csv" class="button primary icon solid fa-download">v8.1</a>   <a href="./data/full_rankings_v8.0.1.csv" class="button primary icon solid fa-download">v8.0</a>
+							<?=TemplateMaker::GetDownload(WSL_PATH_RANKINGS,'Download CSV '.WSL_VERSION)?><? TemplateMaker::DownloadBtns('rankings_') ?>
 							<br><br>
 						</div>
 						<div class="inner">
 							<h2>Rankings Table</h2>
 							<p><i>Click column headers to sort, or filter with the search box below.</i></p>
 							<input type="text" id="myinput" placeholder="Search..." title="Type in something"><br>
-							<h3>Cycle 8.3</h3>
+							<h3>Cycle <?=WSL_VERSION?></h3>
 							<table class="table-wrapper rankings"></table>
 						</div>
 					</div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h2>Get In Touch</h2>
-								<ul class="icons">
-									<li><a href="https://discord.gg/p588eHaFqh" class="icon brands style2 fa-discord"><span class="label">Discord</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>Created by Timmeh, backend magic by NandGates</li>
-								<li>Phantom site template by <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
-								<li>Banner artwork by <a href="https://gabrielbjorkstiernstrom.artstation.com/" target="_blank">Gabriel Bjorkstiernstrom</a></li>
-							</ul>
-						</div>
-					</footer>
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.tablesorter.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="assets/js/tables.js"></script>
-	</body>
-</html>
+<? TemplateMaker::Footer(['jquery.tablesorter.min.js','tables.js']) ?>

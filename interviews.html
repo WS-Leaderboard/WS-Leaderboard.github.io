@@ -1,65 +1,15 @@
-<!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>WS Community Leaderboard</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
-
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="logo" /></span><span class="title">Home</span>
-								</a>
-
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
-
-						</div>
-					</header>
-
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="full-rankings.html">Full Rankings</a></li>
-							<li><a href="game_archive.html">Game Archives</a></li>
-							<li><a href="statistics.html">Statistics</a></li>
-							<li><a href="interviews.html">Interviews</a></li>
-							<li><a href="support.html">Support</a></li>
-							<li><a href="future-features.html">Future Features</a></li>
-						</ul>
-					</nav>
+<?
+	$title = 'Interviews';
+	TemplateMaker::Header('+'.$title);
+?>
 
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<header>
-								<span class="image main"><img src="images/hadesstar-cerberussentinel-by-gabrielbjorkstiernstrom.jpg" alt="header_artwork_sentinel" />
-									<div  style="text-align: right"><sup>Artwork by <a href="https://gabrielbjorkstiernstrom.artstation.com/" target="_blank">Gabriel Bjorkstiernstrom</a></sup></div>
-								</span>
-								<h1>Interviews</h1>
-							</header>
-							<p>Welcome to our interviews section, where we will periodically interview some of the top players, commanders and First Officers in the Hades Star galaxy to provide some deeper insight into their HS career, their thoughts on White Stars, and maybe some #offtopic too.</p>
-							<p><i>Click on the avatars or names below to read more.</i></p>
+						<? TemplateMaker::HeroImage(['title'=>$title,'img'=>'hadesstar-cerberussentinel-by-gabrielbjorkstiernstrom.jpg','url'=>'https://gabrielbjorkstiernstrom.artstation.com','by'=>'Gabriel Bjorkstiernstrom','txt'=>'Simple export of all known games. More work is planned for this page, but for now it may be easier to download the .csv to use as you wish.']) ?>
+
+						<p>Welcome to our interviews section, where we will periodically interview some of the top players, commanders and First Officers in the Hades Star galaxy to provide some deeper insight into their HS career, their thoughts on White Stars, and maybe some #offtopic too.</p>
+						<p><i>Click on the avatars or names below to read more.</i></p>
 							
 							<span class="image left"><a href="interviews/ahlims.html"><img class="image avatar" src="images/ahlims.png" alt="ahlims"/></a></span>
 							<h2><a href="interviews/ahlims.html">Ahlims</a></h2>
@@ -79,30 +29,4 @@
 						</div>
 					</div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h2>Get In Touch</h2>
-								<ul class="icons">
-									<li><a href="https://discord.gg/p588eHaFqh" class="icon brands style2 fa-discord"><span class="label">Discord</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>Created by Timmeh, backend magic by NandGates</li>
-								<li>Phantom site template by <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
-								<li>Banner artwork by <a href="https://gabrielbjorkstiernstrom.artstation.com/" target="_blank">Gabriel Bjorkstiernstrom</a></li>
-							</ul>
-						</div>
-					</footer>
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+<? TemplateMaker::Footer() ?>

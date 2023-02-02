@@ -1,17 +1,7 @@
-<!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <?php
-include_once 'assets/php/tablemaker.php';
-include_once 'assets/php/statsmaker.php';
 
-$f = 'data/full_archive.csv';
-$games = new TableMaker($f);
-$f = 'data/full_rankings.csv';
-$rankings = new TableMaker($f);
+$games = new TableMaker(WSL_PATH_GAMES);
+$rankings = new TableMaker(WSL_PATH_RANKINGS);
 
 $games = $games->data;
 $rankings = $rankings->data;
@@ -35,63 +25,16 @@ $gs = [
 		['name'=>'Highest Relics', 'high'=>'%']
 			]
 	];
-	
+
+	$title = 'Statistics';
+	TemplateMaker::Header('+'.$title);
 ?>
-<html>
-	<head>
-		<title>WS Community Leaderboard</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
-
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="logo" /></span><span class="title">Home</span>
-								</a>
-
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
-
-						</div>
-					</header>
-
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="full-rankings.html">Full Rankings</a></li>
-							<li><a href="game_archive.html">Game Archives</a></li>
-							<li><a href="statistics.html">Statistics</a></li>
-							<li><a href="interviews.html">Interviews</a></li>
-							<li><a href="support.html">Support</a></li>
-							<li><a href="future-features.html">Future Features</a></li>
-						</ul>
-					</nav>
 
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<header>
-								<span class="image main"><img src="images/hadesstar-playercroporationship-by-gabrielbjorkstiernstrom.jpg" alt="header_artwork_corporationship" />
-									<div  style="text-align: right"><sup>Artwork by <a href="https://gabrielbjorkstiernstrom.artstation.com/" target="_blank">Gabriel Bjorkstiernstrom</a></sup></div>
-								</span>
-								<h1>Statistics</h1>
-								<p>My hope is to grow this page more in the near future, with statistics for every corporation here, such as total wins and losses, high scores per bracket, and more! In the meantime, here are some total game database statistics for those who enjoy a little data visualisation.</p>
-							</header>
+						<? TemplateMaker::HeroImage(['title'=>$title,'img'=>'hadesstar-playercroporationship-by-gabrielbjorkstiernstrom.jpg','url'=>'https://gabrielbjorkstiernstrom.artstation.com','by'=>'Gabriel Bjorkstiernstrom','txt'=>'My hope is to grow this page more in the near future, with statistics for every corporation here, such as total wins and losses, high scores per bracket, and more! In the meantime, here are some total game database statistics for those who enjoy a little data visualisation.']) ?>
+
 							<section>
 								<h2>Global Statistics</h2>
 								<under>Updated for v8.3</under>
@@ -143,30 +86,4 @@ $gs = [
 						</div>
 					</div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h2>Get In Touch</h2>
-								<ul class="icons">
-									<li><a href="https://discord.gg/p588eHaFqh" class="icon brands style2 fa-discord"><span class="label">Discord</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>Created by Timmeh, backend magic by NandGates</li>
-								<li>Phantom site template by <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
-								<li>Banner artwork by <a href="https://gabrielbjorkstiernstrom.artstation.com/" target="_blank">Gabriel Bjorkstiernstrom</a></li>
-							</ul>
-						</div>
-					</footer>
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+<? TemplateMaker::Footer() ?>
