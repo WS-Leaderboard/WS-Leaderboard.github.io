@@ -2,11 +2,12 @@
 /*
     Set folder for all includes
 */
+define('WSL_ROOT', __DIR__ );
 define('WSL_ASSETS','/assets/');
 /*
     Load config definitions
 */
-require_once __DIR__ . WSL_ASSETS . 'config.php';
+require_once WSL_ROOT . WSL_ASSETS . 'config.php';
 /*
     Usage example:
 
@@ -49,7 +50,7 @@ require_once __DIR__ . WSL_ASSETS . 'config.php';
 
 */
 spl_autoload_register(function (string $className) {
-    $assets = __DIR__ . WSL_ASSETS . 'php/';
+    $assets = WSL_ROOT . WSL_ASSETS . 'php/';
     $fileName = [
         // # 1 with namespaces
         $assets . str_replace('\\', '/', $className . '.php'),
