@@ -94,6 +94,32 @@ class TemplateMaker{
 		}
 		echo $menu;
 	}
+	function Interviews($int){
+		$search = '/interviews';
+		$dir = WSL_ROOT . $search;
+		if (is_dir($dir) && is_array($int)){
+			$f = scandir($dir);
+			$d = [];
+			foreach($f as $e){
+				if (strpos($e,'.html') !== FALSE ) {
+					$d[] = $e;
+				}
+			}
+			$link = '';
+			foreach($d as $e){
+				$name = substr($e,0,-5);
+				if (isset($int[$name])) {
+					$i = $int[$name];
+					$title = ($i['n']?$i['n']:ucfirst($name));
+					$link .= '<a href="'.$search.'/'.$e.'"><span class="image left"><img class="image avatar" src="/images/'.$name.'.png" alt="'.$name.'"/></span><h2>'.$title.'</h2><blockquote style="display: grid">"'.$i['b'].'"</blockquote></a>';
+				}
+			}
+			echo $link;
+		}
+	}
+	function InterviewHead($name){
+		echo '<h1 style="margin-bottom: 0.25em"><span class="image right" style="padding: 0 0 0.75em 1em"><img class="image small" src="/images/'. strtolower($name) .'.png" alt="'.$name.'" /></span>'.$name.'</h1>';
+	}
 	function DownloadBtns($search, $count=3, $skip=TRUE){
 		if ($count>0){
 			$f = scandir(WSL_ROOT . '/data', SCANDIR_SORT_DESCENDING);
