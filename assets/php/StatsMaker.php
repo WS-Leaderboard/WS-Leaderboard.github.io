@@ -4,8 +4,8 @@
 */
 class StatsMaker {
 
-	private $games;
-	private $rankings;
+	//private $games;
+	//private $rankings;
 	/*
 		CSV header fields
 	*/
@@ -21,6 +21,9 @@ class StatsMaker {
 	private $f_score2	= 'score2';
 	private $f_size		= 'players';
 	private $f_date		= 'date';
+		//
+	public $day_short	= [ 'su', 'mo', 'tu', 'we', 'th', 'fr', 'sa' ];
+	public $day_long	= [ 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
 	/*
 		STATS
 	*/
@@ -38,11 +41,11 @@ class StatsMaker {
 	***
 	*/
 	function __construct($rankings,$games){
-		$this->$games = $games;
-		$this->$rankings = $rankings;
+		//$this->games = $games;
+		//$this->rankings = $rankings;
 
 		for ( $t=0; $t<7; $t++ ){
-			$this->$dwms[] = 0;
+			$this->dwms[] = 0;
 		}
 		$gs_totals = [];
 		$corpall = [];
@@ -98,8 +101,14 @@ class StatsMaker {
 				// DWMS : Day of Week for Match Start
 				// w : 0 (for Sunday) through 6 (for Saturday) (N : 1 (for Monday) through 7 (for Sunday) )
 				$d = date('w', $this->makeTimeStamp($g[$this->f_date],-5) );
-				$this->$dwms[$d] += 1;
+				$this->dwms[$d] += 1;
 			}
+		}
+
+		// DWMS / calc % to max
+		$dmax = max($this->dwms);
+		foreach($this->dwms as $k => $v){
+			$this->dwms[$k] = round( ($v*100)/$dmax, 1);
 		}
 		/*
 			CS: Counting totals
@@ -152,6 +161,11 @@ class StatsMaker {
 			$this->asgs[$k] = round(($this->gs['total'][$k]*100)/$total,1);
 		}
 	}
+	/*
+	***
+		Support functions
+	***
+	*/
 	private function makeTimeStamp($d,$inc=0){
         $d = explode('/',$d);
         // mktime(hour, minute, second, month, day, year) 
@@ -243,6 +257,7 @@ class StatsMaker {
 		return implode('',$html);
 	}
 	public function makeDWMS(){
+
 
 	}
 	//https://chartscss.org/
