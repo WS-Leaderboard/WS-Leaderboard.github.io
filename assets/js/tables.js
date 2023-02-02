@@ -19,11 +19,8 @@ $(document).ready(function(){
 		or load PHP on hosting which support it
 	*/
 	site = document.location;
-	if ( site.toString().includes("github.io")) {
-		file = 'html';
-	}else{
-		file = 'php';
-	}
+	file = 'php';
+
 	/*
 		Load content or dynamic PHP or static, need to be in main directory
 		Linux/terminal
