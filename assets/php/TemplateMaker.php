@@ -95,7 +95,7 @@ class TemplateMaker{
 		echo $menu;
 	}
 	function Interviews($int){
-		$search = '/interviews';
+		$search = 'interviews';
 		$dir = WSL_ROOT . $search;
 		if (is_dir($dir) && is_array($int)){
 			$f = scandir($dir);
@@ -122,7 +122,7 @@ class TemplateMaker{
 	}
 	function DownloadBtns($search, $count=3, $skip=TRUE){
 		if ($count>0){
-			$f = scandir(WSL_ROOT . '/data', SCANDIR_SORT_DESCENDING);
+			$f = scandir(WSL_ROOT . WSL_DATA, SCANDIR_SORT_DESCENDING);
 			$d = [];
 			foreach($f as $e){
 				if (strpos($e,$search) !== FALSE ) {
@@ -135,7 +135,7 @@ class TemplateMaker{
 			$link = '';
 			foreach($d as $e) {
 				if ($count>0) {
-					$link .= self::GetDownload('data/'.$e, substr(array_pop(explode('_',$e)),0, -4) );
+					$link .= self::GetDownload( WSL_DATA . $e, substr(array_pop(explode('_',$e)),0, -4) );
 				}
 				$count--;
 			}
@@ -155,7 +155,7 @@ class TemplateMaker{
 		return '<nav id="menu"><h2>Menu</h2><ul>'. $link .'</ul></nav>';
 	}
 	function GetDownload($link,$name){
-		if (file_exists( WSL_ROOT . '/'. $link)) {
+		if (file_exists( WSL_ROOT . $link)) {
 			return '<a href="./'.$link.'" class="button primary icon solid fa-download">'.$name.'</a>';
 		}
 		return NULL;
@@ -163,7 +163,7 @@ class TemplateMaker{
 	function GetAsset($asset) {
 		$link = '';
 		$ext = strtolower(array_pop(explode('.',$asset)));
-		$path = WSL_ASSETS . $ext . '/'. $asset;
+		$path = '/' . WSL_ASSETS . $ext . '/'. $asset;
 		if (!empty($asset)){
 			if ($ext == 'js') {
 				$link = '<script src="'. $path .'"></script>';

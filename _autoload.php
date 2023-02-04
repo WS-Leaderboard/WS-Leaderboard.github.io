@@ -2,8 +2,9 @@
 /*
     Set folder for all includes
 */
-define('WSL_ROOT', __DIR__ );
-define('WSL_ASSETS','/assets/');
+define('WSL_ROOT', __DIR__ . '/' );
+define('WSL_ASSETS','assets/');
+define('WSL_DATA','data/');
 /*
     Load config definitions
 */

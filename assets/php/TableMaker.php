@@ -9,7 +9,7 @@ class TableMaker {
 	public $caret = '<i class="caret fa fa-caret-up"></i><i class="caret fa fa-caret-down"></i>';
 
 	function __construct($f, $overide=[], $delimiter=',') {
-		$this->csvToArray($f, $delimiter);
+		$this->csvToArray(WSL_ROOT . $f, $delimiter);
 		if ( count($this->data) > 1 && is_array($this->data[0]) ) {
 			$this->header = $this->data[0];
 		}
