@@ -165,9 +165,11 @@ class TemplateMaker{
 		$ext = strtolower(array_pop(explode('.',$asset)));
 		$path = '/' . WSL_ASSETS . $ext . '/'. $asset;
 		if (!empty($asset)){
-			if ($ext == 'js') {
+			if (strpos($asset,'<script>')===0){
+				$link = $asset;
+			}elseif ($ext == 'js') {
 				$link = '<script src="'. $path .'"></script>';
-			}else{
+			}elseif ($ext == 'css' || $ext == 'less') {
 				$link = '<link rel="stylesheet" href="'. $path .'" />';
 			}
 		}

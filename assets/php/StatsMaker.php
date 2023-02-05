@@ -35,12 +35,22 @@ class StatsMaker {
 	public $asgs;	// All Submitted Game Sizes
 	public $dwms;	// Day of Week for Match Start
 	public $tc;		// Total Corporations
+		// Help
+	public $hct;	// HighChartTable Scripts
 	/*
 	***
 		Construct Data
 	***
 	*/
-	function __construct($rankings,$games){
+	function __construct($rankings,$games,$tcorps){
+		/*
+			[
+				'rankings'=> $rankings,
+				'games'=> $games,
+				'tcorps'=> $tcorps
+			]
+
+		*/
 		//$this->games = $games;
 		//$this->rankings = $rankings;
 
@@ -55,11 +65,16 @@ class StatsMaker {
 		$t = 0;
 		foreach($rankings as $d){
 			if ($t<50) {
-				$this->top[ $d[$this->f_name] ] = $d;
+				//if ($d[$this->f_rank] > 0){
+					$this->top[ $d[$this->f_name] ] = $d;
+					if ($t<20) {
+						$this->rt20[ $d[$this->f_name] ] = $d;
+					}
+					$t++;
+				//}
 			}else{
 				break;
 			}
-			$t++;
 		}
 		foreach($games as $g ){
 			$type = $this->type[ $g[$this->f_size] ];
@@ -122,9 +137,15 @@ class StatsMaker {
 			Count totals for Top20 and 50
 		*/
 		foreach($this->top as $v){
-			$total = $v[$this->type[5]] + $v[$this->type[15]] + $v[$this->type[10]];
+			$v5 = $v[$this->type[5]];
+			$v10 = $v[$this->type[10]];
+			$v15 = $v[$this->type[15]];
+			$total = $v5 + $v10 + $v15;
+			$n = $this->f_name;
 			if ($t < 20){
 				$cs_top20 += $total;
+				$this->top[ $v[$n] ] = $d;
+				$this->sbt20[] = [ $n => $v[$n], $this->type[5]=>$v5, $this->type[10]=>$v10, $this->type[15]=>$v15 ];
 			}else{
 				$cs_top50 += $total;
 			}
@@ -160,6 +181,8 @@ class StatsMaker {
 		foreach($this->type as $k){
 			$this->asgs[$k] = round(($this->gs['total'][$k]*100)/$total,1);
 		}
+			// TC
+			$this->tc = $tcorps;
 	}
 	/*
 	***
@@ -256,11 +279,291 @@ class StatsMaker {
 		$html[] = '</tbody></table>';
 		return implode('',$html);
 	}
-	public function makeDWMS(){
-
-
+	public function makeASGS($class = "AllSubmitedGameSizes"){
+		$html = [];
+		$xaxis = [];
+		$series = [];
+		foreach($this->asgs as $k => $v){
+			$xaxis[] = $k;
+			$series[] = [ 'y'=> intval($v), 'label'=>$k ] ;
+		}
+		$html[] = '<div id="'.$class.'"></div>';
+		$this->hct[] = "Highcharts.chart('".$class."', {
+			chart: {
+				type: 'pie'
+			},
+			xAxis: {
+				categories: ".json_encode($xaxis).",
+			},
+			yAxis:{
+				title: null,
+				max: 100
+			},
+			credits: {
+				enabled: false
+			},
+			title: {
+				text: null
+			},
+			legend: {
+				enabled: false
+			},
+			plotOptions: {
+				series: {
+					colors: ['#5891AD','#F1C232','#004561'],
+					dataLabels: {
+						enabled: true,
+							formatter: function () {
+								return '<b>' + this.point.label + '<br> ' + this.point.y + '%</b>';
+							}
+					}
+				}
+			},
+			 
+			tooltip: {
+				formatter: function() {
+					return '<b>' + this.point.y + '%</b> : ' + this.point.label;
+				},
+			},
+			series: [{
+				name: 'Corporations',
+				innerSize: '50%',
+				data: ".json_encode($series)."
+			}]
+		});";
+		return implode('',$html);		
+	}
+	public function makeSBT20($class = "SizeBreakDownOfTop20"){
+		$html = [];
+		$xaxis = [];
+		$seriesA = [];
+		$seriesB = [];
+		$seriesC = [];
+		foreach($this->sbt20 as $k => $v){
+			$xaxis[] = $v[$this->f_name];
+			$seriesA[] = [ intval($v[$this->type[5]]) ];
+			$seriesB[] = [ intval($v[$this->type[10]]) ];
+			$seriesC[] = [ intval($v[$this->type[15]]) ];
+		}
+		$html[] = '<div id="'.$class.'"></div>';
+		$this->hct[] = "Highcharts.chart('".$class."', {
+			chart: {
+				type: 'column'
+			},
+			xAxis: {
+				categories: ".json_encode($xaxis).",
+				crosshair: true
+			},
+			yAxis:{
+				title: null,
+			},
+			credits: {
+				enabled: false
+			},
+			title: {
+				text: null
+			},
+			legend: {
+				enabled: true
+			},
+			colors: ['#5891AD','#F1C232','#004561'],
+			plotOptions: {
+				column: {
+					stacking: 'percent'
+				},
+				series: {
+					dataLabels: {
+						enabled: false,
+							formatter: function () {
+								return this.point.label;
+							}
+					}
+				}
+			},
+			 
+			tooltip: {
+				formatter: function() {
+					return '<b>' + (this.point.percentage).toFixed(0) + '%</b> : ' + this.series.name;
+				},
+			},
+			series: [
+				{ name: '".$this->type[5]."',
+				data: ".json_encode($seriesA)."},
+				{ name: '".$this->type[10]."',
+				data: ".json_encode($seriesB)."},
+				{ name: '".$this->type[15]."',
+				data: ".json_encode($seriesC)."}
+			]
+		});";
+		return implode('',$html);
+	}
+	public function makRT20($class = "RattingsOfTop20"){
+		$html = [];
+		$xaxis = [];
+		$series = [];
+		foreach($this->rt20 as $k => $v){
+			$rank = $v[$this->f_rank];
+			$xaxis[] = $v[$this->f_name];
+			if ($rank>0) {
+				$color = '#F1C232';
+			}else{
+				$color = '#FFE599';
+			}
+			$series[] = [ 'y'=> intval($v[$this->f_rating]), 'label'=>$v[$this->f_name],'rank'=> ($rank?$rank:'~'), 'color'=>$color ] ;
+		}
+		$html[] = '<div id="'.$class.'"></div>';
+		$this->hct[] = "Highcharts.chart('".$class."', {
+			chart: {
+				type: 'column'
+			},
+			xAxis: {
+				categories: ".json_encode($xaxis).",
+				crosshair: true
+			},
+			yAxis:{
+				title: null,
+			},
+			credits: {
+				enabled: false
+			},
+			title: {
+				text: null
+			},
+			legend: {
+				enabled: false
+			},
+			colors: ".json_encode($colors).",
+			plotOptions: {
+				series: {
+					dataLabels: {
+						enabled: false,
+							formatter: function () {
+								return this.point.label;
+							}
+					}
+				}
+			},
+			 
+			tooltip: {
+				formatter: function() {
+					return this.point.rank + '. <b>' + this.point.y + '</b> : ' + this.point.label;
+				},
+			},
+			series: [{
+				name: 'Corporations',
+				data: ".json_encode($series)."
+			}]
+		});";
+		return implode('',$html);
+	}
+	public function makeDWMS($class = "DatOfWeekForMatch"){
+		$html = [];
+		$xaxis = [];
+		$series = [];
+		foreach($this->dwms as $k => $v){
+			$xaxis[] = $this->day_long[$k];
+			$series[] = [ 'y'=> intval($v), 'label'=>$this->day_long[$k] ] ;
+		}
+		$html[] = '<div id="'.$class.'"></div>';
+		$this->hct[] = "Highcharts.chart('".$class."', {
+			chart: {
+				type: 'column'
+			},
+			xAxis: {
+				categories: ".json_encode($xaxis).",
+				crosshair: true
+			},
+			yAxis:{
+				title: null,
+				max: 100
+			},
+			credits: {
+				enabled: false
+			},
+			title: {
+				text: null
+			},
+			legend: {
+				enabled: false
+			},
+			plotOptions: {
+				series: {
+					color: '#F1C232',
+					dataLabels: {
+						enabled: false,
+							formatter: function () {
+								return this.point.label;
+							}
+					}
+				}
+			},
+			 
+			tooltip: {
+				formatter: function() {
+					return '<b>' + this.point.y + '%</b> : ' + this.point.label;
+				},
+			},
+			series: [{
+				name: 'Corporations',
+				data: ".json_encode($series)."
+			}]
+		});";
+		return implode('',$html);
 	}
 	//https://chartscss.org/
+	public function makeScripts(){
+		return "<script>$(document).ready(function() { ". implode('',$this->hct) . " });</script>";
+	}
+	public function makeTC($class = "TotalCorporations"){
+		$html = [];
+		$xaxis = [];
+		$series = [];
+		foreach($this->tc as $k => $v){
+			$xaxis[] = $v['Date'];
+			$series[] = [ 'y'=> intval($v['Corporations']), 'label'=>$v['Version'] ] ;
+		}
+		$html[] = '<div id="'.$class.'"></div>';
+		$this->hct[] = "Highcharts.chart('".$class."', {
+			xAxis: {
+				categories: ".json_encode($xaxis).",
+				crosshair: true
+			},
+			yAxis:{
+				title: null
+			},
+			credits: {
+				enabled: false
+			},
+			title: {
+				text: null
+			},
+			legend: {
+				enabled: false
+			},
+			plotOptions: {
+				series: {
+					color: '#004561',
+					dataLabels: {
+						enabled: true,
+							formatter: function () {
+								return this.point.label;
+							}
+					}
+				}
+			},
+			 
+			tooltip: {
+				formatter: function() {
+					return '<b>' + this.point.y + '</b> : ' + this.point.label;
+				},
+			},
+			series: [{
+				name: 'Corporations',
+				data: ".json_encode($series)."
+			}]
+		});";
+		return implode('',$html);
+	}
 }
 
 ?>

@@ -2,11 +2,13 @@
 
 $games = new TableMaker(WSL_PATH_GAMES);
 $rankings = new TableMaker(WSL_PATH_RANKINGS);
+$tcorps = new TableMaker(WSL_PATH_TCORPS);
 
 $games = $games->data;
 $rankings = $rankings->data;
+$tcorps = $tcorps->data;
 
-$st = new StatsMaker($rankings,$games);
+$st = new StatsMaker($rankings,$games, $tcorps);
 
 $cs = [
 	'head'=>['name'=>'Corporation Statistics','top20'=>'Top 20', 'top50'=>'Top 50', 'all'=>'All'],
@@ -28,6 +30,7 @@ $gs = [
 
 	$title = 'Statistics';
 	TemplateMaker::Header('+'.$title);
+
 ?>
 
 				<!-- Main -->
@@ -37,14 +40,15 @@ $gs = [
 
 							<section>
 								<h2>Global Statistics</h2>
-								<under>Updated for v8.3</under>
+								<under>Updated for v<?=WSL_VERSION?></under>
 								<br><br>
 								<span class="table-wrapper">
 									<?=$st->makeCS($cs)?>
 								</span>
 								<h3>Ratings of Top 20</h3>
 								<div class="row gtr-uniform">
-									<div class="col-12"><span class="image fit" style="max-width: 800px"><img src="images/top20_rating.svg" alt="top20_rating"/></span></div>
+									
+									<div class="col-12"><?=$st->makRT20() ?></div>
 								</div>
 								<under>Faded columns indicate non-qualifying teams - i.e. less than 3 recorded games in the past 6 months.</under>
 								<br><br>
@@ -52,7 +56,7 @@ $gs = [
 								<span>
 								<h3>Size Breakdown of Top 20</h3>
 								<div class="row gtr-uniform">
-									<div class="col-12"><span class="image fit" style="max-width: 800px"><img src="images/top20_percent.svg" alt="top20_percent"/></span></div>
+									<div class="col-12"><?=$st->makeSBT20() ?></div>
 								</div>
 								<br>
 								<span class="table-wrapper">
@@ -62,14 +66,14 @@ $gs = [
 								<span>
 								<h3>All Submitted Game Sizes</h3>
 								<div class="row gtr-uniform">
-									<div class="col-12"><span class="image fit" style="max-width: 800px"><img src="images/all_size_percent.svg" alt="all_size_percent"/></span></div>
+									<div class="col-12"><?=$st->makeASGS() ?></div>
 								</div>
 								<br>
 								</span>
 								<span>
 								<h3>Day of Week for Match Start</h3>
 								<div class="row gtr-uniform">
-									<div class="col-12"><span class="image fit" style="max-width: 800px"><img src="images/day_of_week.svg" alt="day_of_week"/></span></div>
+									<div class="col-12"><?=$st->makeDWMS() ?></div>
 								</div>
 								<br>
 								</span>
@@ -77,7 +81,7 @@ $gs = [
 								<h3>Total Corporations</h3>
 								<p>The original leaderboard, which existed as an ethereally-sourced list in HSO #white-stars, contained only 25 coporations. V5.0, posted in Novemember 2020, was the last of its kind. My early records of v6 were not great, however I began in January 2021 with around 100 corporations, and by v6.9 in August 2021 this had grown to just over 300. As of v7.0, records are far more reliable, and here below is the growth in the total number of corporations since. Also on file are the scores for each corporation at the conclusion of each cycle, however I am yet to find a convenient way to make this accessible.</p>
 								<div class="row gtr-uniform">
-									<div class="col-12"><span class="image fit" style="max-width: 800px"><img src="images/total_corporations.svg" alt="total_corporations"/></span></div>
+									<div class="col-12"><?=$st->makeTC() ?></div>
 								</div>
 								<br>
 								</span>
@@ -85,5 +89,7 @@ $gs = [
 							</section>
 						</div>
 					</div>
+					
+					
+<? TemplateMaker::Footer(['highcharts.js', $st->makeScripts()]) ?>
 
-<? TemplateMaker::Footer() ?>
