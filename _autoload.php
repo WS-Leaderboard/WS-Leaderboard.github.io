@@ -1,68 +1,69 @@
 <?php
 /*
-    Set folder for all includes
+	Set folder for all includes
 */
-define('WSL_ROOT', __DIR__ );
-define('WSL_ASSETS','/assets/');
+define('WSL_ROOT', __DIR__ . '/' );
+define('WSL_ASSETS','assets/');
+define('WSL_DATA','data/');
 /*
-    Load config definitions
+	Load config definitions
 */
 require_once WSL_ROOT . WSL_ASSETS . 'config.php';
 /*
-    Usage example:
+	Usage example:
 
-        // notation: CamelCase
+		// notation: CamelCase
 
-    Assets folder:
+	Assets folder:
 
-        ./assets
-            /php
-                ClassName.php
-                /NameSpace
-                    ClassName.php
-                    /NextGroup
-                        ClassNext.php
+		./assets
+			/php
+				ClassName.php
+				/NameSpace
+					ClassName.php
+					/NextGroup
+						ClassNext.php
 
-    #        
-    # 1 with namespaces
+	#        
+	# 1 with namespaces
 
-        use NameSpace/ClassName;
-            / inside ClassName.php
-                namespace NameSpace;
+		use NameSpace/ClassName;
+			/ inside ClassName.php
+				namespace NameSpace;
 
-        use NameSpace/NextGroup/ClassNext;
-            / inside ClassNext.php
-                namespace NameSpace/NextGroup;
+		use NameSpace/NextGroup/ClassNext;
+			/ inside ClassNext.php
+				namespace NameSpace/NextGroup;
 
-    #
-    # 2 without
+	#
+	# 2 without
 
-            / just call class
+			/ just call class
 
-    #
-    # then call class
+	#
+	# then call class
 
-        $class = new ClassName();
+		$class = new ClassName();
 
-            or for class with no __construct
+			or for class with no __construct
 
-        ClassName::FunctionCall();
+		ClassName::FunctionCall();
 
 */
 spl_autoload_register(function (string $className) {
-    $assets = WSL_ROOT . WSL_ASSETS . 'php/';
-    $fileName = [
-        // # 1 with namespaces
-        $assets . str_replace('\\', '/', $className . '.php'),
-        // # 2 without
-        $assets . $className . '.php'
-    ];
-    foreach ($fileName as $file) {
-        if (file_exists($file)) {
-            require_once $file;
-            break;
-        }
-    }
+	$assets = WSL_ROOT . WSL_ASSETS . 'php/';
+	$fileName = [
+		// # 1 with namespaces
+		$assets . str_replace('\\', '/', $className . '.php'),
+		// # 2 without
+		$assets . $className . '.php'
+	];
+	foreach ($fileName as $file) {
+		if (file_exists($file)) {
+			require_once $file;
+			break;
+		}
+	}
 });
 
 ?>
