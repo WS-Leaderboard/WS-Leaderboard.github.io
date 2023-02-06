@@ -326,7 +326,6 @@ class StatsMaker {
 				},
 			},
 			series: [{
-				name: 'Corporations',
 				innerSize: '50%',
 				data: ".json_encode($series)."
 			}]
@@ -397,7 +396,7 @@ class StatsMaker {
 		});";
 		return implode('',$html);
 	}
-	public function makRT20($class = "RattingsOfTop20"){
+	public function makRT20($class = "RatingsOfTop20"){
 		$html = [];
 		$xaxis = [];
 		$series = [];
@@ -432,7 +431,6 @@ class StatsMaker {
 			legend: {
 				enabled: false
 			},
-			colors: ".json_encode($colors).",
 			plotOptions: {
 				series: {
 					dataLabels: {
@@ -450,7 +448,6 @@ class StatsMaker {
 				},
 			},
 			series: [{
-				name: 'Corporations',
 				data: ".json_encode($series)."
 			}]
 		});";
@@ -504,7 +501,6 @@ class StatsMaker {
 				},
 			},
 			series: [{
-				name: 'Corporations',
 				data: ".json_encode($series)."
 			}]
 		});";
@@ -558,7 +554,6 @@ class StatsMaker {
 				},
 			},
 			series: [{
-				name: 'Corporations',
 				data: ".json_encode($series)."
 			}]
 		});";
