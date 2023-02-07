@@ -37,6 +37,9 @@ class StatsMaker {
 	public $tc;		// Total Corporations
 		// Help
 	public $hct;	// HighChartTable Scripts
+		// Colors
+	private $colors	= ['#FFE599','#5891AD','#F1C232','#004561'];
+	private $colordef = 2;
 	/*
 	***
 		Construct Data
@@ -198,12 +201,19 @@ class StatsMaker {
 		if (is_array($class)) { $class = implode(' ',$class); }
 		return (empty($class)?'':' class="'.$class."'");
 	}
+	private function makeColors(){
+		$c = $this->colors;
+		array_shift($c);
+		return json_encode($c);
+	}
 	/*
 	***
 		HTML outputs
 	***
 	*/
-
+	public function makeScripts(){
+		return "<script>$(document).ready(function() { ". implode('',$this->hct) . " });</script>";
+	}
 	/*
 		$gs = [
 		'head'=>['name'=>'Game Statistics','15v15'=>'15 v 15', '10v10'=>'10 v 10', '5v5'=>'5 v 5'],
@@ -283,7 +293,7 @@ class StatsMaker {
 		$html = [];
 		$xaxis = [];
 		$series = [];
-		foreach($this->asgs as $k => $v){
+		foreach(array_reverse($this->asgs) as $k => $v){
 			$xaxis[] = $k;
 			$series[] = [ 'y'=> intval($v), 'label'=>$k ] ;
 		}
@@ -310,7 +320,7 @@ class StatsMaker {
 			},
 			plotOptions: {
 				series: {
-					colors: ['#5891AD','#F1C232','#004561'],
+					colors: ".$this->makeColors().",
 					dataLabels: {
 						enabled: true,
 							formatter: function () {
@@ -319,7 +329,6 @@ class StatsMaker {
 					}
 				}
 			},
-			 
 			tooltip: {
 				formatter: function() {
 					return '<b>' + this.point.y + '%</b> : ' + this.point.label;
@@ -340,9 +349,9 @@ class StatsMaker {
 		$seriesC = [];
 		foreach($this->sbt20 as $k => $v){
 			$xaxis[] = $v[$this->f_name];
-			$seriesA[] = [ intval($v[$this->type[5]]) ];
-			$seriesB[] = [ intval($v[$this->type[10]]) ];
-			$seriesC[] = [ intval($v[$this->type[15]]) ];
+			$seriesA[] = intval($v[$this->type[5]]);
+			$seriesB[] = intval($v[$this->type[10]]);
+			$seriesC[] = intval($v[$this->type[15]]);
 		}
 		$html[] = '<div id="'.$class.'"></div>';
 		$this->hct[] = "Highcharts.chart('".$class."', {
@@ -365,7 +374,7 @@ class StatsMaker {
 			legend: {
 				enabled: true
 			},
-			colors: ['#5891AD','#F1C232','#004561'],
+			colors: ".$this->makeColors().",
 			plotOptions: {
 				column: {
 					stacking: 'percent'
@@ -379,7 +388,6 @@ class StatsMaker {
 					}
 				}
 			},
-			 
 			tooltip: {
 				formatter: function() {
 					return '<b>' + (this.point.percentage).toFixed(0) + '%</b> : ' + this.series.name;
@@ -400,13 +408,14 @@ class StatsMaker {
 		$html = [];
 		$xaxis = [];
 		$series = [];
+		$col_def = $this->colors[$this->colordef];
+		$col_lit = $this->colors[0];
 		foreach($this->rt20 as $k => $v){
 			$rank = $v[$this->f_rank];
 			$xaxis[] = $v[$this->f_name];
-			if ($rank>0) {
-				$color = '#F1C232';
-			}else{
-				$color = '#FFE599';
+			$color = $col_def;
+			if ($rank==0) {
+				$color = $col_lit;
 			}
 			$series[] = [ 'y'=> intval($v[$this->f_rating]), 'label'=>$v[$this->f_name],'rank'=> ($rank?$rank:'~'), 'color'=>$color ] ;
 		}
@@ -441,7 +450,6 @@ class StatsMaker {
 					}
 				}
 			},
-			 
 			tooltip: {
 				formatter: function() {
 					return this.point.rank + '. <b>' + this.point.y + '</b> : ' + this.point.label;
@@ -485,7 +493,7 @@ class StatsMaker {
 			},
 			plotOptions: {
 				series: {
-					color: '#F1C232',
+					color: '".$this->colors[$this->colordef]."',
 					dataLabels: {
 						enabled: false,
 							formatter: function () {
@@ -494,7 +502,6 @@ class StatsMaker {
 					}
 				}
 			},
-			 
 			tooltip: {
 				formatter: function() {
 					return '<b>' + this.point.y + '%</b> : ' + this.point.label;
@@ -506,10 +513,6 @@ class StatsMaker {
 		});";
 		return implode('',$html);
 	}
-	//https://chartscss.org/
-	public function makeScripts(){
-		return "<script>$(document).ready(function() { ". implode('',$this->hct) . " });</script>";
-	}
 	public function makeTC($class = "TotalCorporations"){
 		$html = [];
 		$xaxis = [];
@@ -520,6 +523,9 @@ class StatsMaker {
 		}
 		$html[] = '<div id="'.$class.'"></div>';
 		$this->hct[] = "Highcharts.chart('".$class."', {
+			chart: {
+				type: 'line'
+			},
 			xAxis: {
 				categories: ".json_encode($xaxis).",
 				crosshair: true
@@ -538,7 +544,7 @@ class StatsMaker {
 			},
 			plotOptions: {
 				series: {
-					color: '#004561',
+					color: '".$this->colors[3]."',
 					dataLabels: {
 						enabled: true,
 							formatter: function () {
@@ -547,7 +553,6 @@ class StatsMaker {
 					}
 				}
 			},
-			 
 			tooltip: {
 				formatter: function() {
 					return '<b>' + this.point.y + '</b> : ' + this.point.label;
