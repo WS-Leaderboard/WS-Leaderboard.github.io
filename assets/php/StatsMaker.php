@@ -4,8 +4,6 @@
 */
 class StatsMaker {
 
-	//private $games;
-	//private $rankings;
 	/*
 		CSV header fields
 	*/
@@ -24,6 +22,9 @@ class StatsMaker {
 		//
 	public $day_short	= [ 'su', 'mo', 'tu', 'we', 'th', 'fr', 'sa' ];
 	public $day_long	= [ 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+		// Colors
+	private $colors	= ['#FFE599','#5891AD','#F1C232','#004561'];
+	private $colordef = 2;
 	/*
 		STATS
 	*/
@@ -37,9 +38,6 @@ class StatsMaker {
 	public $tc;		// Total Corporations
 		// Help
 	public $hct;	// HighChartTable Scripts
-		// Colors
-	private $colors	= ['#FFE599','#5891AD','#F1C232','#004561'];
-	private $colordef = 2;
 	/*
 	***
 		Construct Data
@@ -54,9 +52,6 @@ class StatsMaker {
 			]
 
 		*/
-		//$this->games = $games;
-		//$this->rankings = $rankings;
-
 		for ( $t=0; $t<7; $t++ ){
 			$this->dwms[] = 0;
 		}
@@ -124,10 +119,10 @@ class StatsMaker {
 		}
 
 		// DWMS / calc % to max
-		$dmax = max($this->dwms);
+/* 		$dmax = max($this->dwms);
 		foreach($this->dwms as $k => $v){
 			$this->dwms[$k] = round( ($v*100)/$dmax, 1);
-		}
+		} */
 		/*
 			CS: Counting totals
 		*/
@@ -249,6 +244,7 @@ class StatsMaker {
 					}elseif ($v == "%") {
 						foreach($head as $h){
 							$html[] = '<td>'.$gs[$k][$h].'</td>';
+							
 						}
 					}
 				}	
@@ -359,8 +355,7 @@ class StatsMaker {
 				type: 'column'
 			},
 			xAxis: {
-				categories: ".json_encode($xaxis).",
-				crosshair: true
+				categories: ".json_encode($xaxis)."
 			},
 			yAxis:{
 				title: null,
@@ -425,8 +420,7 @@ class StatsMaker {
 				type: 'column'
 			},
 			xAxis: {
-				categories: ".json_encode($xaxis).",
-				crosshair: true
+				categories: ".json_encode($xaxis)."
 			},
 			yAxis:{
 				title: null,
@@ -461,8 +455,13 @@ class StatsMaker {
 		});";
 		return implode('',$html);
 	}
-	public function makeDWMS($class = "DatOfWeekForMatch"){
+	public function makeDWMS($class = "DayOfWeekForMatch"){
 		$html = [];
+		$total = 0;
+		foreach($this->gs['total'] as $v){
+			$total += $v;
+		}
+		$total = $total /100;
 		$xaxis = [];
 		$series = [];
 		foreach($this->dwms as $k => $v){
@@ -475,12 +474,10 @@ class StatsMaker {
 				type: 'column'
 			},
 			xAxis: {
-				categories: ".json_encode($xaxis).",
-				crosshair: true
+				categories: ".json_encode($xaxis)."
 			},
 			yAxis:{
 				title: null,
-				max: 100
 			},
 			credits: {
 				enabled: false
@@ -504,7 +501,7 @@ class StatsMaker {
 			},
 			tooltip: {
 				formatter: function() {
-					return '<b>' + this.point.y + '%</b> : ' + this.point.label;
+					return '<b>' + (this.point.y/".$total.").toFixed(0) + '%</b> ('+this.point.y+') : ' + this.point.label;
 				},
 			},
 			series: [{
