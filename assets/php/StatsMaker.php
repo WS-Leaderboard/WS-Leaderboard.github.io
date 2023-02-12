@@ -19,9 +19,9 @@ class StatsMaker {
 	private $f_score2	= 'score2';
 	private $f_size		= 'players';
 	private $f_date		= 'date';
-		//
-	public $day_short	= [ 'su', 'mo', 'tu', 'we', 'th', 'fr', 'sa' ];
-	public $day_long	= [ 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+		// Day name
+	private $day_short	= [ 'su', 'mo', 'tu', 'we', 'th', 'fr', 'sa' ];
+	private $day_long	= [ 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
 		// Colors
 	private $colors	= ['#FFE599','#5891AD','#F1C232','#004561'];
 	private $colordef = 2;
