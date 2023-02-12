@@ -43,7 +43,7 @@ class StatsMaker {
 		Construct Data
 	***
 	*/
-	function __construct($rankings,$games,$tcorps){
+	function __construct(){
 		/*
 			[
 				'rankings'=> $rankings,
@@ -51,6 +51,19 @@ class StatsMaker {
 				'tcorps'=> $tcorps
 			]
 
+
+			Collect DATA from CSV
+
+		*/
+		$games = new TableMaker(WSL_PATH_GAMES);
+		$rankings = new TableMaker(WSL_PATH_RANKINGS);
+		$tcorps = new TableMaker(WSL_PATH_TCORPS);
+
+		$games = $games->data;
+		$rankings = $rankings->data;
+		$tcorps = $tcorps->data;
+		/*
+			Process DATA
 		*/
 		for ( $t=0; $t<7; $t++ ){
 			$this->dwms[] = 0;
