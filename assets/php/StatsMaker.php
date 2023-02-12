@@ -4,8 +4,6 @@
 */
 class StatsMaker {
 
-	//private $games;
-	//private $rankings;
 	/*
 		CSV header fields
 	*/
@@ -21,9 +19,12 @@ class StatsMaker {
 	private $f_score2	= 'score2';
 	private $f_size		= 'players';
 	private $f_date		= 'date';
-		//
-	public $day_short	= [ 'su', 'mo', 'tu', 'we', 'th', 'fr', 'sa' ];
-	public $day_long	= [ 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+		// Day name
+	private $day_short	= [ 'su', 'mo', 'tu', 'we', 'th', 'fr', 'sa' ];
+	private $day_long	= [ 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+		// Colors
+	private $colors	= ['#FFE599','#5891AD','#F1C232','#004561'];
+	private $colordef = 2;
 	/*
 		STATS
 	*/
@@ -42,7 +43,7 @@ class StatsMaker {
 		Construct Data
 	***
 	*/
-	function __construct($rankings,$games,$tcorps){
+	function __construct(){
 		/*
 			[
 				'rankings'=> $rankings,
@@ -50,10 +51,20 @@ class StatsMaker {
 				'tcorps'=> $tcorps
 			]
 
-		*/
-		//$this->games = $games;
-		//$this->rankings = $rankings;
 
+			Collect DATA from CSV
+
+		*/
+		$games = new TableMaker(WSL_PATH_GAMES);
+		$rankings = new TableMaker(WSL_PATH_RANKINGS);
+		$tcorps = new TableMaker(WSL_PATH_TCORPS);
+
+		$games = $games->data;
+		$rankings = $rankings->data;
+		$tcorps = $tcorps->data;
+		/*
+			Process DATA
+		*/
 		for ( $t=0; $t<7; $t++ ){
 			$this->dwms[] = 0;
 		}
@@ -121,10 +132,10 @@ class StatsMaker {
 		}
 
 		// DWMS / calc % to max
-		$dmax = max($this->dwms);
+/* 		$dmax = max($this->dwms);
 		foreach($this->dwms as $k => $v){
 			$this->dwms[$k] = round( ($v*100)/$dmax, 1);
-		}
+		} */
 		/*
 			CS: Counting totals
 		*/
@@ -198,12 +209,19 @@ class StatsMaker {
 		if (is_array($class)) { $class = implode(' ',$class); }
 		return (empty($class)?'':' class="'.$class."'");
 	}
+	private function makeColors(){
+		$c = $this->colors;
+		array_shift($c);
+		return json_encode($c);
+	}
 	/*
 	***
 		HTML outputs
 	***
 	*/
-
+	public function makeScripts(){
+		return "<script>$(document).ready(function() { ". implode('',$this->hct) . " });</script>";
+	}
 	/*
 		$gs = [
 		'head'=>['name'=>'Game Statistics','15v15'=>'15 v 15', '10v10'=>'10 v 10', '5v5'=>'5 v 5'],
@@ -239,6 +257,7 @@ class StatsMaker {
 					}elseif ($v == "%") {
 						foreach($head as $h){
 							$html[] = '<td>'.$gs[$k][$h].'</td>';
+							
 						}
 					}
 				}	
@@ -283,7 +302,7 @@ class StatsMaker {
 		$html = [];
 		$xaxis = [];
 		$series = [];
-		foreach($this->asgs as $k => $v){
+		foreach(array_reverse($this->asgs) as $k => $v){
 			$xaxis[] = $k;
 			$series[] = [ 'y'=> intval($v), 'label'=>$k ] ;
 		}
@@ -310,7 +329,7 @@ class StatsMaker {
 			},
 			plotOptions: {
 				series: {
-					colors: ['#5891AD','#F1C232','#004561'],
+					colors: ".$this->makeColors().",
 					dataLabels: {
 						enabled: true,
 							formatter: function () {
@@ -319,7 +338,6 @@ class StatsMaker {
 					}
 				}
 			},
-			 
 			tooltip: {
 				formatter: function() {
 					return '<b>' + this.point.y + '%</b> : ' + this.point.label;
@@ -340,9 +358,9 @@ class StatsMaker {
 		$seriesC = [];
 		foreach($this->sbt20 as $k => $v){
 			$xaxis[] = $v[$this->f_name];
-			$seriesA[] = [ intval($v[$this->type[5]]) ];
-			$seriesB[] = [ intval($v[$this->type[10]]) ];
-			$seriesC[] = [ intval($v[$this->type[15]]) ];
+			$seriesA[] = intval($v[$this->type[5]]);
+			$seriesB[] = intval($v[$this->type[10]]);
+			$seriesC[] = intval($v[$this->type[15]]);
 		}
 		$html[] = '<div id="'.$class.'"></div>';
 		$this->hct[] = "Highcharts.chart('".$class."', {
@@ -350,8 +368,7 @@ class StatsMaker {
 				type: 'column'
 			},
 			xAxis: {
-				categories: ".json_encode($xaxis).",
-				crosshair: true
+				categories: ".json_encode($xaxis)."
 			},
 			yAxis:{
 				title: null,
@@ -365,7 +382,7 @@ class StatsMaker {
 			legend: {
 				enabled: true
 			},
-			colors: ['#5891AD','#F1C232','#004561'],
+			colors: ".$this->makeColors().",
 			plotOptions: {
 				column: {
 					stacking: 'percent'
@@ -379,7 +396,6 @@ class StatsMaker {
 					}
 				}
 			},
-			 
 			tooltip: {
 				formatter: function() {
 					return '<b>' + (this.point.percentage).toFixed(0) + '%</b> : ' + this.series.name;
@@ -400,13 +416,14 @@ class StatsMaker {
 		$html = [];
 		$xaxis = [];
 		$series = [];
+		$col_def = $this->colors[$this->colordef];
+		$col_lit = $this->colors[0];
 		foreach($this->rt20 as $k => $v){
 			$rank = $v[$this->f_rank];
 			$xaxis[] = $v[$this->f_name];
-			if ($rank>0) {
-				$color = '#F1C232';
-			}else{
-				$color = '#FFE599';
+			$color = $col_def;
+			if ($rank==0) {
+				$color = $col_lit;
 			}
 			$series[] = [ 'y'=> intval($v[$this->f_rating]), 'label'=>$v[$this->f_name],'rank'=> ($rank?$rank:'~'), 'color'=>$color ] ;
 		}
@@ -416,8 +433,7 @@ class StatsMaker {
 				type: 'column'
 			},
 			xAxis: {
-				categories: ".json_encode($xaxis).",
-				crosshair: true
+				categories: ".json_encode($xaxis)."
 			},
 			yAxis:{
 				title: null,
@@ -441,7 +457,6 @@ class StatsMaker {
 					}
 				}
 			},
-			 
 			tooltip: {
 				formatter: function() {
 					return this.point.rank + '. <b>' + this.point.y + '</b> : ' + this.point.label;
@@ -453,8 +468,13 @@ class StatsMaker {
 		});";
 		return implode('',$html);
 	}
-	public function makeDWMS($class = "DatOfWeekForMatch"){
+	public function makeDWMS($class = "DayOfWeekForMatch"){
 		$html = [];
+		$total = 0;
+		foreach($this->gs['total'] as $v){
+			$total += $v;
+		}
+		$total = $total /100;
 		$xaxis = [];
 		$series = [];
 		foreach($this->dwms as $k => $v){
@@ -467,12 +487,10 @@ class StatsMaker {
 				type: 'column'
 			},
 			xAxis: {
-				categories: ".json_encode($xaxis).",
-				crosshair: true
+				categories: ".json_encode($xaxis)."
 			},
 			yAxis:{
 				title: null,
-				max: 100
 			},
 			credits: {
 				enabled: false
@@ -485,7 +503,7 @@ class StatsMaker {
 			},
 			plotOptions: {
 				series: {
-					color: '#F1C232',
+					color: '".$this->colors[$this->colordef]."',
 					dataLabels: {
 						enabled: false,
 							formatter: function () {
@@ -494,10 +512,9 @@ class StatsMaker {
 					}
 				}
 			},
-			 
 			tooltip: {
 				formatter: function() {
-					return '<b>' + this.point.y + '%</b> : ' + this.point.label;
+					return '<b>' + (this.point.y/".$total.").toFixed(0) + '%</b> ('+this.point.y+') : ' + this.point.label;
 				},
 			},
 			series: [{
@@ -505,10 +522,6 @@ class StatsMaker {
 			}]
 		});";
 		return implode('',$html);
-	}
-	//https://chartscss.org/
-	public function makeScripts(){
-		return "<script>$(document).ready(function() { ". implode('',$this->hct) . " });</script>";
 	}
 	public function makeTC($class = "TotalCorporations"){
 		$html = [];
@@ -520,6 +533,9 @@ class StatsMaker {
 		}
 		$html[] = '<div id="'.$class.'"></div>';
 		$this->hct[] = "Highcharts.chart('".$class."', {
+			chart: {
+				type: 'line'
+			},
 			xAxis: {
 				categories: ".json_encode($xaxis).",
 				crosshair: true
@@ -538,7 +554,7 @@ class StatsMaker {
 			},
 			plotOptions: {
 				series: {
-					color: '#004561',
+					color: '".$this->colors[3]."',
 					dataLabels: {
 						enabled: true,
 							formatter: function () {
@@ -547,7 +563,6 @@ class StatsMaker {
 					}
 				}
 			},
-			 
 			tooltip: {
 				formatter: function() {
 					return '<b>' + this.point.y + '</b> : ' + this.point.label;

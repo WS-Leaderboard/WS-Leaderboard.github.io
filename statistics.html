@@ -1,14 +1,6 @@
 <?php
 
-$games = new TableMaker(WSL_PATH_GAMES);
-$rankings = new TableMaker(WSL_PATH_RANKINGS);
-$tcorps = new TableMaker(WSL_PATH_TCORPS);
-
-$games = $games->data;
-$rankings = $rankings->data;
-$tcorps = $tcorps->data;
-
-$st = new StatsMaker($rankings,$games, $tcorps);
+$st = new StatsMaker();
 
 $cs = [
 	'head'=>['name'=>'Corporation Statistics','top20'=>'Top 20', 'top50'=>'Top 50', 'all'=>'All'],
@@ -47,7 +39,6 @@ $gs = [
 								</span>
 								<h3>Ratings of Top 20</h3>
 								<div class="row gtr-uniform">
-									
 									<div class="col-12"><?=$st->makRT20() ?></div>
 								</div>
 								<under>Faded columns indicate non-qualifying teams - i.e. less than 3 recorded games in the past 6 months.</under>
