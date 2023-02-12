@@ -3,6 +3,7 @@
 define('WSL_VERSION','8.4');
 define('WSL_SITENAME','WS Community Leaderboard');
 
+define('WSL_DELIMITER',',');
 define('WSL_PATH_RANKINGS', WSL_DATA . 'full_rankings.csv');
 define('WSL_PATH_GAMES', WSL_DATA . 'full_archive.csv');
 define('WSL_PATH_TCORPS', WSL_DATA . 'total_corporations.csv');
