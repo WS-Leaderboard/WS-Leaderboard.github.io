@@ -74,6 +74,7 @@ Use ```echo $st->makeGS($gs)```
 
 # Charts
 Optional argument set html ID.
+If adding charts there need to be included js assets like so ```TemplateMaker::Footer(['highcharts.js', $st->makeScripts()])```. **$st->makeScripts()** outputs all needed scripts to build charts.
 
 ## Ratings of Top 20
 Type: column
