@@ -66,6 +66,8 @@ Optional:
 ### Interview list
 Display interview list from **/interviews**. Arg is array.
 Image is build like so **/images/filename.png**.
+If something is on $args and also in folder then will be displayed.
+
 ```
     $args = [
         'filename' => [
@@ -81,6 +83,13 @@ Image is build like so **/images/filename.png**.
 - filename => array key and also filename
 - filename[n] => alternative entry title if empty use filename
 - filename[b] => blockquote or short description
+
+Files structure for entry:
+
+    /interviews
+        /filename.html
+    /images
+        /filename.png
 
 ### Interview entry head
 Display \<h1\> entry title with image. Image filename is case lowered $name and then build like above.
@@ -100,6 +109,7 @@ Optional args:
 Display version number
 
     TemplateMaker::Version()
+
 as well as
 
     echo WSL_VERSION
