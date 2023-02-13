@@ -1,6 +1,5 @@
 <?php
 
-define('WSL_VERSION','8.4');
 define('WSL_SITENAME','WS Community Leaderboard');
 
 define('WSL_DELIMITER',',');

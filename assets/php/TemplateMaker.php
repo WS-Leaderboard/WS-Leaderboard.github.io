@@ -13,6 +13,13 @@ class TemplateMaker{
 		if (empty($title)){
 			$title = WSL_SITENAME;
 		}
+		if (!defined('WSL_VERSION')){
+			$tcorps = new TableMaker(WSL_PATH_TCORPS);
+			$tcorps = array_pop($tcorps->data);
+			$version = substr(array_shift($tcorps),1);
+			define('WSL_VERSION',$version);
+		}
+
 		echo '<!DOCTYPE HTML>
 		<!--
 			Phantom by HTML5 UP
@@ -50,6 +57,9 @@ class TemplateMaker{
 							</div>
 						</header>';
 						echo self::GetMenu();
+	}
+	function Version(){
+		echo WSL_VERSION;
 	}
 	function Footer($asset=''){
 		echo '<!-- Footer -->
