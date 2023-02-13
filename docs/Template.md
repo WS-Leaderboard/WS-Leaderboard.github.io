@@ -96,6 +96,14 @@ Optional args:
 - $class => class name but autonumberd (exp. class0, class1 ... class5)
 - $skip => if FALSE display menu entry for home/index
 
+### Version
+Display version number
+
+    TemplateMaker::Version()
+as well as
+
+    echo WSL_VERSION
+
 #
 ## Footer
 Outputs end of html. Thru args add assets like scripts. Arg is array.
