@@ -180,7 +180,7 @@ class TemplateMaker{
 			}elseif ($ext == 'js') {
 				$link = '<script src="'. $path .'"></script>';
 			}elseif ($ext == 'css' || $ext == 'less') {
-				$link = '<link rel="stylesheet" href="'. $path .'" />';
+				$link = '<link rel="preload" href="'. $path .'" as="style" onload="this.onload=null;this.rel=\'stylesheet\'" />';
 			}
 		}
 		return $link;
