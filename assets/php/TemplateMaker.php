@@ -80,7 +80,7 @@ class TemplateMaker{
 				</div>
 			</footer>
 	</div>'.
-		self::Link(['jquery.min.js','browser.min.js','breakpoints.min.js','util.js','main.js'])	. self::Link($asset) .'</body></html>';
+		self::Link(['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js','browser.min.js','breakpoints.min.js','util.js','main.js'])	. self::Link($asset) .'</body></html>';
 		flush();
 	}
 	function HeroImage($arg=[]){
