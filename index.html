@@ -1,14 +1,15 @@
 <?
 	$title = 'White Star Community Leaderboard';
-	TemplateMaker::Header();
+	$tpl = new TemplateMaker;
+	$tpl->Header();
 ?>
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<? TemplateMaker::HeroImage(['title'=>$title,'img'=>'hadesstar-battleship-by-gabrielbjorkstiernstrom.jpg','url'=>'https://gabrielbjorkstiernstrom.artstation.com','by'=>'Gabriel Bjorkstiernstrom','txt'=>'Version '. WSL_VERSION .' of the Hades Star - White Star leaderboard project. A community driven ranking system for the best White Star teams.']) ?>
+							<? $tpl->HeroImage(['title'=>$title,'img'=>'hadesstar-battleship-by-gabrielbjorkstiernstrom.jpg','url'=>'https://gabrielbjorkstiernstrom.artstation.com','by'=>'Gabriel Bjorkstiernstrom','txt'=>'Version '. WSL_VERSION .' of the Hades Star - White Star leaderboard project. A community driven ranking system for the best White Star teams.']) ?>
 
 							<section class="tiles">
-								<? TemplateMaker::HeroMenu() ?>
+								<? $tpl->HeroMenu() ?>
 							</section>
 
 						</div>
@@ -34,4 +35,4 @@
 						</div>
 					</div>
 
-<? TemplateMaker::Footer() ?>
+<? $tpl->Footer() ?>

@@ -1,12 +1,13 @@
 <?
 	$title = 'Support';
-	TemplateMaker::Header('+'.$title);
+	$tpl = new TemplateMaker;
+	$tpl->Header('+'.$title);
 ?>
 
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-						<? TemplateMaker::HeroImage(['title'=>$title,'img'=>'hadesstar-spacestation-by-gabrielbjorkstiernstrom.jpg','url'=>'https://gabrielbjorkstiernstrom.artstation.com','by'=>'Gabriel Bjorkstiernstrom']) ?>
+						<? $tpl->HeroImage(['title'=>$title,'img'=>'hadesstar-spacestation-by-gabrielbjorkstiernstrom.jpg','url'=>'https://gabrielbjorkstiernstrom.artstation.com','by'=>'Gabriel Bjorkstiernstrom']) ?>
 
 							<p>Please join our discord to find out how you can help!</p>
 							<p>• Submit results for your corporation</p>
@@ -32,4 +33,4 @@
 						</div>
 					</div>
 
-<? TemplateMaker::Footer() ?>
+<? $tpl->Footer() ?>
