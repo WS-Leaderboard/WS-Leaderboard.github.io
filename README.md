@@ -28,7 +28,7 @@ The website is based on an HTML5 UP template: Phantom. Details are below.
 	Images:
 		Gabriel Bjorkstiernstrom (gabrielbjorkstiernstrom.artstation.com)
 	Backend magic:
-		NandGates
+		NandGates (github.com/NandGates)
 	PHP/webdev:
 		exa18 aka KypDuron (github.com/exa18)
 	Icons:
