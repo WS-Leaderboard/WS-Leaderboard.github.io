@@ -179,8 +179,8 @@ class TemplateMaker{
 				$link = $asset;
 			}elseif ($ext == 'js') {
 				$link = '<script src="'. $path .'"></script>';
-			}elseif ($ext == 'css' || $ext == 'less') {
-				$link = '<link rel="preload" href="'. $path .'" as="style" onload="this.onload=null;this.rel=\'stylesheet\'" />';
+			}elseif ($ext == 'css') {
+				$link = '<link rel="stylesheet" href="'.$path.'" type="text/css" media="all" />';
 			}
 		}
 		return $link;
