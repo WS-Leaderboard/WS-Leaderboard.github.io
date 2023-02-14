@@ -33,7 +33,6 @@ class TemplateMaker{
 			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />'.
 			self::Link(['main.min.css','https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'])
 			.'<noscript>'.self::Link('noscript.min.css').'</noscript>
-			<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
 			<link rel="icon" type="image/png" href="/images/favicon.png">
 			</head>
 		<body class="is-preload">
