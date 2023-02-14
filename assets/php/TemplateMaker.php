@@ -31,8 +31,8 @@ class TemplateMaker{
 			<title>'.$title.'</title>
 			<meta charset="utf-8" />
 			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />'.
-			self::Link('main.css')
-			.'<noscript>'.self::Link('noscript.css').'</noscript>
+			self::Link('main.min.css')
+			.'<noscript>'.self::Link('noscript.min.css').'</noscript>
 		</head>
 		<body class="is-preload">
 			<!-- Wrapper -->
