@@ -5,10 +5,6 @@
 
 This website is based on a discord server (invite: https://discord.gg/p588eHaFqh) dedicated to rating and ranking Corporations from the game Hades Star in their White Star match results over time.
 
-The website is based on an HTML5 UP template: Phantom. Details are below.
-
----
-
 	Website:
 
 		Phantom by HTML5 UP
@@ -24,7 +20,8 @@ The website is based on an HTML5 UP template: Phantom. Details are below.
 		aj@lkn.io | @ajlkn
 
 ## Credits
-
+	Website template:
+		Phantom by HTML5 UP (html5up.net | @ajlkn)
 	Images:
 		Gabriel Bjorkstiernstrom (gabrielbjorkstiernstrom.artstation.com)
 	Backend magic:
@@ -36,4 +33,5 @@ The website is based on an HTML5 UP template: Phantom. Details are below.
 	Other:
 		jQuery (jquery.com)
 		HighCharts (highcharts.com)
+		TableSorter (tablesorter.com)
 		Responsive Tools (github.com/ajlkn/responsive-tools)
