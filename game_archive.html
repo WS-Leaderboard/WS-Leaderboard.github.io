@@ -1,13 +1,14 @@
 <?
 	$title = 'Game Archive';
-	TemplateMaker::Header('+'.$title);
+	$tpl = new TemplateMaker;
+	$tpl->Header('+'.$title);
 ?>
 
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-						<? TemplateMaker::HeroImage(['title'=>$title,'img'=>'hadesstar-cerberusbomber-by-gabrielbjorkstiernstrom.jpg','url'=>'https://gabrielbjorkstiernstrom.artstation.com','by'=>'Gabriel Bjorkstiernstrom','txt'=>'Simple export of all known games. More work is planned for this page, but for now it may be easier to download the .csv to use as you wish.']) ?>
-							<?=TemplateMaker::GetDownload(WSL_PATH_GAMES,'Download CSV')?>
+						<? $tpl->HeroImage(['title'=>$title,'img'=>'hadesstar-cerberusbomber-by-gabrielbjorkstiernstrom.jpg','url'=>'https://gabrielbjorkstiernstrom.artstation.com','by'=>'Gabriel Bjorkstiernstrom','txt'=>'Simple export of all known games. More work is planned for this page, but for now it may be easier to download the .csv to use as you wish.']) ?>
+							<?=$tpl->GetDownload(WSL_PATH_GAMES,'Download CSV')?>
 							<br><br>
 						</div>
 						<div class="inner">
@@ -18,4 +19,4 @@
 						</div>
 					</div>
 
-<? TemplateMaker::Footer(['jquery.tablesorter.min.js','tables.js']) ?>
+<? $tpl->Footer(['https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.17.8/js/jquery.tablesorter.min.js','tables.js']) ?>

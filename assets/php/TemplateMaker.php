@@ -13,6 +13,13 @@ class TemplateMaker{
 		if (empty($title)){
 			$title = WSL_SITENAME;
 		}
+		if (!defined('WSL_VERSION')){
+			$tcorps = new TableMaker(WSL_PATH_TCORPS);
+			$tcorps = array_pop($tcorps->data);
+			$version = substr(array_shift($tcorps),1);
+			define('WSL_VERSION',$version);
+		}
+
 		echo '<!DOCTYPE HTML>
 		<!--
 			Phantom by HTML5 UP
@@ -24,9 +31,10 @@ class TemplateMaker{
 			<title>'.$title.'</title>
 			<meta charset="utf-8" />
 			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />'.
-			self::Link('main.css')
-			.'<noscript>'.self::Link('noscript.css').'</noscript>
-		</head>
+			self::Link(['main.min.css','https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'])
+			.'<noscript>'.self::Link('noscript.min.css').'</noscript>
+			<link rel="icon" type="image/png" href="/images/favicon.png">
+			</head>
 		<body class="is-preload">
 			<!-- Wrapper -->
 				<div id="wrapper">
@@ -51,6 +59,9 @@ class TemplateMaker{
 						</header>';
 						echo self::GetMenu();
 	}
+	function Version(){
+		echo WSL_VERSION;
+	}
 	function Footer($asset=''){
 		echo '<!-- Footer -->
 			<footer id="footer">
@@ -69,7 +80,7 @@ class TemplateMaker{
 				</div>
 			</footer>
 	</div>'.
-		self::Link(['jquery.min.js','browser.min.js','breakpoints.min.js','util.js','main.js'])	. self::Link($asset) .'</body></html>';
+		self::Link(['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js','browser.min.js','breakpoints.min.js','util.js','main.js'])	. self::Link($asset) .'</body></html>';
 		flush();
 	}
 	function HeroImage($arg=[]){
@@ -163,14 +174,18 @@ class TemplateMaker{
 	function GetAsset($asset) {
 		$link = '';
 		$ext = strtolower(array_pop(explode('.',$asset)));
-		$path = '/' . WSL_ASSETS . $ext . '/'. $asset;
+		if (strpos($asset,'http')===FALSE) {
+			$path = '/' . WSL_ASSETS . $ext . '/'. $asset;
+		}else{
+			$path = $asset;
+		}
 		if (!empty($asset)){
 			if (strpos($asset,'<script>')===0){
 				$link = $asset;
 			}elseif ($ext == 'js') {
 				$link = '<script src="'. $path .'"></script>';
-			}elseif ($ext == 'css' || $ext == 'less') {
-				$link = '<link rel="stylesheet" href="'. $path .'" />';
+			}elseif ($ext == 'css') {
+				$link = '<link rel="stylesheet" href="'.$path.'" type="text/css" media="all" />';
 			}
 		}
 		return $link;

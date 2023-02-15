@@ -1,13 +1,14 @@
 <?
 	$int = 'Ahlims';
 	$title = 'Interviews / ' . $int;
-	TemplateMaker::Header('+'.$title);
+	$tpl = new TemplateMaker;
+	$tpl->Header('+'.$title);
 ?>
 
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<? TemplateMaker::InterviewHead($int) ?>
+							<? $tpl->InterviewHead($int) ?>
 
 							
 							<span class="just">
@@ -73,4 +74,4 @@
 						</div>
 					</div>
 
-<? TemplateMaker::Footer() ?>
+<? $tpl->Footer() ?>

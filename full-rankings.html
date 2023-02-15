@@ -1,23 +1,24 @@
 <?
 	$title = 'Full Rankings';
-	TemplateMaker::Header('+'.$title);
+	$tpl = new TemplateMaker;
+	$tpl->Header('+'.$title);
 ?>
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<? TemplateMaker::HeroImage(['title'=>$title,'img'=>'hadesstar-playerdrones-by-gabrielbjorkstiernstrom.jpg','url'=>'https://gabrielbjorkstiernstrom.artstation.com','by'=>'Gabriel Bjorkstiernstrom']) ?>
+							<? $tpl->HeroImage(['title'=>$title,'img'=>'hadesstar-playerdrones-by-gabrielbjorkstiernstrom.jpg','url'=>'https://gabrielbjorkstiernstrom.artstation.com','by'=>'Gabriel Bjorkstiernstrom']) ?>
 
 							<p>The method applied to process the results of submitted games is known as the Elo rating system. Wikipedia has a decent rundown of it <a href="https://en.wikipedia.org/wiki/Elo_rating_system">here</a> if you would like to know more. This goes through the history, the formula used, and many of the applications it has been used for over the years. This is a great place to start if you want to know how the ratings are achieved.</p>
-							<?=TemplateMaker::GetDownload(WSL_PATH_RANKINGS,'Download v'.WSL_VERSION)?><? TemplateMaker::DownloadBtns('rankings_') ?>
+							<?=$tpl->GetDownload(WSL_PATH_RANKINGS,'Download v'.WSL_VERSION)?><? $tpl->DownloadBtns('rankings_') ?>
 							<br><br>
 						</div>
 						<div class="inner">
 							<h2>Rankings Table</h2>
 							<p><i>Click column headers to sort, or filter with the search box below.</i></p>
 							<input type="text" id="myinput" placeholder="Search..." title="Type in something"><br>
-							<h3>Cycle <?=WSL_VERSION?></h3>
+							<h3>Cycle <?$tpl->Version()?></h3>
 							<table class="table-wrapper rankings"></table>
 						</div>
 					</div>
 
-<? TemplateMaker::Footer(['jquery.tablesorter.min.js','tables.js']) ?>
+<? $tpl->Footer(['https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.17.8/js/jquery.tablesorter.min.js','tables.js']) ?>

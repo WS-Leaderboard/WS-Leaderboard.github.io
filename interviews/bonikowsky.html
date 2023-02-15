@@ -1,13 +1,14 @@
 <?
 	$int = 'Bonikowsky';
 	$title = 'Interviews / ' . $int;
-	TemplateMaker::Header('+'.$title);
+	$tpl = new TemplateMaker;
+	$tpl->Header('+'.$title);
 ?>
 
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<? TemplateMaker::InterviewHead($int) ?>
+							<? $tpl->InterviewHead($int) ?>
 							
 							<span class="just">
 							<under>Interviewed on 25<sup>th</sup> September 2022</under>
@@ -56,4 +57,4 @@
 						</div>
 					</div>
 
-<? TemplateMaker::Footer() ?>
+<? $tpl->Footer() ?>

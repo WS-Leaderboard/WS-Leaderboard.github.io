@@ -2,7 +2,7 @@
 # Config
 
 ## WSL_VERSION
-Site version.
+Site version taken from **WSL_PATH_TCORPS** last entry if not set in config.
 
 ## WSL_SITENAME
 Site name/title

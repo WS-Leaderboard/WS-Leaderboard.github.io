@@ -21,18 +21,19 @@ $gs = [
 	];
 
 	$title = 'Statistics';
-	TemplateMaker::Header('+'.$title);
+	$tpl = new TemplateMaker;
+	$tpl->Header('+'.$title);
 
 ?>
 
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-						<? TemplateMaker::HeroImage(['title'=>$title,'img'=>'hadesstar-playercroporationship-by-gabrielbjorkstiernstrom.jpg','url'=>'https://gabrielbjorkstiernstrom.artstation.com','by'=>'Gabriel Bjorkstiernstrom','txt'=>'My hope is to grow this page more in the near future, with statistics for every corporation here, such as total wins and losses, high scores per bracket, and more! In the meantime, here are some total game database statistics for those who enjoy a little data visualisation.']) ?>
+						<? $tpl->HeroImage(['title'=>$title,'img'=>'hadesstar-playercroporationship-by-gabrielbjorkstiernstrom.jpg','url'=>'https://gabrielbjorkstiernstrom.artstation.com','by'=>'Gabriel Bjorkstiernstrom','txt'=>'My hope is to grow this page more in the near future, with statistics for every corporation here, such as total wins and losses, high scores per bracket, and more! In the meantime, here are some total game database statistics for those who enjoy a little data visualisation.']) ?>
 
 							<section>
 								<h2>Global Statistics</h2>
-								<under>Updated for v<?=WSL_VERSION?></under>
+								<under>Updated for v<?$tpl->Version()?></under>
 								<br><br>
 								<span class="table-wrapper">
 									<?=$st->makeCS($cs)?>
@@ -82,5 +83,5 @@ $gs = [
 					</div>
 					
 					
-<? TemplateMaker::Footer(['highcharts.js', $st->makeScripts()]) ?>
+<? $tpl->Footer(['https://cdnjs.cloudflare.com/ajax/libs/highcharts/10.3.3/highcharts.js', $st->makeScripts()]) ?>
 
