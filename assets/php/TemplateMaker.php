@@ -26,11 +26,14 @@ class TemplateMaker{
 			html5up.net | @ajlkn
 			Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 		-->
-		<html>
+		<html lang="en">
 		<head>
 			<title>'.$title.'</title>
-			<meta charset="utf-8" />
-			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />'.
+			<meta http-equiv="content-type" content="text/html; charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;700;900&display=swap" rel="stylesheet">'.
 			self::Link(['main.min.css','https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'])
 			.'<noscript>'.self::Link('noscript.min.css').'</noscript>
 			<link rel="icon" type="image/png" href="/images/favicon.png">
@@ -69,7 +72,7 @@ class TemplateMaker{
 					<section>
 						<h2>Get In Touch</h2>
 						<ul class="icons">
-							<li><a href="https://discord.gg/p588eHaFqh" class="icon brands style2 fa-discord"><span class="label">Discord</span></a></li>
+							<li><a href="https://discord.gg/p588eHaFqh" aria-label="Discord" class="icon brands style2 fa-discord"><span class="label">Discord</span></a></li>
 						</ul>
 					</section>
 					<ul class="copyright">
