@@ -76,7 +76,9 @@ class TemplateMaker{
 						</ul>
 					</section>
 					<ul class="copyright">
-						<li>Created by Timmeh, backend magic by NandGates</li>
+						<li>Created by Timmeh</li>
+						<li>Website by KypDuron</li>
+						<li>Backend by NandGates</li>
 						<li>Phantom site template by <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
 						<li>Banner artwork by <a href="https://gabrielbjorkstiernstrom.artstation.com" target="_blank">Gabriel Bjorkstiernstrom</a></li>
 					</ul>
