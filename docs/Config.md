@@ -31,6 +31,16 @@ Menu settings
     ...
 ```
 
+## WSL_HTML
+HTML document elements (main tags included by render functions like head, body, etc.):
+- comment : optional
+- head : meta, link, etc.
+- headlinks : styles, scripts inside HEAD
+- body : common begin, header, logo, navi, etc.
+- footer : bottom page informations
+- footerlinks : scripts, styles, etc. appended after FOOTER
+
+#
 # Autoload config
 Autoload function which loads all from **/assets/php** also set main folders.
 
