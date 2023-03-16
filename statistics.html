@@ -25,63 +25,59 @@ $gs = [
 	$tpl->Header('+'.$title);
 
 ?>
+<div id="main">
+	<div class="inner">
+	<? $tpl->HeroImage(['title'=>$title,'img'=>'hadesstar-playercroporationship-by-gabrielbjorkstiernstrom.jpg','url'=>'https://gabrielbjorkstiernstrom.artstation.com','by'=>'Gabriel Bjorkstiernstrom','txt'=>'My hope is to grow this page more in the near future, with statistics for every corporation here, such as total wins and losses, high scores per bracket, and more! In the meantime, here are some total game database statistics for those who enjoy a little data visualisation.']) ?>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-						<? $tpl->HeroImage(['title'=>$title,'img'=>'hadesstar-playercroporationship-by-gabrielbjorkstiernstrom.jpg','url'=>'https://gabrielbjorkstiernstrom.artstation.com','by'=>'Gabriel Bjorkstiernstrom','txt'=>'My hope is to grow this page more in the near future, with statistics for every corporation here, such as total wins and losses, high scores per bracket, and more! In the meantime, here are some total game database statistics for those who enjoy a little data visualisation.']) ?>
-
-							<section>
-								<h2>Global Statistics</h2>
-								<under>Updated for v<?$tpl->Version()?></under>
-								<br><br>
-								<span class="table-wrapper">
-									<?=$st->makeCS($cs)?>
-								</span>
-								<h3>Ratings of Top 20</h3>
-								<div class="row gtr-uniform">
-									<div class="col-12"><?=$st->makRT20() ?></div>
-								</div>
-								<under>Faded columns indicate non-qualifying teams - i.e. less than 3 recorded games in the past 6 months.</under>
-								<br><br>
-								</span>
-								<span>
-								<h3>Size Breakdown of Top 20</h3>
-								<div class="row gtr-uniform">
-									<div class="col-12"><?=$st->makeSBT20() ?></div>
-								</div>
-								<br>
-								<span class="table-wrapper">
-									<?=$st->makeGS($gs)?>
-									<under>* Close is defined as: a score difference of < 30% of the winners relic count.</under>
-									<br><br>
-								<span>
-								<h3>All Submitted Game Sizes</h3>
-								<div class="row gtr-uniform">
-									<div class="col-12"><?=$st->makeASGS() ?></div>
-								</div>
-								<br>
-								</span>
-								<span>
-								<h3>Day of Week for Match Start</h3>
-								<div class="row gtr-uniform">
-									<div class="col-12"><?=$st->makeDWMS() ?></div>
-								</div>
-								<br>
-								</span>
-								<span>
-								<h3>Total Corporations</h3>
-								<p>The original leaderboard, which existed as an ethereally-sourced list in HSO #white-stars, contained only 25 coporations. V5.0, posted in Novemember 2020, was the last of its kind. My early records of v6 were not great, however I began in January 2021 with around 100 corporations, and by v6.9 in August 2021 this had grown to just over 300. As of v7.0, records are far more reliable, and here below is the growth in the total number of corporations since. Also on file are the scores for each corporation at the conclusion of each cycle, however I am yet to find a convenient way to make this accessible.</p>
-								<div class="row gtr-uniform">
-									<div class="col-12"><?=$st->makeTC() ?></div>
-								</div>
-								<br>
-								</span>
-								<p>Have any other stats you'd like to see here? Let us know!</p>
-							</section>
-						</div>
-					</div>
-					
-					
+		<section>
+			<h2>Global Statistics</h2>
+			<under>Updated for v<?$tpl->Version()?></under>
+			<br><br>
+			<span class="table-wrapper">
+				<?=$st->makeCS($cs)?>
+			</span>
+			<h3>Ratings of Top 20</h3>
+			<div class="row gtr-uniform">
+				<div class="col-12"><?=$st->makRT20() ?></div>
+			</div>
+			<under>Faded columns indicate non-qualifying teams - i.e. less than 3 recorded games in the past 6 months.</under>
+			<br><br>
+			</span>
+			<span>
+			<h3>Size Breakdown of Top 20</h3>
+			<div class="row gtr-uniform">
+				<div class="col-12"><?=$st->makeSBT20() ?></div>
+			</div>
+			<br>
+			<span class="table-wrapper">
+				<?=$st->makeGS($gs)?>
+				<under>* Close is defined as: a score difference of < 30% of the winners relic count.</under>
+				<br><br>
+			<span>
+			<h3>All Submitted Game Sizes</h3>
+			<div class="row gtr-uniform">
+				<div class="col-12"><?=$st->makeASGS() ?></div>
+			</div>
+			<br>
+			</span>
+			<span>
+			<h3>Day of Week for Match Start</h3>
+			<div class="row gtr-uniform">
+				<div class="col-12"><?=$st->makeDWMS() ?></div>
+			</div>
+			<br>
+			</span>
+			<span>
+			<h3>Total Corporations</h3>
+			<p>The original leaderboard, which existed as an ethereally-sourced list in HSO #white-stars, contained only 25 coporations. V5.0, posted in Novemember 2020, was the last of its kind. My early records of v6 were not great, however I began in January 2021 with around 100 corporations, and by v6.9 in August 2021 this had grown to just over 300. As of v7.0, records are far more reliable, and here below is the growth in the total number of corporations since. Also on file are the scores for each corporation at the conclusion of each cycle, however I am yet to find a convenient way to make this accessible.</p>
+			<div class="row gtr-uniform">
+				<div class="col-12"><?=$st->makeTC() ?></div>
+			</div>
+			<br>
+			</span>
+			<p>Have any other stats you'd like to see here? Let us know!</p>
+		</section>
+	</div>
+</div>
 <? $tpl->Footer(['https://cdnjs.cloudflare.com/ajax/libs/highcharts/10.3.3/highcharts.js', $st->makeScripts()]) ?>
 

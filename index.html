@@ -3,38 +3,33 @@
 	$tpl = new TemplateMaker;
 	$tpl->Header();
 ?>
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<? $tpl->HeroImage(['title'=>$title,'img'=>'hadesstar-battleship-by-gabrielbjorkstiernstrom.jpg','url'=>'https://gabrielbjorkstiernstrom.artstation.com','by'=>'Gabriel Bjorkstiernstrom','txt'=>'Version '. WSL_VERSION .' of the Hades Star - White Star leaderboard project. A community driven ranking system for the best White Star teams.']) ?>
+<div id="main">
+	<div class="inner">
+		<? $tpl->HeroImage(['title'=>$title,'img'=>'hadesstar-battleship-by-gabrielbjorkstiernstrom.jpg','url'=>'https://gabrielbjorkstiernstrom.artstation.com','by'=>'Gabriel Bjorkstiernstrom','txt'=>'Version '. WSL_VERSION .' of the Hades Star - White Star leaderboard project. A community driven ranking system for the best White Star teams.']) ?>
 
-							<section class="tiles">
-								<? $tpl->HeroMenu() ?>
-							</section>
-
-						</div>
-						<div class="inner">
-							<br><br>
-							<h2>Past, Present, and Future</h2>
-							<p class="just">After contentious origins in the Hades Star Official discord #white-stars channel, the leaderboard went through many early iterations. At first it was a manually determined ranking of the top corporations based on recent white start performances.
-							<br>
-							In January 2021, a new phase of the leaderboard began - an experiment of sorts - to algorithmically rate and rank all corporations based on accumulated game data [generously provided by players from across the galaxy]. This data, game history and rankings (as well as the underlying algorithms), have always been fully transparent, and always will be. This version (6) posted only a top 25, as the original list did, with many extra rules around ranking Alliances based on the best performing corporation. By Version 7, we were posting top 30 and had done away with Alliance rankings, instead posting all corps, but with rating decays being applied to top teams with no recent game history.
-							<br>
-							And so begins a new era. While for now it is still backended by a humble excel spreadsheet (revamped and simplified in version 8), the new website front-end aims to bring greater interactivity than what a monthly announcement and a complex spreadsheet could ever achieve. For now, all player interaction is best done on Discord, so head there to chat to other players, post games for your corporation, and make suggestions for future website improvements.</p>
-							<br>
-							<h2>How the ratings are made</h2>
-							<p>The method applied to process the results of submitted games is known as the Elo rating system. Wikipedia has a decent rundown of it <a href="https://en.wikipedia.org/wiki/Elo_rating_system" target="_blank">here</a> if you would like to know more. This goes through the history, the formula used, and many of the applications it has been used for over the years. This is a great place to start if you want to know how the ratings are achieved.</p>
-							<p>Currently, this algorithm exists in a public Google spreadsheet (see discord for link). The process, as applied here, is as follows:</p>
-							<ul>
-								<li>All games submitted via discord are manually added into a table with match date, player size, both corporations and their score.</li>
-								<li>The win or loss for each team is compared against their expected win/loss. E.g. A team wins (+1) who had an 80% expectation to win (0.8) gains a 0.2 difference.</li>
-								<li>The expectations are derived from a formula which weights both teams current ratings against each other.</li>
-								<li>This is multiplied by their K-factor (a flat coefficient of 50 for all teams, though this wasn't always the case), as well as a sizing component depending on player size (⅓ for 5v5, ⅔ for 10v10, and the full amount for 15v15).</li>
-								<li>This determines the ratings points won or lost for each team, which are then applied cumulatively over the evaluation cycle (approximately monthly).</li>
-								<li>Finally, the new ratings and rankings are published for all known games as applied by the above method.</li>
-							</ul>
-							<br>
-						</div>
-					</div>
-
+		<section class="tiles"><? $tpl->HeroMenu() ?></section>
+	</div>
+	<div class="inner">
+		<br><br>
+		<h2>Past, Present, and Future</h2>
+		<p class="just">After contentious origins in the Hades Star Official discord #white-stars channel, the leaderboard went through many early iterations. At first it was a manually determined ranking of the top corporations based on recent white start performances.
+		<br>
+		In January 2021, a new phase of the leaderboard began - an experiment of sorts - to algorithmically rate and rank all corporations based on accumulated game data [generously provided by players from across the galaxy]. This data, game history and rankings (as well as the underlying algorithms), have always been fully transparent, and always will be. This version (6) posted only a top 25, as the original list did, with many extra rules around ranking Alliances based on the best performing corporation. By Version 7, we were posting top 30 and had done away with Alliance rankings, instead posting all corps, but with rating decays being applied to top teams with no recent game history.
+		<br>
+		And so begins a new era. While for now it is still backended by a humble excel spreadsheet (revamped and simplified in version 8), the new website front-end aims to bring greater interactivity than what a monthly announcement and a complex spreadsheet could ever achieve. For now, all player interaction is best done on Discord, so head there to chat to other players, post games for your corporation, and make suggestions for future website improvements.</p>
+		<br>
+		<h2>How the ratings are made</h2>
+		<p>The method applied to process the results of submitted games is known as the Elo rating system. Wikipedia has a decent rundown of it <a href="https://en.wikipedia.org/wiki/Elo_rating_system" target="_blank">here</a> if you would like to know more. This goes through the history, the formula used, and many of the applications it has been used for over the years. This is a great place to start if you want to know how the ratings are achieved.</p>
+		<p>Currently, this algorithm exists in a public Google spreadsheet (see discord for link). The process, as applied here, is as follows:</p>
+		<ul>
+			<li>All games submitted via discord are manually added into a table with match date, player size, both corporations and their score.</li>
+			<li>The win or loss for each team is compared against their expected win/loss. E.g. A team wins (+1) who had an 80% expectation to win (0.8) gains a 0.2 difference.</li>
+			<li>The expectations are derived from a formula which weights both teams current ratings against each other.</li>
+			<li>This is multiplied by their K-factor (a flat coefficient of 50 for all teams, though this wasn't always the case), as well as a sizing component depending on player size (⅓ for 5v5, ⅔ for 10v10, and the full amount for 15v15).</li>
+			<li>This determines the ratings points won or lost for each team, which are then applied cumulatively over the evaluation cycle (approximately monthly).</li>
+			<li>Finally, the new ratings and rankings are published for all known games as applied by the above method.</li>
+		</ul>
+		<br>
+	</div>
+</div>
 <? $tpl->Footer() ?>

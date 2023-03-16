@@ -3,28 +3,25 @@
 	$tpl = new TemplateMaker;
 	$tpl->Header('+'.$title);
 ?>
+<div id="main">
+	<div class="inner">
+		<? $tpl->HeroImage(['title'=>$title,'img'=>'hadesstarblackcitadel-by-gabrielbjorkstiernstrom-high.jpg','url'=>'https://gabrielbjorkstiernstrom.artstation.com','by'=>'Gabriel Bjorkstiernstrom']) ?>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<? $tpl->HeroImage(['title'=>$title,'img'=>'hadesstarblackcitadel-by-gabrielbjorkstiernstrom-high.jpg','url'=>'https://gabrielbjorkstiernstrom.artstation.com','by'=>'Gabriel Bjorkstiernstrom']) ?>
-
-							<p class="just">For now, this project is administered by a single individual, who has a job, a family, and a passion to play the game itself. While I would love to finish everything on this list tomorrow, and more, for now it is more of a wish list. If you have ideas or the required skill (and passion) to achieve any of these, please get in contact through discord. Or feel free to make more suggestions.</p><br>
-							<h3>Current List</h3>
-							<ul>
-								<li> Dark mode</li>
-								<li> Past rankings</li>
-								<li> Corporation profiles (stats, last game etc)</li>
-								<li> Translate excel algorithms to web</li>
-								<li> Translations for non-English names</li>
-								<li> Bot integration</li>
-								<li> Odds predictors</li>
-								<li> Deeper statistics</li>
-								<li> Improved game submission</li>
-								<li> More community features</li>
-								<li> Corp links/advertising (à la HSO #corporations)</li>
-							</ul>
-						</div>
-					</div>
-
+		<p class="just">For now, this project is administered by a single individual, who has a job, a family, and a passion to play the game itself. While I would love to finish everything on this list tomorrow, and more, for now it is more of a wish list. If you have ideas or the required skill (and passion) to achieve any of these, please get in contact through discord. Or feel free to make more suggestions.</p><br>
+		<h3>Current List</h3>
+		<ul>
+			<li> Dark mode</li>
+			<li> Past rankings</li>
+			<li> Corporation profiles (stats, last game etc)</li>
+			<li> Translate excel algorithms to web</li>
+			<li> Translations for non-English names</li>
+			<li> Bot integration</li>
+			<li> Odds predictors</li>
+			<li> Deeper statistics</li>
+			<li> Improved game submission</li>
+			<li> More community features</li>
+			<li> Corp links/advertising (à la HSO #corporations)</li>
+		</ul>
+	</div>
+</div>
 <? $tpl->Footer() ?>

@@ -3,34 +3,31 @@
 	$tpl = new TemplateMaker;
 	$tpl->Header('+'.$title);
 ?>
+<div id="main">
+	<div class="inner">
+	<? $tpl->HeroImage(['title'=>$title,'img'=>'hadesstar-spacestation-by-gabrielbjorkstiernstrom.jpg','url'=>'https://gabrielbjorkstiernstrom.artstation.com','by'=>'Gabriel Bjorkstiernstrom']) ?>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-						<? $tpl->HeroImage(['title'=>$title,'img'=>'hadesstar-spacestation-by-gabrielbjorkstiernstrom.jpg','url'=>'https://gabrielbjorkstiernstrom.artstation.com','by'=>'Gabriel Bjorkstiernstrom']) ?>
-
-							<p>Please join our discord to find out how you can help!</p>
-							<p>• Submit results for your corporation</p>
-							<p>• Suggest new features</p>
-							<p>• Help out!</p>
-							<br>
-							<span class="table-wrapper">
-								<table class="plain">
-									<thead>
-										<tr>
-											<th>Discord Links</th>
-											<th></th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>WS Leaderboard</td>
-											<td style="font-style: italic"><a href="https://discord.gg/p588eHaFqh">https://discord.gg/p588eHaFqh</a></td>
-										</tr>
-									</tbody>
-								</table>
-							</span>
-						</div>
-					</div>
-
+		<p>Please join our discord to find out how you can help!</p>
+		<p>• Submit results for your corporation</p>
+		<p>• Suggest new features</p>
+		<p>• Help out!</p>
+		<br>
+		<span class="table-wrapper">
+			<table class="plain">
+				<thead>
+					<tr>
+						<th>Discord Links</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>WS Leaderboard</td>
+						<td style="font-style: italic"><a href="https://discord.gg/p588eHaFqh">https://discord.gg/p588eHaFqh</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</span>
+	</div>
+</div>
 <? $tpl->Footer() ?>
