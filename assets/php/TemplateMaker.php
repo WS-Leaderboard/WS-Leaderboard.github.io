@@ -75,6 +75,26 @@ class TemplateMaker{
 	function InterviewHead($name){
 		echo '<h1 style="margin-bottom: 0.25em"><span class="image right" style="padding: 0 0 0.75em 1em"><img class="image small" src="/images/'. strtolower($name) .'.png" alt="'.$name.'" /></span>'.$name.'</h1>';
 	}
+	function InterviewShow($txt,$q,$i){
+		$txt = trim($txt);
+		$talk = explode(';;',$txt);
+		$html = [];
+		foreach( $talk as $e){
+			$e = trim($e);
+			if ( strpos($e,'**')===0){
+				$p = $q;
+				$e = substr($e,2);
+			}else{
+				$p = $i;
+			}
+			$f = explode(PHP_EOL,$e);
+			foreach( $f as $k => $v ){ $f[$k] = trim($v); }
+			$e = implode('<br>',$f);
+			$e = str_replace('<br><br>','<br>',$e);
+			$html[]='<p><b>'.$p.'</b>&nbsp;&nbsp;'.$e.'</p>';
+		}
+		echo implode('',$html);
+	}
 	function DownloadBtns($search, $count=3, $skip=TRUE){
 		if ($count>0){
 			$f = scandir(WSL_ROOT . WSL_DATA, SCANDIR_SORT_DESCENDING);
