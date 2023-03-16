@@ -97,7 +97,7 @@ Display \<h1\> entry title with image. Image filename is case lowered $name and 
     TemplateMaker::InterviewHead($name)
 
 ### **Interview show**
-Display taged interview from simple, large string. Interviewer marked as ```**``` at begining of line. Each answer or question is divided with end line mark ```;;```. Regular linebreak (enter) is converted to ```<br>```.
+Display taged interview from simple, large string. Interviewer marked as ```**``` at begining of line. Each answer or question is divided with end line mark ```;;```. Regular linebreak (enter) is converted to ```<br>```. Notice to replace all double quotation marks with double single.
 
     TemplateMaker::InterviewShow($questions, $interviewer, $answerer)
 
