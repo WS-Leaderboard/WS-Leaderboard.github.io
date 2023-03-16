@@ -28,6 +28,8 @@ define('WSL_MENU',[
 ]);
 
 define('WSL_HTML',[
+	// COMMENT
+	'comment' => '<!-- Phantom by HTML5 UP : html5up.net | @ajlkn :: Free for personal and commercial use under the CCA 3.0 license (html5up.net/license) -->',
 	// HEAD
 	'head' => '<meta http-equiv="content-type" content="text/html; charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -38,17 +40,11 @@ define('WSL_HTML',[
 	// HEAD links
 	'headlinks' => ['main.min.css','https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css','<noscript><link rel="stylesheet" href="/assets/css/noscript.min.css" type="text/css" media="all" /></noscript>'],
 	// BODY start
-	'body' => '<body class="is-preload">
-	<!-- Wrapper -->
-	<div id="wrapper">
-		<!-- Header -->
-			<header id="header">
+	'body' => '<header id="header">
 				<div class="inner">
-					<!-- Logo -->
 						<a href="/index.html" class="logo">
 							<span class="symbol"><img src="/images/logo.svg" alt="logo" /></span><span class="title">Home</span>
 						</a>
-					<!-- Nav -->
 						<nav>
 							<ul>
 								<li><a href="#menu">Menu</a></li>
@@ -57,8 +53,7 @@ define('WSL_HTML',[
 				</div>
 			</header>',
 	// FOOTER as end
-	'footer' => '<!-- Footer -->
-		<footer id="footer">
+	'footer' => '<footer id="footer">
 			<div class="inner">
 				<section>
 					<h2>Get In Touch</h2>
@@ -74,8 +69,7 @@ define('WSL_HTML',[
 					<li>Banner artwork by <a href="https://gabrielbjorkstiernstrom.artstation.com" target="_blank">Gabriel Bjorkstiernstrom</a></li>
 				</ul>
 			</div>
-		</footer>
-	</div>',
+		</footer>',
 	// FOOTER links
 	'footerlinks' => ['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js','browser.min.js','breakpoints.min.js','util.js','main.js']
 ]);

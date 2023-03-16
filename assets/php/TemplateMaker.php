@@ -20,25 +20,19 @@ class TemplateMaker{
 			define('WSL_VERSION',$version);
 		}
 
-		echo '<!DOCTYPE HTML>
-		<!--
-			Phantom by HTML5 UP
-			html5up.net | @ajlkn
-			Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-		-->
-		<html lang="en"><head><title>'.$title.'</title>'. self::GetTags('head') . self::Link( self::GetTags('headlinks') ) .'</head>'. self::GetTags('body') . self::GetMenu();
+		echo '<!DOCTYPE HTML>' . self::GetTags('comment') . '<html lang="en"><head><title>'.$title.'</title>'. self::GetTags('head') . self::Link( self::GetTags('headlinks') ) .'</head><body class="is-preload"><div id="wrapper">'. self::GetTags('body') . self::GetMenu();
 	}
 	function Version(){
 		echo WSL_VERSION;
 	}
 	function Footer($asset=''){
-		echo self::GetTags('footer') . self::Link( self::GetTags('footerlinks')) . self::Link($asset) . '</body></html>';
+		echo self::GetTags('footer') . '</div>' . self::Link( self::GetTags('footerlinks')) . self::Link($asset) . '</body></html>';
 		flush();
 	}
 	function HeroImage($arg=[]){
 		extract($arg, EXTR_OVERWRITE);
-		echo '<header>'.
-		($img?'<span class="image main"><img src="/images/'.$img.'" alt="header_artwork_drones" />'. ($by?'<div style="text-align: right"><sup>Artwork by '.($url?'<a href="'.$url.'" target="_blank">'.$by.'</a>':$by).'</sup></div>':'')	.'</span>':'') . ($title?'<h1>'.$title.'</h1>':'') . ($txt?'<p>'.$txt.'</p>':'') .'</header>';
+		echo '<section class="heroimage">'.
+		($img?'<span class="image main"><img src="/images/'.$img.'" alt="header_artwork_drones" />'. ($by?'<div style="text-align: right"><sup>Artwork by '.($url?'<a href="'.$url.'" target="_blank">'.$by.'</a>':$by).'</sup></div>':'')	.'</span>':'') . ($title?'<h1>'.$title.'</h1>':'') . ($txt?'<p>'.$txt.'</p>':'') .'</section>';
 	}
 	function HeroMenu($class='style',$skip=TRUE){
 		$menu = '';
