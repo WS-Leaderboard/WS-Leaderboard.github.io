@@ -26,74 +26,19 @@ class TemplateMaker{
 			html5up.net | @ajlkn
 			Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 		-->
-		<html lang="en">
-		<head>
-			<title>'.$title.'</title>
-			<meta http-equiv="content-type" content="text/html; charset="utf-8" />
-			<meta name="viewport" content="width=device-width, initial-scale=1" />
-			<link rel="preconnect" href="https://fonts.googleapis.com">
-			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-			<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;700;900&display=swap" rel="stylesheet">'.
-			self::Link(['main.min.css','https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'])
-			.'<noscript>'.self::Link('noscript.min.css').'</noscript>
-			<link rel="icon" type="image/png" href="/images/favicon.png">
-			</head>
-		<body class="is-preload">
-			<!-- Wrapper -->
-				<div id="wrapper">
-	
-					<!-- Header -->
-						<header id="header">
-							<div class="inner">
-	
-								<!-- Logo -->
-									<a href="/index.html" class="logo">
-										<span class="symbol"><img src="/images/logo.svg" alt="logo" /></span><span class="title">Home</span>
-									</a>
-	
-								<!-- Nav -->
-									<nav>
-										<ul>
-											<li><a href="#menu">Menu</a></li>
-										</ul>
-									</nav>
-	
-							</div>
-						</header>';
-						echo self::GetMenu();
+		<html lang="en"><head><title>'.$title.'</title>'. self::GetTags('head') . self::Link( self::GetTags('headlinks') ) .'</head>'. self::GetTags('body') . self::GetMenu();
 	}
 	function Version(){
 		echo WSL_VERSION;
 	}
 	function Footer($asset=''){
-		echo '<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<section>
-						<h2>Get In Touch</h2>
-						<ul class="icons">
-							<li><a href="https://discord.gg/p588eHaFqh" aria-label="Discord" class="icon brands style2 fa-discord"><span class="label">Discord</span></a></li>
-						</ul>
-					</section>
-					<ul class="copyright">
-						<li>Created by Timmeh</li>
-						<li>Website by KypDuron</li>
-						<li>Backend by NandGates</li>
-						<li>Phantom site template by <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
-						<li>Banner artwork by <a href="https://gabrielbjorkstiernstrom.artstation.com" target="_blank">Gabriel Bjorkstiernstrom</a></li>
-					</ul>
-				</div>
-			</footer>
-	</div>'.
-		self::Link(['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js','browser.min.js','breakpoints.min.js','util.js','main.js'])	. self::Link($asset) .'</body></html>';
+		echo self::GetTags('footer') . self::Link( self::GetTags('footerlinks')) . self::Link($asset) . '</body></html>';
 		flush();
 	}
 	function HeroImage($arg=[]){
 		extract($arg, EXTR_OVERWRITE);
-
 		echo '<header>'.
-		($img?'<span class="image main"><img src="/images/'.$img.'" alt="header_artwork_drones" />'. ($by?'<div style="text-align: right"><sup>Artwork by '.($url?'<a href="'.$url.'" target="_blank">'.$by.'</a>':$by).'</sup></div>':'')	.'</span>':'')
-		. ($title?'<h1>'.$title.'</h1>':'') . ($txt?'<p>'.$txt.'</p>':'') .'</header>';
+		($img?'<span class="image main"><img src="/images/'.$img.'" alt="header_artwork_drones" />'. ($by?'<div style="text-align: right"><sup>Artwork by '.($url?'<a href="'.$url.'" target="_blank">'.$by.'</a>':$by).'</sup></div>':'')	.'</span>':'') . ($title?'<h1>'.$title.'</h1>':'') . ($txt?'<p>'.$txt.'</p>':'') .'</header>';
 	}
 	function HeroMenu($class='style',$skip=TRUE){
 		$menu = '';
@@ -163,6 +108,21 @@ class TemplateMaker{
 		Helper functions with returns
 
 	*/
+	function GetTags($tag){
+		$t = WSL_HTML;
+		if ( isset($t[$tag]) ) {
+			if (is_array($t[$tag])){
+				return $t[$tag];
+			}else{
+				return self::ClearTagSpace( $t[$tag] );
+			}
+		}else{
+			return NULL;
+		}
+	}
+	function ClearTagSpace($html){
+		return preg_replace('/\>\s+\</m', '><', trim($html));
+	}
 	function GetMenu(){
 		$link = '';
 		foreach( WSL_MENU as $li ){
@@ -185,7 +145,7 @@ class TemplateMaker{
 			$path = $asset;
 		}
 		if (!empty($asset)){
-			if (strpos($asset,'<script>')===0){
+			if (strpos($asset,'<')===0){
 				$link = $asset;
 			}elseif ($ext == 'js') {
 				$link = '<script src="'. $path .'"></script>';
