@@ -21,7 +21,7 @@ Optional:
 #
 ## Elemets
 
-### Hero Image
+### **Hero Image**
 Display Hero Image in header section. Arg is array.
 ```
     $args = [
@@ -39,7 +39,7 @@ Arguments:
 - by => author name
 - txt => additional description under title
 
-### Download buttons
+### **Download buttons**
 
     TemplateMaker::DownloadBtns($search, $count=3, $skip=TRUE)
 
@@ -48,7 +48,7 @@ Optional:
 - $count => display given entries but except first found,
     exp: if "rankings_" will display 1. thru 3. 
     ```
-        0. ull_rankings_v8.4.csv
+        0. full_rankings_v8.4.csv
         1. full_rankings_v8.3.csv
         2. full_rankings_v8.2.csv
         3. full_rankings_v8.1.csv
@@ -63,7 +63,7 @@ Optional:
     - $link => relative path and filename, exp. "data/full_rankings.csv"
     - $name => button's title
 
-### Interview list
+### **Interview list**
 Display interview list from **/interviews**. Arg is array.
 Image is build like so **/images/filename.png**.
 If something is on $args and also in folder then will be displayed.
@@ -91,12 +91,17 @@ Files structure for entry:
     /images
         /filename.png
 
-### Interview entry head
+### **Interview entry head**
 Display \<h1\> entry title with image. Image filename is case lowered $name and then build like above.
 
     TemplateMaker::InterviewHead($name)
 
-### Hero menu
+### **Interview show**
+Display taged interview from simple, large string. Interviewer marked as ```**``` at begining of line. Each answer or question is divided with end line mark ```;;```. Regular linebreak (enter) is converted to ```<br>```. Notice to replace all double quotation marks with double single.
+
+    TemplateMaker::InterviewShow($questions, $interviewer, $answerer)
+
+### **Hero menu**
 Display large menu at home page.
 
     TemplateMaker::HeroMenu($class='style', $skip=TRUE)
@@ -105,7 +110,7 @@ Optional args:
 - $class => class name but autonumberd (exp. class0, class1 ... class5)
 - $skip => if FALSE display menu entry for home/index
 
-### Version
+### **Version**
 Display version number
 
     TemplateMaker::Version()

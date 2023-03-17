@@ -10,18 +10,15 @@
 		'samkay' => [ 'n'=>'SamKay', 'b'=>"A successful corp doesn't just come from winning matches and events. It comes from multiple personalities, working in sync towards bettering long-term corp values and goals"],
 	];
 ?>
+<div id="main">
+	<div class="inner">
+	<? $tpl->HeroImage(['title'=>$title,'img'=>'hadesstar-cerberussentinel-by-gabrielbjorkstiernstrom.jpg','url'=>'https://gabrielbjorkstiernstrom.artstation.com','by'=>'Gabriel Bjorkstiernstrom','txt'=>'Simple export of all known games. More work is planned for this page, but for now it may be easier to download the .csv to use as you wish.']) ?>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-						<? $tpl->HeroImage(['title'=>$title,'img'=>'hadesstar-cerberussentinel-by-gabrielbjorkstiernstrom.jpg','url'=>'https://gabrielbjorkstiernstrom.artstation.com','by'=>'Gabriel Bjorkstiernstrom','txt'=>'Simple export of all known games. More work is planned for this page, but for now it may be easier to download the .csv to use as you wish.']) ?>
+	<p>Welcome to our interviews section, where we will periodically interview some of the top players, commanders and First Officers in the Hades Star galaxy to provide some deeper insight into their HS career, their thoughts on White Stars, and maybe some #offtopic too.</p>
+	<p><i>Click on the avatars or names below to read more.</i></p>
 
-						<p>Welcome to our interviews section, where we will periodically interview some of the top players, commanders and First Officers in the Hades Star galaxy to provide some deeper insight into their HS career, their thoughts on White Stars, and maybe some #offtopic too.</p>
-						<p><i>Click on the avatars or names below to read more.</i></p>
+	<? $tpl->Interviews($interview) ?>
 
-						<? $tpl->Interviews($interview) ?>
-
-						</div>
-					</div>
-
+	</div>
+</div>
 <? $tpl->Footer() ?>
