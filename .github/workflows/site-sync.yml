@@ -1,0 +1,21 @@
+name: SiteLoadToServer
+
+on: workflow_dispatch
+
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get latest code
+      uses: actions/checkout@v3
+
+    - name: Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.MAIN_FTP_HOST }}
+        username: ${{ secrets.MAIN_FTP_USER }}
+        password: ${{ secrets.MAIN_FTP_PASSWORD }}
+        exclude: |
+            **/.git*
+            **/.git*/**
