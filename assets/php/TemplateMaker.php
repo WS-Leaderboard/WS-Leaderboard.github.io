@@ -43,8 +43,7 @@ class TemplateMaker{
 			$x++;
 		}
 		foreach( $entries as $m ){
-			$menu .= '<article class="'. $class . $x .'"><span class="image"><img src="/images/'.$m['i'].'" alt="'.$m['a'].'"/></span>
-			<a href="/'.$m['u'].'"><h2>'.$m['n'].'</h2>'.($m['c']?'<div class="content"><p>'.$m['c'].'</p></div>':'') .'</a></article>';
+			$menu .= '<article class="'. $class . $x .'"><span class="image"><img src="/images/'.$m['i'].'" alt="'.$m['a'].'"/></span><a href="/'.$m['u'].'"><h2>'.$m['n'].'</h2>'.($m['c']?'<div class="content"><p>'.$m['c'].'</p></div>':'') .'</a></article>';
 		$x++;
 		}
 		echo $menu;
