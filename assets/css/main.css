@@ -3411,3 +3411,40 @@ table .caret {margin-left: 0.5em;}
 			}
 
 		}
+
+/*
+		Darkmode
+*/
+
+.thememode {
+	display: flex;
+}
+.thememode button:first-of-type{
+	margin-left:0;
+}
+.thememode button:last-of-type{
+	margin-right:0;
+}
+.thememode button{
+	box-shadow: inset 0 0 0 2px #fff;
+	color: #fff !important;
+	flex-grow: 1;
+	margin:0 0.5em;
+	padding: 0;
+}
+.thememode button:hover{
+	color: #FCA311 !important;
+	box-shadow: inset 0 0 0 2px #FCA311;
+}
+
+@media (prefers-color-scheme: dark){
+
+	html.darkmode{
+		filter: invert(1) hue-rotate(180deg);
+	}
+	html.darkmode .heroimage, html.darkmode img.image{filter: invert(1) hue-rotate(180deg);}
+	html.darkmode .tiles article > a{
+		font-weight: bold;
+	}
+
+}
