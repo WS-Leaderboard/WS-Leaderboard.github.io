@@ -33,12 +33,13 @@ define('WSL_HTML',[
 	// HEAD
 	'head' => '<meta http-equiv="content-type" content="text/html; charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="color-scheme" content="dark light">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;700;900&display=swap" rel="stylesheet">
 	<link rel="icon" type="image/png" href="/images/favicon.png">',
 	// HEAD links
-	'headlinks' => ['main.min.css','https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css','<noscript><link rel="stylesheet" href="/assets/css/noscript.min.css" type="text/css" media="all" /></noscript>'],
+	'headlinks' => ['<script>if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) { document.documentElement.classList.add("darkmode") } else { document.documentElement.classList.remove("darkmode") }</script>','main.min.css','https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css','<noscript><link rel="stylesheet" href="/assets/css/noscript.min.css" type="text/css" media="all" /></noscript>'],
 	// BODY start
 	'body' => '<header id="header">
 				<div class="inner">
