@@ -2506,7 +2506,17 @@ table .caret {margin-left: 0.5em;}
 				border-bottom: solid 2px #c9c9c9;
 			}
 			/* table.plain tr {} */
-
+	@media screen and (max-width: 640px){
+		.table-wrapper {
+			display: block;
+			font-size:90%;
+		}
+	}
+	@media screen and (max-width: 400px){
+		table td {
+			padding: 0.5em 0.25em;
+		}
+	}
 /* Button */
 
 	.button.primary.icon.solid.fa-download {margin-right: 1em; }
@@ -3437,14 +3447,9 @@ table .caret {margin-left: 0.5em;}
 	box-shadow: inset 0 0 0 2px #FCA311;
 }
 
-@media (prefers-color-scheme: dark){
-
-	html.darkmode{
-		filter: invert(1) hue-rotate(180deg);
-	}
-	html.darkmode .heroimage, html.darkmode img.image{filter: invert(1) hue-rotate(180deg);}
-	html.darkmode .tiles article > a{
-		font-weight: bold;
-	}
-
+html.darkmode, html.darkmode .heroimage, html.darkmode img.image{
+	filter: invert(1) hue-rotate(180deg);
+}
+html.darkmode .tiles article > a{
+	font-weight: bold;
 }
