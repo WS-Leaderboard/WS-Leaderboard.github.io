@@ -2375,14 +2375,18 @@ input, select, textarea {
 			-ms-transition: -ms-transform 0.5s ease;
 			transition: transform 0.5s ease;
 		}
-		
-		.image.avatar:hover {
+
+		a:hover .image.avatar, .image.avatar:hover {
 			-moz-transform: scale(1.1);
 			-webkit-transform: scale(1.1);
 			-ms-transform: scale(1.1);
 			transform: scale(1.1);
 		}
-		
+		.interviews a{
+                        display: table;
+                        border:0;
+                        margin-top:2em;
+                }
 		.image.fit {
 			display: block;
 			margin: 0 0 2em 0;
