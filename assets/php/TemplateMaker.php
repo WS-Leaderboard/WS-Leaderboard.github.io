@@ -43,8 +43,7 @@ class TemplateMaker{
 			$x++;
 		}
 		foreach( $entries as $m ){
-			$menu .= '<article class="'. $class . $x .'"><span class="image"><img src="/images/'.$m['i'].'" alt="'.$m['a'].'"/></span>
-			<a href="/'.$m['u'].'"><h2>'.$m['n'].'</h2>'.($m['c']?'<div class="content"><p>'.$m['c'].'</p></div>':'') .'</a></article>';
+			$menu .= '<article class="'. $class . $x .'"><span class="image"><img src="/images/'.$m['i'].'" alt="'.$m['a'].'"/></span><a href="/'.$m['u'].'"><h2>'.$m['n'].'</h2>'.($m['c']?'<div class="content"><p>'.$m['c'].'</p></div>':'') .'</a></article>';
 		$x++;
 		}
 		echo $menu;
@@ -142,7 +141,7 @@ class TemplateMaker{
 		foreach( WSL_MENU as $li ){
 			$link .= '<li><a href="/'. $li['u'] .'">'. $li['n'] .'</a></li>';
 		}
-		return '<nav id="menu"><h2>Menu</h2><ul>'. $link .'</ul></nav>';
+		return '<nav id="menu"><h2>Menu</h2><ul>'. $link .'</ul><div class="btn-group thememode"><button class="btn" onclick="localStorage.theme=\'light\';location.reload();">LIGHT</button><button class="btn" onclick="localStorage.theme=\'dark\';location.reload();">DARK</button><button class="btn" onclick="localStorage.removeItem(\'theme\');location.reload();">OS</button></div></nav>';
 	}
 	function GetDownload($link,$name){
 		if (file_exists( WSL_ROOT . $link)) {
