@@ -1,5 +1,7 @@
+# 20230711
 name: SiteLoadToServer
 
+# manual execute
 on: workflow_dispatch
 
 jobs:
