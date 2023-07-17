@@ -151,18 +151,36 @@ class TemplateMaker{
 	}
 	function GetAsset($asset) {
 		$link = '';
+		$notlink = true;
 		$ext = strtolower(array_pop(explode('.',$asset)));
 		if (strpos($asset,'http')===FALSE) {
 			$path = '/' . WSL_ASSETS . $ext . '/'. $asset;
 		}else{
 			$path = $asset;
+			$notlink = false;
 		}
 		if (!empty($asset)){
 			if (strpos($asset,'<')===0){
 				$link = $asset;
 			}elseif ($ext == 'js') {
 				$link = '<script src="'. $path .'"></script>';
-			}elseif ($ext == 'css') {
+			}elseif ($ext == 'css' /* OR $ext == 'less' */) {
+				if ( $notlink ) {
+					$src =  WSL_ROOT . WSL_ASSETS . $ext . '/'. $asset;
+/* 					if ($ext == 'less') {
+						$less = new lessc;
+						$less->setFormatter("compressed");
+						$ext = 'css';
+						$path = WSL_ASSETS . $ext . '/'. $asset . '.' . $ext;
+						$less->checkedCompile($src, WSL_ROOT . $path);
+					}else{ */
+						$path = WSL_ASSETS . $ext . '/'. strtolower(array_pop(array_reverse(explode('.',$asset)))) . '.less.' . $ext;
+						$dest = WSL_ROOT . $path;
+						$min = new CSSminify($src,$dest);
+/* 					} */
+					$mod = '?v=' . date("YmdHis",filemtime(WSL_ROOT . $path));
+					$path = '/' . $path . $mod;
+				}
 				$link = '<link rel="stylesheet" href="'.$path.'" type="text/css" media="all" />';
 			}
 		}
