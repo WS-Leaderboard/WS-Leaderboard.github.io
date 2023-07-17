@@ -2513,7 +2513,7 @@ table .caret {margin-left: 0.5em;}
 	@media screen and (max-width: 640px){
 		.table-wrapper {
 			display: block;
-			font-size:90%;
+			/* font-size:90%; */
 		}
 	}
 	@media screen and (max-width: 400px){

@@ -3,3 +3,4 @@ files/tmp/*
 *.zip
 *.gif
 .vscode/*
+*.less.css
